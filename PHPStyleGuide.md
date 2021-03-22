@@ -7,7 +7,7 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 <!-- ---------------------------------------------------------------------- -->
 
 ## Icons Legend
-The icons are used to designate the character sequences around this document unambiguously.
+The icons are used to designate the character sequences around this document simply and unambiguously.
 
 1. `·` means `Space`
 2. `⇥` means `Tab`
