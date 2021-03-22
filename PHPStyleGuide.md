@@ -4,14 +4,14 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 
 > The keywords "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](http://www.ietf.org/rfc/rfc2119.txt).
 
-Most sections are broken up into two parts:
+<!-- ---------------------------------------------------------------------- -->
 
-1. Overview of all rules with a quick example
-2. Each rule called out with examples of do's and don'ts
+## Icons Legend
+The icons are used to designate the character sequences around this document unambiguously.
 
-**Icon Legend**:
-
-`·` Space, `⇥` Tab, `↵` Enter/Return
+1. `·` means `Space`
+2. `⇥` means `Tab`
+3. `↵` means `Enter`
 
 <!-- ---------------------------------------------------------------------- -->
 
