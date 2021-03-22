@@ -302,7 +302,7 @@ namespace MyCOMPANY;
 
 </pre>
 
-&#8627; Incorrect because `MyCOMPANY` is not written in camelcase.
+&#8627; Incorrect because `MyCOMPANY` is not camelcased.
 
 #### &#10004; Correct
 
