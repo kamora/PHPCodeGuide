@@ -93,8 +93,8 @@ This section describes the format and naming convention of PHP files.
 
 1. **Names** MUST follow the [PSR-4](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md) convention 
 	* e.g. `Controller.php` but not `controller.php`
-2. **Words** MUST NOT be separated with a hyphen
-	* e.g. `AppConfig.php` but not `app-config.php`
+2. **Words** MUST NOT be separated with a hyphen or underscore
+	* e.g. `AppConfig.php` but not `app-config.php` or `app_config.php` 
 
 &#9650; [Table of Contents](#table-of-contents)
 
