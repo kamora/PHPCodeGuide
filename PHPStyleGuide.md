@@ -499,7 +499,7 @@ The soft limit on line length MUST be 120 characters; automated style checkers M
 
 ### 2. Line Indentation
 
-The line indentation MUST be accomplished by using TABs characters only.
+The line indentation MUST be accomplished by using `TAB` characters only.
 
 &#9650; [Formatting](#5-formatting)
 
