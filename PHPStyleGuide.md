@@ -428,7 +428,6 @@ Multi-line comments MUST use the block format and follow the [PHPDoc](https://do
 
 <pre lang=php>
 &lt;?php
-
 /*
  This is a
  multi-line
