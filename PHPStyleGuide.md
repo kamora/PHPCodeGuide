@@ -157,7 +157,6 @@ Close tag MUST NOT be used in PHP files.
 
 <pre lang=php>
 &lt;?php
-
 print_welcome_message();
 
 ?&gt;
@@ -169,7 +168,6 @@ print_welcome_message();
 
 <pre lang=php>
 &lt;?php
-
 print_welcome_message();
 </pre>
 
@@ -185,7 +183,6 @@ Short open tag MUST NOT be used.
 
 <pre lang=php>
 &lt;?
-
 print_welcome_message();
 </pre>
 
@@ -195,7 +192,6 @@ print_welcome_message();
 
 <pre lang=php>
 &lt;?php
-
 print_welcome_message();
 </pre>
 
