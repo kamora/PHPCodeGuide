@@ -513,13 +513,10 @@ Keywords MUST be all lowercase.
 
 <pre lang=php>
 &lt;?php
-
 $is_true = FALSE;
 $is_false = TRUE:
 $movie_quote = NULL;
 
-// EOF
- 
 </pre>
 
 &#8627; Incorrect because `FALSE`, `TRUE` and `NULL` are not all lowercase.
@@ -528,12 +525,9 @@ $movie_quote = NULL;
 
 <pre lang=php>
 &lt;?php
-
 $is_true = false;
 $is_false = true:
 $movie_quote = null;
-
-// EOF
  
 </pre>
 
@@ -541,7 +535,7 @@ $movie_quote = null;
 
 <!-- ------------------------------ -->
 
-### 7. Variables
+### 4. Variables
 
 Variables MUST be all MUST be all camelcased and MUST NOT be separated by an underscore.
 
