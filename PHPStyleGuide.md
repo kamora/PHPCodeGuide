@@ -369,7 +369,6 @@ Single-line comments MUST use two forward slashes.
 
 <pre lang=php>
 &lt;?php
-
 /* This is a comment */
 
 </pre>
@@ -380,7 +379,6 @@ Single-line comments MUST use two forward slashes.
 
 <pre lang=php>
 &lt;?php
-
 // This is a comment
 
 </pre>
@@ -397,7 +395,6 @@ Multi-line comments MUST use the block format.
 
 <pre lang=php>
 &lt;?php
-
 // This is a
 // multi-line
 // comment
@@ -410,7 +407,6 @@ Multi-line comments MUST use the block format.
 
 <pre lang=php>
 &lt;?php
-
 /*
  This is a
  multi-line
