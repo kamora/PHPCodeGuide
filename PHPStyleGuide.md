@@ -107,9 +107,9 @@ This section describes the use of PHP tags in PHP and PHP/HTML files.
 1. [**Open tag**](#1-open-tag) MUST be on its own line and MUST NOT be followed by a blank line
 	* i.e. `<?php` `↵` `...` but not `<?php` `↵` `↵` `...`
 2. [**Close tag**](#2-close-tag) MUST NOT be used in PHP files
-	* i.e. no `?>` allowed in PHP files
+	* i.e. `?>` is prohibited in PHP files
 3. [**Short open tag**](#3-short-open-tag) MUST NOT be used
-	* i.e. `<?php` MUST be used over `<?` 
+	* i.e. `<?php` MUST be always used over `<?` 
 4. [**Short echo tag**](#4-short-echo-tag) MAY be used inside PHP/HTML files
 	* i.e. `<?=` SHOULD be used over `<?php echo` inside PHP/HTML files when possible
 
@@ -230,11 +230,11 @@ Short echo tag MAY be used inside PHP/HTML files and SHOULD be used over `<?php 
 This section describes how to use one or more namespaces and their naming convention.
 
 1. [**Namespace declaration**](#1-namespace-declaration) MUST be the first statement and MUST be followed by a blank line
-	* i.e. `<?php` `↵` `namespace MyCompany;` `↵` `↵` `...`
+	* e.g. `<?php` `↵` `namespace MyCompany;` `↵` `↵` `...`
 2. [**Namespace definition**](#2-namespace-definition) MUST start with a capital letter and MUST be camelcased
 	* e.g. `namespace MyCompany;`
 3. [**Multiple namespaces**](#3-multiple-namespaces) MUST use the curly brace syntax
-	* i.e. `namespace MyCompany { ... }`
+	* e.g. `namespace MyCompany { ... }`
 
 &#9650; [Table of Contents](#table-of-contents)
 
@@ -466,16 +466,10 @@ This section outline various, general formatting rules related to whitespace and
 	* i.e. `|---- 80+ chars ----|` &rarr; refactor expression and/or break list values
 2. [**Line indentation**](#2-line-indentation) MUST be accomplished using tabs
 	* i.e. `function func() {` `↵` `⇥` `...` `↵` `}`
-3. [**Blank lines**](#3-blank-lines) SHOULD be added between logical blocks of code
-	* i.e. `...` `↵` `↵` `...`
-4. [**Text alignment**](#4-text-alignment) MUST be accomplished using spaces
-	* i.e. `$var` `·` `·` `·` `= ...;`
-5. [**Trailing whitespace**](#5-trailing-whitespace) MUST NOT be present after statements or serial comma break or on blank lines
-	* i.e. no `...` `·` `·` `↵` `·` `↵` `...`
-6. [**Keywords**](#6-keywords) MUST be all lowercase
+3. [**Keywords**](#3-keywords) MUST be all lowercase
 	* e.g. `false`, `true`, `null`, etc.
-7. [**Variables**](#7-variables) MUST be all lowercase and words MUST be separated by an underscore
-	* e.g. `$welcome_message`
+4. [**Variables**](#4-variables) MUST be all camelcased
+	* e.g. `$shortWelcomeMessage` instead of `$short_welcome_message`
 8. [**Global variables**](#8-global-variables) MUST be declared one variable per line and MUST be indented after the first
 	* e.g. `global $var1,` `↵` `⇥` `$var2;`
 9. [**Constants**](#9-constants) MUST be all uppercase and words MUST be separated by an underscore
@@ -499,219 +493,19 @@ This section outline various, general formatting rules related to whitespace and
 
 ### 1. Line Length
 
-The soft limit on line length MUST be 120 characters; automated style checkers MUST warn but MUST NOT error at the soft limit.
+The soft limit on line length MUST be 120 characters; automated style checkers MAY warn but MUST NOT error at the soft limit.
 
 &#9650; [Formatting](#5-formatting)
 
-### 1. Line Length
+### 2. Line Indentation
 
-The soft limit on line length MUST be 120 characters; automated style checkers MUST warn but MUST NOT error at the soft limit.
+The line indentation MUST be accomplished by using tabs characters only.
 
 &#9650; [Formatting](#5-formatting)
 
 <!-- ------------------------------ -->
 
-### 3. Blank Lines
-
-Blank lines SHOULD be added between logical blocks of code.
-
-#### ~ Acceptable
-
-<pre lang=php>
-&lt;?php
-
-$my_movies = array(
-	'Slumdog Millionaire',
-	'Silver Linings Playbook',
-	'The Lives of Others',
-	'The Shawshank Redemption'
-);
-$has_all_movies = true;
-foreach($my_movies as $my_movie) {
-	if(!in_array($my_movie, $movies)) {
-		$has_all_movies = false;
-	}
-}
-if($has_all_movies) {
-	// if body
-}
-
-// EOF
-
-</pre>
-
-&#8627; Acceptable, but can make scanning code more difficult.
-
-#### &#10004; Preferred
-
-<pre lang=php>
-&lt;?php
-
-$my_movies = array(
-	'Slumdog Millionaire',
-	'Silver Linings Playbook',
-	'The Lives of Others',
-	'The Shawshank Redemption'
-);
-
-$has_all_movies = true;
-
-foreach($my_movies as $my_movie) {
-	if(!in_array($my_movie, $movies)) {
-		$has_all_movies = false;
-	}
-}
-
-if($has_all_movies) {
-	// if body
-}
-
-// EOF
- 
-</pre>
-
-&#9650; [Formatting](#8-formatting)
-
-<!-- ------------------------------ -->
-
-### 4. Text Alignment
-
-Text alignment MUST be accomplished using spaces.
-
-#### &#10006; Incorrect
-
-<pre lang=php>
-&lt;?php
-
-$movie_quotes = array(
-	'slumdog_millionaire'		=> 'When somebody asks me a question, I tell them the answer.',
-	'silver_linings_playbook'	=> 'I opened up to you, and you judged me.',
-	'the_lives_of_others'		=> 'To think that people like you ruled a country.',
-	'the_shawshank_redemption'	=> 'Get busy living, or get busy dying.'
-);
-
-// EOF
- 
-</pre>
-
-&#8627; Incorrect because tabs are used instead of spaces to vertically align `=>`.
-
-<pre lang=php>
-&lt;?php
-
-$movie_quotes = array(
-    'slumdog_millionaire'       => 'When somebody asks me a question, I tell them the answer.',
-    'silver_linings_playbook'   => 'I opened up to you, and you judged me.',
-    'the_lives_of_others'       => 'To think that people like you ruled a country.',
-    'the_shawshank_redemption'  => 'Get busy living, or get busy dying.'
-);
-
-// EOF
- 
-</pre>
-
-&#8627; Incorrect because spaces are used instead of tabs to indent array keys.
-
-#### &#10004; Correct
-
-<pre lang=php>
-&lt;?php
-
-$movie_quotes = array(
-	'slumdog_millionaire'       => 'When somebody asks me a question, I tell them the answer.',
-	'silver_linings_playbook'   => 'I opened up to you, and you judged me.',
-	'the_lives_of_others'       => 'To think that people like you ruled a country.',
-	'the_shawshank_redemption'  => 'Get busy living, or get busy dying.'
-);
-
-// EOF
- 
-</pre>
-
-&#9650; [Formatting](#8-formatting)
-
-<!-- ------------------------------ -->
-
-### 5. Trailing Whitespace
-
-Trailing whitespace MUST NOT be present after statements or serial comma break or on blank lines.
-
-#### &#10006; Incorrect
-
-<pre lang=php>
-&lt;?php
-
-$quotes_exist = false;  
-
-print_welcome_message();
-
-// EOF
- 
-</pre>
-
-&#8627; Incorrect because there are two spaces after `$quotes_exist = false;`.
-
-<pre lang=php>
-&lt;?php
-
-$my_movies = array(
-	'Slumdog Millionaire', 
-	'Silver Linings Playbook', 
-	'The Lives of Others', 
-	'The Shawshank Redemption'
-);
-
-// EOF
- 
-</pre>
-
-&#8627; Incorrect because there is a space after `,`.
-
-<pre lang=php>
-&lt;?php
-
-$quotes_exist = false;
-  
-print_welcome_message();
-
-// EOF
- 
-</pre>
-
-&#8627; Incorrect because there are two spaces on the blank line below `$quotes_exist = false;`.
-
-#### &#10004; Correct
-
-<pre lang=php>
-&lt;?php
-
-$quotes_exist = false;
-
-print_welcome_message();
-
-// EOF
- 
-</pre>
-
-<pre lang=php>
-&lt;?php
-
-$my_movies = array(
-	'Slumdog Millionaire',
-	'Silver Linings Playbook',
-	'The Lives of Others',
-	'The Shawshank Redemption'
-);
-
-// EOF
- 
-</pre>
-
-&#9650; [Formatting](#8-formatting)
-
-<!-- ------------------------------ -->
-
-### 6. Keywords
+### 3. Keywords
 
 Keywords MUST be all lowercase.
 
@@ -743,49 +537,29 @@ $movie_quote = null;
  
 </pre>
 
-&#9650; [Formatting](#8-formatting)
+&#9650; [Formatting](#5-formatting)
 
 <!-- ------------------------------ -->
 
 ### 7. Variables
 
-Variables MUST be all lowercase and words MUST be separated by an underscore.
+Variables MUST be all MUST be all camelcased and MUST NOT be separated by an underscore.
 
 #### &#10006; Incorrect
 
 <pre lang=php>
 &lt;?php
-
-$welcome_Message = '';
-$Welcome_Message = '';
-$WELCOME_MESSAGE = '';
-
-// EOF
- 
+$welcome_message = '';
+$WelcomeMESSAGE = '';
 </pre>
 
-&#8627; Incorrect because `$welcome_Message`, `$Welcome_Message` and `$WELCOME_MESSAGE` are not all lowercase.
-
-<pre lang=php>
-&lt;?php
-
-$welcomemessage = '';
-
-// EOF
- 
-</pre>
-
-&#8627; Incorrect because `welcome` and `message` are not separated with an underscore.
+&#8627; Incorrect because `$welcome_Message`, `$Welcome_Message` and `$WELCOME_MESSAGE` are not all camelcased properly.
 
 #### &#10004; Correct
 
 <pre lang=php>
 &lt;?php
-
-$welcome_message = '';
-
-// EOF
- 
+$welcomeMessage = '';
 </pre>
 
 &#9650; [Formatting](#8-formatting)
