@@ -201,7 +201,7 @@ print_welcome_message();
 
 ### 4. Short Echo Tag
 
-Short echo tag MAY be used inside PHP/HTML files.
+Short echo tag MAY be used inside PHP/HTML files and SHOULD be used over `<?php echo` inside PHP/HTML files when possible.
 
 #### ~ Acceptable
 
