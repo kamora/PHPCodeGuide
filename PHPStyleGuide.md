@@ -107,11 +107,11 @@ This section describes the use of PHP tags in PHP and PHP/HTML files.
 1. [**Open tag**](#1-open-tag) MUST be on its own line and MUST NOT be followed by a blank line
 	* i.e. `<?php` `↵` `...` but not `<?php` `↵` `↵` `...`
 2. [**Close tag**](#2-close-tag) MUST NOT be used in PHP files
-	* i.e. no `?>`
+	* i.e. no `?>` allowed in PHP files
 3. [**Short open tag**](#3-short-open-tag) MUST NOT be used
-	* i.e. no `<?` but only `<?php`
-4. [**Short echo tag**](#4-short-echo-tag) SHOULD be used inside PHP/HTML files only
-	* i.e. `<?php echo` can be replaced by `<?=` inside PHP/HTML files.
+	* i.e. `<?php` MUST be used over `<?` 
+4. [**Short echo tag**](#4-short-echo-tag) MAY be used inside PHP/HTML files
+	* i.e. `<?=` SHOULD be used over `<?php echo` inside PHP/HTML files when possible
 
 &#9650; [Table of Contents](#table-of-contents)
 
@@ -141,8 +141,8 @@ print_welcome_message();
 
 <pre lang=php>
 &lt;?php
-
 print_welcome_message();
+
 </pre>
 
 &#9650; [PHP Tags](#2-php-tags)
@@ -205,7 +205,7 @@ print_welcome_message();
 
 ### 4. Short Echo Tag
 
-Short echo tag SHOULD be used in PHP/HTML files.
+Short echo tag MAY be used inside PHP/HTML files.
 
 #### ~ Acceptable
 
@@ -221,7 +221,7 @@ Short echo tag SHOULD be used in PHP/HTML files.
 
 <pre lang=html>
 &lt;div&gt;
-	&lt;p&gt;&lt;?= get_welcome_message(); ?&gt;&lt;/p&gt;
+	&lt;p&gt;&lt;?=get_welcome_message();?&gt;&lt;/p&gt;
 &lt;/div&gt;
 </pre>
 
