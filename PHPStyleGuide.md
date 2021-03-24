@@ -554,14 +554,14 @@ $WelcomeMESSAGE = '';
 $WelcomeMessage = '';
 </pre>
 
-&#8627; Incorrect because the variable hold a primitive type but start from an uppercase letter.
+&#8627; Incorrect because the variable contains a primitive type but starts from an uppercase letter.
 
 <pre lang=php>
 &lt;?php
 $someObject = new SomeClass();
 </pre>
 
-&#8627; Incorrect because the variable hold an object but doesn't start from an uppercase letter.
+&#8627; Incorrect because the variable contains an object but doesn't start from an uppercase letter.
 
 #### &#10004; Correct
 
