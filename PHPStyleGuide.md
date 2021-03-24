@@ -536,7 +536,6 @@ Variables MUST be all camelcased and MUST NOT be separated by an underscore.
 The first letter case MUST slightly determine the variable type:
 1. All variables of primitive types MUST starts from a lowercase letter.
 1. All variables of object type MUST starts from an uppercase letter. 
-1. Arrays MAY be tract as primitives or as object in accordance to the situation. 
 
 #### &#10006; Incorrect
 
