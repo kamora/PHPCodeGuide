@@ -463,7 +463,7 @@ This section outline various, general formatting rules related to whitespace and
 	* i.e. `function func() {` `↵` `⇥` `...` `↵` `}`
 3. [**Keywords**](#3-keywords) MUST be all lowercase
 	* e.g. `false`, `true`, `null`, etc.
-4. [**Variables**](#4-variables) MUST be all camelcased
+4. [**Variables**](#4-variables) MUST be all camelcased and MUST NOT be separated by an underscore.
 	* e.g. `$shortWelcomeMessage` instead of `$short_welcome_message`
 8. [**Global variables**](#8-global-variables) MUST be declared one variable per line and MUST be indented after the first
 	* e.g. `global $var1,` `↵` `⇥` `$var2;`
@@ -532,7 +532,11 @@ $movie_quote = null;
 
 ### 4. Variables
 
-Variables MUST be all MUST be all camelcased and MUST NOT be separated by an underscore.
+Variables MUST be all camelcased and MUST NOT be separated by an underscore. 
+The first letter case MUST slightly determine the variable type:
+1. All variables of primitive types MUST starts from a lowercase letter.
+1. All variables of object type MUST starts from an uppercase letter. 
+1. Arrays MAY be tract as primitives or as object in accordance to the situation. 
 
 #### &#10006; Incorrect
 
@@ -542,13 +546,28 @@ $welcome_message = '';
 $WelcomeMESSAGE = '';
 </pre>
 
-&#8627; Incorrect because `$welcome_Message`, `$Welcome_Message` and `$WELCOME_MESSAGE` are not all camelcased properly.
+&#8627; Incorrect because variables are not camelcased properly.
+
+<pre lang=php>
+&lt;?php
+$WelcomeMessage = '';
+</pre>
+
+&#8627; Incorrect because the variable hold a primitive type but start from an uppercase letter.
+
+<pre lang=php>
+&lt;?php
+$someObject = new SomeClass();
+</pre>
+
+&#8627; Incorrect because the variable hold an object but doesn't start from an uppercase letter.
 
 #### &#10004; Correct
 
 <pre lang=php>
 &lt;?php
 $welcomeMessage = '';
+$SomeObject = new SomeClass();
 </pre>
 
 &#9650; [Formatting](#8-formatting)
