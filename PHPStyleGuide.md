@@ -465,9 +465,7 @@ This section outline various, general formatting rules related to whitespace and
 	* e.g. `false`, `true`, `null`, etc.
 4. [**Variables**](#4-variables) MUST be all camelcased and MUST NOT be separated by an underscore.
 	* e.g. `$shortWelcomeMessage` instead of `$short_welcome_message`
-8. [**Global variables**](#8-global-variables) MUST be declared one variable per line and MUST be indented after the first
-	* e.g. `global $var1,` `↵` `⇥` `$var2;`
-9. [**Constants**](#9-constants) MUST be all uppercase and words MUST be separated by an underscore
+9. [**Constants**](#5-constants) MUST be all uppercase and words MUST be separated by an underscore
 	* e.g. `WELCOME_MESSAGE`
 10. [**Statements**](#10-statements) MUST be placed on their own line and MUST end with a semicolon
 	* e.g. `welcome_message();`
@@ -571,58 +569,11 @@ $welcomeMessage = '';
 $SomeObject = new SomeClass();
 </pre>
 
-&#9650; [Formatting](#8-formatting)
+&#9650; [Formatting](#5-formatting)
 
 <!-- ------------------------------ -->
 
-### 8. Global Variables
-
-Global variables MUST be declared one variable per line and MUST be indented after the first.
-
-#### &#10006; Incorrect
-
-<pre lang=php>
-&lt;?php
-
-global $app_config, $cache, $db_connection;
-
-// EOF
- 
-</pre>
-
-&#8627; Incorrect because `$app_config`, `$cache` and `$db_connection` are together on one line.
-
-<pre lang=php>
-&lt;?php
-
-global $app_config,
-$cache,
-$db_connection;
-
-// EOF
- 
-</pre>
-
-&#8627; Incorrect because `$db_connection` and `$cache` are not indentend once.
-
-#### &#10004; Correct
-
-<pre lang=php>
-&lt;?php
-
-global $app_config,
-	$cache,
-	$db_connection;
-
-// EOF
- 
-</pre>
-
-&#9650; [Formatting](#8-formatting)
-
-<!-- ------------------------------ -->
-
-### 9. Constants
+### 5. Constants
 
 Constants MUST be all uppercase and words MUST be separated by an underscore.
 
@@ -630,23 +581,17 @@ Constants MUST be all uppercase and words MUST be separated by an underscore.
 
 <pre lang=php>
 &lt;?php
-
 define('welcome_Message', '');
 define('Welcome_Message', '');
 define('welcome_message', '');
 
-// EOF
- 
 </pre>
 
 &#8627; Incorrect because `welcome_Message`, `Welcome_Message` and `welcome_message` are not all uppercase.
 
 <pre lang=php>
 &lt;?php
-
 define('WELCOMEMESSAGE', '');
-
-// EOF
  
 </pre>
 
@@ -656,14 +601,11 @@ define('WELCOMEMESSAGE', '');
 
 <pre lang=php>
 &lt;?php
-
 define('WELCOME_MESSAGE', '');
-
-// EOF
  
 </pre>
 
-&#9650; [Formatting](#8-formatting)
+&#9650; [Formatting](#5-formatting)
 
 <!-- ------------------------------ -->
 
