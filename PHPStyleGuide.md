@@ -587,7 +587,7 @@ define('welcome_message', '');
 
 </pre>
 
-&#8627; Incorrect because `welcome_Message`, `Welcome_Message` and `welcome_message` are not all uppercase.
+&#8627; Incorrect because the constants are not all uppercase.
 
 <pre lang=php>
 &lt;?php
@@ -602,7 +602,7 @@ define('WELCOMEMESSAGE', '');
 <pre lang=php>
 &lt;?php
 define('WELCOME_MESSAGE', '');
- 
+
 </pre>
 
 &#9650; [Formatting](#5-formatting)
