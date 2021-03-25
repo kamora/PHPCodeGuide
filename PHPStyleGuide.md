@@ -726,7 +726,6 @@ This section describes the format for function names, calls, arguments and decla
 	* MUST NOT have a space before the comma
 	* MUST have a space after the comma
 	* MAY use line breaks for long arguments
-	* MUST use descriptive defaults
 	* MUST use type hinting
 	* e.g. `func($arg1, $arg2 = 'asc', $arg3 = 100);`
 5. [**Function declaration**](#5-function-declaration) MUST be documented using [phpDocumentor](http://phpdoc.org/docs/latest/index.html) tag style and SHOULD include
