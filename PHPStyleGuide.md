@@ -467,18 +467,14 @@ This section outline various, general formatting rules related to whitespace and
 	* e.g. `$shortWelcomeMessage` instead of `$short_welcome_message`
 9. [**Constants**](#5-constants) MUST be all uppercase and words MUST be separated by an underscore
 	* e.g. `WELCOME_MESSAGE`
-10. [**Statements**](#10-statements) MUST be placed on their own line and MUST end with a semicolon
+10. [**Statements**](#6-statements) MUST be placed on their own line and MUST end with a semicolon
 	* e.g. `welcome_message();`
-11. [**Operators**](#11-operators) MUST be surrounded by a space
+11. [**Operators**](#7-operators) MUST be surrounded by a space
 	* e.g. `$total = 15 + 7;`, `$var .= '';`
-12. [**Unary operators**](#12-unary-operators) MUST be attached to their variable or integer
+12. [**Unary operators**](#8-unary-operators) MUST be attached to their variable or integer
 	* e.g. `$index++`, `--$index`
-13. [**Concatenation period**](#13-concatenation-period) MUST be surrounded by a space
+13. [**Concatenation period**](#9-concatenation-period) MUST be surrounded by a space
 	* e.g. `echo 'Read:' . $welcome_message;`
-14. [**Single quotes**](#14-single-quotes) MUST be used
-	* e.g. `echo 'Hello, World!';`
-15. [**Double quotes**](#15-double-quotes) SHOULD NOT be used
-	* e.g. `echo "Read: $welcome_message";` &rarr; `echo 'Read: ' . $welcome_message;`
 
 &#9650; [Table of Contents](#table-of-contents)
 
@@ -609,7 +605,7 @@ define('WELCOME_MESSAGE', '');
 
 <!-- ------------------------------ -->
 
-### 10. Statements
+### 6. Statements
 
 Statements MUST be placed on their own line and MUST end with a semicolon.
 
@@ -617,46 +613,26 @@ Statements MUST be placed on their own line and MUST end with a semicolon.
 
 <pre lang=php>
 &lt;?php
-
 $quotes_exist = false; print_welcome_message();
 
-// EOF
- 
 </pre>
 
-&#8627; Incorrect because `$quotes_exist = false;` and `print_welcome_message();` are on one line.
-
-<pre lang=html>
-&lt;div&gt;
-	&lt;h1&gt;&lt;?= print_welcome_message() ?&gt;&lt;/h1&gt;
-&lt;/div&gt;
-</pre>
-
-&#8627; Incorrect because `print_welcome_message()` is missing a semicolon.
+&#8627; Incorrect because the statements are on the same line.
 
 #### &#10004; Correct
 
 <pre lang=php>
 &lt;?php
-
 $quotes_exist = false;
 print_welcome_message();
 
-// EOF
- 
 </pre>
 
-<pre lang=html>
-&lt;div&gt;
-	&lt;h1&gt;&lt;?= print_welcome_message() ?&gt;&lt;/h1&gt;
-&lt;/div&gt;
-</pre>
-
-&#9650; [Formatting](#8-formatting)
+&#9650; [Formatting](#5-formatting)
 
 <!-- ------------------------------ -->
 
-### 11. Operators
+### 7. Operators
 
 Operators MUST be surrounded a space.
 
@@ -664,13 +640,10 @@ Operators MUST be surrounded a space.
 
 <pre lang=php>
 &lt;?php
-
 $total=3+14;
 $string='Hello, World! ';
 $string.='Today is a good day!';
 
-// EOF
- 
 </pre>
 
 &#8627; Incorrect because there is no space surrounding the `=`, `+` or `.=` sign.
@@ -684,28 +657,22 @@ $total = 3 + 14;
 $string = 'Hello, World! ';
 $string .= 'Today is a good day!';
 
-// EOF
- 
 </pre>
 
-&#9650; [Formatting](#8-formatting)
+&#9650; [Formatting](#5-formatting)
 
 <!-- ------------------------------ -->
 
-### 12. Unary Operators
+### 8. Unary Operators
 
-Unary operators MUST be attached to their variable or integer.
+Unary operators MUST be attached to their operand.
 
 #### &#10006; Incorrect
 
 <pre lang=php>
 &lt;?php
-
 $index ++;
 -- $index;
-
-// EOF
- 
 </pre>
 
 &#8627; Incorrect because there is a space before `++` and after `--`.
@@ -714,19 +681,15 @@ $index ++;
 
 <pre lang=php>
 &lt;?php
-
 $index++;
 --$index;
-
-// EOF
- 
 </pre>
 
-&#9650; [Formatting](#8-formatting)
+&#9650; [Formatting](#5-formatting)
 
 <!-- ------------------------------ -->
 
-### 13. Concatenation Period
+### 9. Concatenation Period
 
 Concatenation period MUST be surrounded by a space.
 
@@ -734,11 +697,7 @@ Concatenation period MUST be surrounded by a space.
 
 <pre lang=php>
 &lt;?php
-
 echo 'Hello, World! Today is '.$date.'!';
-
-// EOF
- 
 </pre>
 
 &#8627; Incorrect because there is no space surrounding `.`.
@@ -747,93 +706,12 @@ echo 'Hello, World! Today is '.$date.'!';
 
 <pre lang=php>
 &lt;?php
-
 echo 'Hello, World! Today is ' . $date . '!';
-
-// EOF
- 
 </pre>
 
-&#9650; [Formatting](#8-formatting)
+&#9650; [Formatting](#5-formatting)
 
 <!-- ------------------------------ -->
-
-### 14. Single Quotes
-
-Single quotes MUST be used.
-
-#### &#10006; Incorrect
-
-<pre lang=php>
-&lt;?php
-
-echo "Hello, World!";
-
-// EOF
- 
-</pre>
-
-&#8627; Incorrect because `"Hello, World!"` is not written with single quotes.
-
-#### &#10004; Correct
-
-<pre lang=php>
-&lt;?php
-
-echo 'Hello, World!';
-
-// EOF
- 
-</pre>
-
-&#9650; [Formatting](#8-formatting)
-
-<!-- ------------------------------ -->
-
-### 15. Double Quotes
-
-Double quotes SHOULD NOT be used.
-
-#### ~ Acceptable
-
-<pre lang=php>
-&lt;?php
-
-echo "Hello, World! Today is $date!";
-
-// EOF
- 
-</pre>
-
-&#8627; Acceptable, but burries the `$date` variable, which is why single quotes are preferred.
-
-<pre lang=php>
-&lt;?php
-
-echo "Hello, World! He's watching movies and she's reading books.";
-
-// EOF
- 
-</pre>
-
-&#8627; Acceptable when long pieces of text have apostrophies that would need to be escaped.
-
-#### &#10004; Preferred
-
-<pre lang=php>
-&lt;?php
-
-echo 'Hello, World! Today is ' . $date . '!';
-
-echo 'Hello, World! He\'s watching movies and she\'s reading books.';
-
-// EOF
- 
-</pre>
-
-&#9650; [Formatting](#8-formatting)
-
-<!-- ---------------------------------------------------------------------- -->
 
 ## 9. Functions
 
