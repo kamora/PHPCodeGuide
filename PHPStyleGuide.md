@@ -722,14 +722,10 @@ This section describes the format for function names, calls, arguments and decla
 	* e.g. `function welcomeMessage() {`
 3. [**Function call**](#2-function-call) MUST NOT have a space between function name and open parenthesis
 	* e.g. `func();`
-4. [**Function arguments**](#4-function-arguments)
+4. [**Function arguments**](#3-function-arguments)
 	* MUST NOT have a space before the comma
 	* MUST have a space after the comma
 	* MAY use line breaks for long arguments
-	* MUST then place each argument on its own line
-	* MUST then indent each argument once
-	* MUST be ordered from required to optional first
-	* MUST be ordered from high to low importance second
 	* MUST use descriptive defaults
 	* MUST use type hinting
 	* e.g. `func($arg1, $arg2 = 'asc', $arg3 = 100);`
@@ -809,114 +805,29 @@ Function arguments:
 * MUST NOT have a space before the comma
 * MUST have a space after the comma
 * MAY use line breaks for long arguments
-* MUST then place each argument on its own line
-* MUST then indent each argument once
-* MUST be ordered from required to optional first
-* MUST be ordered from high to low importance second
-* MUST use descriptive defaults
 * MUST use type hinting
 
 #### &#10006; Incorrect
 
 <pre lang=php>
 &lt;?php
-
-my_function($arg1 , $arg2 , $arg3);
-
-// EOF
- 
+someFunction($arg1 , $arg2 , $arg3);
 </pre>
 
 &#8627; Incorrect because there is a space before `,`.
 
 <pre lang=php>
 &lt;?php
-
-my_function($arg1,$arg2,$arg3);
-
-// EOF
- 
+someFunction($arg1,$arg2,$arg3);
 </pre>
 
 &#8627; Incorrect because there is no space after `,`.
 
 <pre lang=php>
 &lt;?php
-
-my_other_function($arg1_with_a_really_long_name,
-	$arg2_also_has_a_long_name,
-	$arg3
-);
-
-// EOF
- 
-</pre>
-
-&#8627; Incorrect because `$arg1_with_a_really_long_name` is not on its own line.
-
-<pre lang=php>
-&lt;?php
-
-my_other_function(
-$arg1_with_a_really_long_name,
-$arg2_also_has_a_long_name,
-$arg3
-);
-
-// EOF
- 
-</pre>
-
-&#8627; Incorrect because arguments are not indented once.
-
-<pre lang=php>
-&lt;?php
-
-function get_objects($type, $order = 'asc', $limit) {
+function addUsersToOffice($users, $Office) {
 	// ...
 }
-
-// EOF
- 
-</pre>
-
-&#8627; Incorrect because `$type`, `$order` and `$limit` are not in order of required to optional.
-
-<pre lang=php>
-&lt;?php
-
-function get_objects($limit, $order, $type) {
-	// ...
-}
-
-// EOF
- 
-</pre>
-
-&#8627; Incorrect because `$limit`, `$order` and `$type` are not in order of importance.
-
-<pre lang=php>
-&lt;?php
-
-function get_objects($type, $order = true, $limit = 100) {
-	// ...
-}
-
-// EOF
- 
-</pre>
-
-&#8627; Incorrect because `true` is not a descriptive default for `$order`.
-
-<pre lang=php>
-&lt;?php
-
-function add_users_to_office($users, $office) {
-	// ...
-}
-
-// EOF
- 
 </pre>
 
 &#8627; Incorrect because `$users` and `$office` are missing their data type.
@@ -926,24 +837,15 @@ function add_users_to_office($users, $office) {
 <pre lang=php>
 &lt;?php
 
-my_function($arg1, $arg2, $arg3);
+someFunction($arg1, $arg2, $arg3);
 
-my_other_function(
-	$arg1_with_a_really_long_name,
-	$arg2_also_has_a_long_name,
-	$arg3
-);
-
-function get_objects($type, $order = 'asc', $limit = 100) {
+function getObjects($type, $order = 'asc', $limit = 100) {
 	// ...
 }
 
-function add_users_to_office(array $users, Office $office) {
+function addUsersToOffice(array $users, Office $Office) {
 	// ...
 }
-
-// EOF
- 
 </pre>
 
 &#9650; [Functions](#9-functions)
