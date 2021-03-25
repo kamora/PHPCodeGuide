@@ -839,7 +839,7 @@ function addUsersToOffice($users, $Office) {
 
 <pre lang=php>
 &lt;?php
-function getObjects(string $type, string $order = 'asc', int $limit = 100) {
+function getObjects(string $type, string $order = 'asc', int $limit = 100): SomeObjectType {
 	// ...
 }
 
@@ -866,7 +866,6 @@ Function declaration MUST be documented via [phpDOC](http://phpdoc.org/docs/late
 &lt;?php
 function someFunction($id, $width = 100, $height = 100): Photo {
 	// ...
-	return $Photo;
 }
 </pre>
 
@@ -886,9 +885,8 @@ function someFunction($id, $width = 100, $height = 100): Photo {
  *
  * @throws AccessDeniedException
  */
-function someFunction($id, $width, $height): Photo {
+function someFunction(int $id, int $width, int $height): Photo {
 	// ...
-	return $SomeObject;
 }
 </pre>
 
@@ -900,100 +898,31 @@ function someFunction($id, $width, $height): Photo {
 
 Function return:
 
-* MUST occur as early as possible 
-* MUST be initialized prior at top
-* MUST be preceded by blank line, except inside control statement
+* MUST use type hinting
 
 #### &#10006; Incorrect
 
 <pre lang=php>
 &lt;?php
-
-function get_object() {
-	$var = false;
-	if($expr1) {
-		// ...
-		if($expr2) {
-			// ...
-		}
-	}
-
-	return $var;
-}
-
-// EOF
- 
-</pre>
-
-&#8627; Incorrect because `get_object` does not return as early as possible.
-
-<pre lang=php>
-&lt;?php
-
-function get_movies() {
+function getValue() {
 	// ...
-
-	return $movies;
+	return $someValue;
 }
-
-// EOF
- 
 </pre>
 
-&#8627; Incorrect because `$movies` is not initialized at top.
-
-<pre lang=php>
-&lt;?php
-
-function get_movies() {
-	$movies = array();
-	// ...
-	return $movies;
-}
-
-// EOF
- 
-</pre>
-
-&#8627; Incorrect because `return $movies` is not preceded by blank line.
+&#8627; Incorrect because the return type is not hinted.
 
 #### &#10004; Correct
 
 <pre lang=php>
 &lt;?php
-
-function get_object() {
-	$var = false;
-	if (!$expr1) {
-		return $var;
-	}
-	if (!$expr2) {
-		return $var;
-	}
+function getValue(): string {
 	// ...
-
-	return $var;
+	return $someValue;
 }
-
-// EOF
- 
 </pre>
 
-<pre lang=php>
-&lt;?php
-
-function get_movies() {
-	$movies = array();
-	// ...
-
-	return $movies;
-}
-
-// EOF
- 
-</pre>
-
-&#9650; [Functions](#9-functions)
+&#9650; [Functions](#6-functions)
 
 <!-- ---------------------------------------------------------------------- -->
 
