@@ -714,15 +714,13 @@ echo 'Hello, World! Today is ' . $date . '!';
 
 <!-- ------------------------------ -->
 
-## 9. Functions
+## 6. Functions
 
 This section describes the format for function names, calls, arguments and declarations.
 
-1. [**Function name**](#1-function-name) MUST be all lowercase and words MUST be separated by an underscore
-	* e.g. `function welcome_message() {`
-2. [**Function prefix**](#2-function-prefix) MUST start with verb
-	* e.g. `get_`, `add_`, `update_`, `delete_`, `convert_`, etc.
-3. [**Function call**](#3-function-call) MUST NOT have a space between function name and open parenthesis
+1. [**Function name**](#1-function-name) MUST start from a lowercase letter, MUST be all camelcased, and MUST NOT be separated by an underscore.
+	* e.g. `function welcomeMessage() {`
+3. [**Function call**](#2-function-call) MUST NOT have a space between function name and open parenthesis
 	* e.g. `func();`
 4. [**Function arguments**](#4-function-arguments)
 	* MUST NOT have a space before the comma
@@ -761,80 +759,26 @@ Function name MUST be all lowercase and words MUST be separated by an underscore
 
 <pre lang=php>
 &lt;?php
-
-get_Welcome_Message();
-Get_Welcome_Message();
+get_WelcomeMessage();
+GetWelcomeMessage();
 GET_WELCOME_MESSAGE();
-
-// EOF
- 
-</pre>
-
-&#8627; Incorrect because the function names are not all lowercase.
-
-<pre lang=php>
-&lt;?php
-
 getwelcomemessage();
-
-// EOF
- 
 </pre>
 
-&#8627; Incorrect because `get`, `welcome` and `message` are not separated with an underscore.
+&#8627; Incorrect because the function names are not all properly camelcased.
 
 #### &#10004; Correct
 
 <pre lang=php>
 &lt;?php
-
-get_welcome_message();
-
-// EOF
- 
+getWelcomeMessage();
 </pre>
 
-&#9650; [Functions](#9-functions)
+&#9650; [Functions](#6-functions)
 
 <!-- ------------------------------ -->
 
-### 2. Function Prefix
-
-Function prefix MUST start with verb.
-
-#### &#10006; Incorrect
-
-<pre lang=php>
-&lt;?php
-
-active_users();
-network_location($location1, $location2);
-widget_form($id);
-
-// EOF
- 
-</pre>
-
-&#8627; Incorrect because functions are not prefixed with a verb.
-
-#### &#10004; Correct
-
-<pre lang=php>
-&lt;?php
-
-get_active_users();
-move_network_location($location1, $location2);
-delete_widget_form($id);
-
-// EOF
- 
-</pre>
-
-&#9650; [Functions](#9-functions)
-
-<!-- ------------------------------ -->
-
-### 3. Function Call
+### 2. Function Call
 
 Function call MUST NOT have a space between function name and open parenthesis.
 
@@ -842,31 +786,23 @@ Function call MUST NOT have a space between function name and open parenthesis.
 
 <pre lang=php>
 &lt;?php
-
-print_welcome_message ();
-
-// EOF
- 
+printWelcomeMessage ();
 </pre>
 
-&#8627; Incorrect because there is a space between `get_welcome_message` and `()`.
+&#8627; Incorrect because there is a space between `getWelcomeMessage` and `()`.
 
 #### &#10004; Correct
 
 <pre lang=php>
 &lt;?php
-
-print_welcome_message();
-
-// EOF
- 
+printWelcomeMessage();
 </pre>
 
-&#9650; [Functions](#9-functions)
+&#9650; [Functions](#6-functions)
 
 <!-- ------------------------------ -->
 
-### 4. Function Arguments
+### 3. Function Arguments
 
 Function arguments:
 
