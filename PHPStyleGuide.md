@@ -835,10 +835,9 @@ function addUsersToOffice($users, $Office) {
 
 <pre lang=php>
 &lt;?php
+someFunction(int $arg1, int $arg2, int $arg3);
 
-someFunction($arg1, $arg2, $arg3);
-
-function getObjects($type, $order = 'asc', $limit = 100) {
+function getObjects(string $type, string $order = 'asc', int $limit = 100) {
 	// ...
 }
 
