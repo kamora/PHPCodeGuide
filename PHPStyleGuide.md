@@ -803,8 +803,8 @@ Function arguments:
 
 * MUST NOT have a space before the comma
 * MUST have a space after the comma
+* MUST be type-hinted
 * MAY use line breaks for long arguments
-* MUST use type hinting
 
 #### &#10006; Incorrect
 
@@ -864,7 +864,7 @@ Function declaration MUST be documented via [phpDOC](http://phpdoc.org/docs/late
 
 <pre lang=php>
 &lt;?php
-function someFunction($id, $width = 100, $height = 100): Photo {
+function someFunction(int $id, int $width, int $height): Photo {
 	// ...
 }
 </pre>
@@ -898,7 +898,7 @@ function someFunction(int $id, int $width, int $height): Photo {
 
 Function return:
 
-* MUST use type hinting
+* MUST be type-hinted
 
 #### &#10006; Incorrect
 
@@ -906,7 +906,6 @@ Function return:
 &lt;?php
 function getValue() {
 	// ...
-	return $someValue;
 }
 </pre>
 
@@ -918,7 +917,6 @@ function getValue() {
 &lt;?php
 function getValue(): string {
 	// ...
-	return $someValue;
 }
 </pre>
 
@@ -926,7 +924,7 @@ function getValue(): string {
 
 <!-- ---------------------------------------------------------------------- -->
 
-## 10. Control Structures
+## 7. Control Structures
 This section defines the layout and usage of control structures. Note that this section is separated into rules that are applicable to all structures, followed by specific rules for individual structures.
 
 * **Keyword** MUST be followed by a space
