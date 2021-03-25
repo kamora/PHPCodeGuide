@@ -56,7 +56,7 @@ The icons are used to designate the character sequences around this document sim
 	4. [Function Arguments](#4-function-arguments)
 	5. [Function Declaration](#5-function-declaration)
 	6. [Function Return](#6-function-return)
-7. [**Control Structures**](#10-control-structures)
+7. [**Control Structures**](#7-control-structures)
 	1. [If, Elseif, Else](#1-if-elseif-else)
 	2. [Switch, Case](#2-switch-case)
 	3. [While, Do While](#3-while-do-while)
@@ -1048,7 +1048,7 @@ if ($expr2) {
  
 </pre>
 
-&#9650; [Control Structures](#10-control-structures)
+&#9650; [Control Structures](#7-control-structures)
 
 <!-- ------------------------------ -->
 
@@ -1170,7 +1170,7 @@ switch ($expr) {
  
 </pre>
 
-&#9650; [Control Structures](#10-control-structures)
+&#9650; [Control Structures](#7-control-structures)
 
 <!-- ------------------------------ -->
 
@@ -1193,7 +1193,7 @@ do {
  
 </pre>
 
-&#9650; [Control Structures](#10-control-structures)
+&#9650; [Control Structures](#7-control-structures)
 
 <!-- ------------------------------ -->
 
@@ -1216,7 +1216,7 @@ foreach ($iterable as $key => $value) {
  
 </pre>
 
-&#9650; [Control Structures](#10-control-structures)
+&#9650; [Control Structures](#7-control-structures)
 
 <!-- ------------------------------ -->
 
@@ -1260,7 +1260,7 @@ try {
  
 </pre>
 
-&#9650; [Control Structures](#10-control-structures)
+&#9650; [Control Structures](#7-control-structures)
 
 <!-- ---------------------------------------------------------------------- -->
 
