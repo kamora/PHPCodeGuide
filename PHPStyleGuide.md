@@ -720,15 +720,15 @@ This section describes the format for function names, calls, arguments and decla
 
 1. [**Function name**](#1-function-name) MUST start from a lowercase letter, MUST be all camelcased, and MUST NOT be separated by an underscore.
 	* e.g. `function welcomeMessage() {`
-3. [**Function call**](#2-function-call) MUST NOT have a space between function name and open parenthesis
+2. [**Function call**](#2-function-call) MUST NOT have a space between function name and open parenthesis
 	* e.g. `func();`
-4. [**Function arguments**](#3-function-arguments)
+3. [**Function arguments**](#3-function-arguments)
 	* MUST NOT have a space before the comma
 	* MUST have a space after the comma
 	* MAY use line breaks for long arguments
 	* MUST use type hinting
 	* e.g. `func($arg1, $arg2 = 'asc', $arg3 = 100);`
-5. [**Function declaration**](#5-function-declaration) MUST be documented using [phpDocumentor](http://phpdoc.org/docs/latest/index.html) tag style and SHOULD include
+4. [**Function declaration**](#4-function-declaration) MUST be documented using [phpDocumentor](http://phpdoc.org/docs/latest/index.html) tag style and SHOULD include
 	* Short description
 	* Optional long description, if needed
 	* @access: `private` or `protected` (assumed `public`)
@@ -736,7 +736,7 @@ This section describes the format for function names, calls, arguments and decla
 	* @global: Global variables function uses, if applicable
 	* @param: Parameters with data type, variable name, and description
 	* @return: Return data type, if applicable
-6. [**Function return**](#6-function-return)
+5. [**Function return**](#5-function-return)
 	* MUST occur as early as possible 
 	* MUST be initialized prior at top
 	* MUST be preceded by blank line, except inside control statement
@@ -810,14 +810,18 @@ Function arguments:
 
 <pre lang=php>
 &lt;?php
-someFunction($arg1 , $arg2 , $arg3);
+someFunction($arg1 , $arg2 , $arg3) {
+	// ...
+}
 </pre>
 
 &#8627; Incorrect because there is a space before `,`.
 
 <pre lang=php>
 &lt;?php
-someFunction($arg1,$arg2,$arg3);
+someFunction($arg1,$arg2,$arg3) {
+	// ...
+}
 </pre>
 
 &#8627; Incorrect because there is no space after `,`.
@@ -839,74 +843,56 @@ function getObjects(string $type, string $order = 'asc', int $limit = 100) {
 	// ...
 }
 
-function addUsersToOffice(array $users, Office $Office) {
+function addUsersToOffice(array $users, Office $Office): bool {
 	// ...
 }
 </pre>
 
-&#9650; [Functions](#9-functions)
+&#9650; [Functions](#6-functions)
 
 <!-- ------------------------------ -->
 
-### 5. Function Declaration
+### 4. Function Declaration
 
-Function declaration MUST be documented using [phpDocumentor](http://phpdoc.org/docs/latest/index.html) tag style and SHOULD include:
+Function declaration MUST be documented via [phpDOC](http://phpdoc.org/docs/latest/index.html) and MUST include but not be limited by:
 
-* Short description
-* Optional long description, if needed
-* @access: `private` or `protected` (assumed `public`)
-* @author: Author name
-* @global: Global variables function uses, if applicable
 * @param: Parameters with data type, variable name, and description
 * @return: Return data type, if applicable
+* @throws: Throwable exceptions if any
 
 #### &#10006; Incorrect
 
 <pre lang=php>
 &lt;?php
-
-function my_function($id, $type, $width, $height) {
+function someFunction($id, $width = 100, $height = 100): Photo {
 	// ...
 	return $Photo;
 }
-
-// EOF
- 
 </pre>
 
-&#8627; Incorrect because `my_function` is not documented.
+&#8627; Incorrect because the function is not documented.
 
 #### &#10004; Correct
 
 <pre lang=php>
 &lt;?php
-
 /**
  * Get photo from blog author
- * 
- * Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id volutpat 
- * orci. Etiam pharetra eget turpis non ultrices. Pellentesque vitae risus 
- * sagittis, vehicula massa eget, tincidunt ligula.
  *
- * @access private
- * @author Firstname Lastname
- * @global object $post
- * @param int $id Author ID
- * @param string $type Type of photo
- * @param int $width Photo width in px
- * @param int $height Photo height in px
- * @return object Photo
+ * @param int $id 
+ * @param int $width 
+ * @param int $height
+ * @return Photo
+ *
+ * @throws AccessDeniedException
  */
-function my_function($id, $type, $width, $height) {
+function someFunction($id, $width, $height): Photo {
 	// ...
-	return $Photo;
+	return $SomeObject;
 }
-
-// EOF
- 
 </pre>
 
-&#9650; [Functions](#9-functions)
+&#9650; [Functions](#6-functions)
 
 <!-- ------------------------------ -->
 
