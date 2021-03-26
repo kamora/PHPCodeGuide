@@ -856,8 +856,9 @@ function addUsersToOffice(array $users, Office $Office): bool {
 
 ### 4. Function Declaration
 
-Function declaration MUST be documented via [phpDOC](http://phpdoc.org/docs/latest/index.html) and MUST include but not be limited by:
+Function declaration MUST be documented via [phpDOC](http://phpdoc.org/docs/latest/index.html) and SHOULD include but not be limited by:
 
+* short description if needed
 * `@param` - argument data type and name
 * `@return` - return data type, if applicable
 * `@throws` - throwable exceptions if any
@@ -878,16 +879,16 @@ function someFunction(int $id, int $width, int $height): Photo {
 <pre lang=php>
 &lt;?php
 /**
- * Get photo from blog author
+ * Get profile photo of a customer
  *
  * @param int $id 
  * @param int $width 
  * @param int $height
- * @return Photo
+ * @return string
  *
  * @throws AccessDeniedException
  */
-function someFunction(int $id, int $width, int $height): Photo {
+function someFunction(int $id, int $width, int $height): string {
 	// ...
 }
 </pre>
