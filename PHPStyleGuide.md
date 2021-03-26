@@ -942,8 +942,6 @@ This section defines the layout and usage of control structures. Note that this 
 	* e.g. `if ($expr) {` `↵` `⇥` `...` `↵` `}`
 * **Closing brace** MUST start on the next line
 	* i.e. `...` `↵` `}`
-* **Nesting** MUST NOT exceed three levels
-	* e.g. no `if ($expr1) { if ($expr2) { if ($expr3) { if ($expr4) { ` `...` `}}}}`
 
 In addition to the rules above, some control structures have additional requirements:
 
@@ -957,8 +955,6 @@ In addition to the rules above, some control structures have additional requirem
 		* i.e. `⇥` `⇥` `func();`
 	* Break keyword MUST be indented twice
 		* i.e. `⇥` `⇥` `break;`
-	* Case logic MUST be separated by one blank line
-		* i.e. `case 1: ... break;` `↵` `↵` `case 2: ... break;`
 3. [**While, Do While**](#3-while-do-while)
 4. [**For, Foreach**](#4-for-foreach)
 5. [**Try, Catch**](#5-try-catch)
