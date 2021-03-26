@@ -803,7 +803,7 @@ Function arguments:
 
 * MUST NOT have a space before the comma
 * MUST have a space after the comma
-* MUST be type-hinted
+* SHOULD be type-hinted
 * MAY use line breaks for long arguments
 
 #### &#10006; Incorrect
@@ -826,6 +826,8 @@ someFunction($arg1,$arg2,$arg3) {
 
 &#8627; Incorrect because there is no space after `,`.
 
+#### ~ Acceptable
+
 <pre lang=php>
 &lt;?php
 function addUsersToOffice($users, $Office) {
@@ -833,9 +835,9 @@ function addUsersToOffice($users, $Office) {
 }
 </pre>
 
-&#8627; Incorrect because `$users` and `$office` are missing their data type.
+&#8627; Acceptable, but `$users` and `$office` are missing their data type.
 
-#### &#10004; Correct
+#### &#10004; Preferred
 
 <pre lang=php>
 &lt;?php
