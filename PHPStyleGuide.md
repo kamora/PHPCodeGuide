@@ -835,7 +835,7 @@ function addUsersToOffice($users, $Office) {
 }
 </pre>
 
-&#8627; Acceptable, but `$users` and `$office` are missing their data type.
+&#8627; Acceptable, but `$users` and `$office` are missing their data types.
 
 #### &#10004; Preferred
 
@@ -858,9 +858,9 @@ function addUsersToOffice(array $users, Office $Office): bool {
 
 Function declaration MUST be documented via [phpDOC](http://phpdoc.org/docs/latest/index.html) and MUST include but not be limited by:
 
-* @param: Parameters with data type, variable name, and description
-* @return: Return data type, if applicable
-* @throws: Throwable exceptions if any
+* `@param` - argument data type and name
+* `@return` - return data type, if applicable
+* `@throws` - throwable exceptions if any
 
 #### &#10006; Incorrect
 
