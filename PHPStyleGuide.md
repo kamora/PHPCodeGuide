@@ -901,9 +901,9 @@ function someFunction(int $id, int $width, int $height): string {
 
 Function return:
 
-* MUST be type-hinted
+* SHOULD be type-hinted if applicable
 
-#### &#10006; Incorrect
+#### ~ Acceptable
 
 <pre lang=php>
 &lt;?php
@@ -912,9 +912,9 @@ function getValue() {
 }
 </pre>
 
-&#8627; Incorrect because the return type is not hinted.
+&#8627; Acceptable, but the return type is not hinted.
 
-#### &#10004; Correct
+#### &#10004; Preferred
 
 <pre lang=php>
 &lt;?php
