@@ -972,7 +972,6 @@ In addition to the rules above, some control structures have additional requirem
 
 <pre lang=php>
 &lt;?php
-
 if ($expr1) {
 	// if body
 } else if ($expr2) {
@@ -980,16 +979,12 @@ if ($expr1) {
 } else {
 	// else body
 }
-
-// EOF
- 
 </pre>
 
 &#8627; Incorrect because `else if` was used instead of `elseif`.
 
 <pre lang=php>
 &lt;?php
-
 if ($expr1) {
 	// if body
 }
@@ -999,23 +994,16 @@ elseif ($expr2) {
 else {
 	// else body
 }
-
-// EOF
- 
 </pre>
 
 &#8627; Incorrect because `elseif` and `else` are not between `}` and `{` on one line.
 
 <pre lang=php>
 &lt;?php
-
 $result1 = if ($expr1) ? true : false;
 
 if($expr2)
 	$result2 = true;
-
-// EOF
- 
 </pre>
 
 &#8627; Incorrect because structure body is not wrapped in curly braces.
@@ -1024,7 +1012,6 @@ if($expr2)
 
 <pre lang=php>
 &lt;?php
-
 if ($expr1) {
 	// if body
 } elseif ($expr2) {
@@ -1042,9 +1029,6 @@ if ($expr1) {
 if ($expr2) {
 	$result2 = true;
 }
-
-// EOF
- 
 </pre>
 
 &#9650; [Control Structures](#7-control-structures)
