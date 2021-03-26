@@ -803,7 +803,7 @@ Function arguments:
 
 * MUST NOT have a space before the comma
 * MUST have a space after the comma
-* SHOULD be type-hinted
+* SHOULD be type-hinted if possible
 * MAY use line breaks for long arguments
 
 #### &#10006; Incorrect
