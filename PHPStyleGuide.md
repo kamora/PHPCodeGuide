@@ -1183,10 +1183,11 @@ This section describes class files, names, definitions, properties, methods and 
 5. [**Class definition**](#4-class-definition) MUST place curly braces on the same line after a space
 	* i.e. `class User` `·` `{` `↵` `...` `↵` `}`
 6. [**Class properties**](#5-class-properties)
-	* MUST follow [variable standards](#6-variables)
+	* MUST follow [variable standards](#4-variables)
 	* MUST specify visibility
-	* MUST NOT be prefixed with an underscore if private or protected
-	* e.g. `$var1;`, `private $var2;`, `protected $var3;`
+	* MUST NOT be prefixed with an underscore
+	* SHOULD be type-hinted if possible
+	* e.g. `protected int $var3;`
 7. [**Class methods**](#7-class-methods)
 	* MUST follow [function standards](#9-functions)
 	* MUST specify visibility
@@ -1239,7 +1240,7 @@ class User {
 
 ### 2. Class Namespace
 
-Class namespace MUST be defined and MUST include vendor name.
+Class namespace MUST be defined.
 
 #### &#10006; Incorrect
 
@@ -1382,7 +1383,7 @@ class User {
 }
 </pre>
 
-&#8627; Incorrect because some properties are prefixed with `_`.
+&#8627; Incorrect because some properties are prefixed by the underscore.
 
 #### ~ Acceptable
 
