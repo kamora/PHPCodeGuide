@@ -1019,16 +1019,6 @@ if ($expr1) {
 } else {
 	// else body
 }
-
-if ($expr1) {
-	$result1 = true;
-} else {
-	$result1 = false;
-}
-
-if ($expr2) {
-	$result2 = true;
-}
 </pre>
 
 &#9650; [Control Structures](#7-control-structures)
