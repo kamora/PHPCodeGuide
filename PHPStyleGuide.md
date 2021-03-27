@@ -1293,7 +1293,7 @@ class Officeprogram {
 }
 </pre>
 
-&#8627; Incorrect because `Officeprogram` is not camelcase.
+&#8627; Incorrect because `Officeprogram` is not camelcased.
 
 #### &#10004; Correct
 
@@ -1312,7 +1312,7 @@ class OfficeProgram {
 
 ### 4. Class Definition
 
-Class definition MUST place curly braces on their own line.
+Class definition MUST place curly braces on the same line.
 
 #### &#10006; Incorrect
 
