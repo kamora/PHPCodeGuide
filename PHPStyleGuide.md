@@ -32,23 +32,23 @@ The icons are used to designate the character sequences around this document sim
 4. [**Comments**](#4-comments)
 	1. [Single-line Comments](#1-single-line-comments)
 	2. [Multi-line Comments](#2-multi-line-comments)
-	2. [PHPDoc Comments](#3-phpdoc-comments)
+	3. [PHPDoc Comments](#3-phpdoc-comments)
 5. [**Formatting**](#5-formatting)
 	1. [Line Length](#1-line-length)
 	2. [Line Indentation](#2-line-indentation)
-	6. [Keywords](#3-keywords)
-	7. [Variables](#4-variables)
-	9. [Constants](#5-constants)
-	10. [Statements](#6-statements)
-	11. [Operators](#7-operators)
-	12. [Unary Operators](#8-unary-operators)
-	13. [Concatenation Period](#9-concatenation-period)
+	3. [Keywords](#3-keywords)
+	4. [Variables](#4-variables)
+	5. [Constants](#5-constants)
+	6. [Statements](#6-statements)
+	7. [Operators](#7-operators)
+	8. [Unary Operators](#8-unary-operators)
+	9. [Concatenation Period](#9-concatenation-period)
 6. [**Functions**](#6-functions)
 	1. [Function Name](#1-function-name)
 	3. [Function Call](#2-function-call)
-	4. [Function Arguments](#3-function-arguments)
-	5. [Function Declaration](#4-function-declaration)
-	6. [Function Return](#5-function-return)
+	3. [Function Arguments](#3-function-arguments)
+	4. [Function Declaration](#4-function-declaration)
+	5. [Function Return](#5-function-return)
 7. [**Control Structures**](#7-control-structures)
 	1. [If, Elseif, Else](#1-if-elseif-else)
 	2. [Switch, Case](#2-switch-case)
@@ -59,10 +59,11 @@ The icons are used to designate the character sequences around this document sim
 	1. [Class File](#1-class-file)
 	2. [Class Namespace](#2-class-namespace)
 	3. [Class Name](#3-class-name)
-	5. [Class Definition](#4-class-definition)
-	6. [Class Properties](#5-class-properties)
-	7. [Class Methods](#6-class-methods)
-	8. [Class Instance](#7-class-instance)
+	4. [Class Definition](#4-class-definition)
+	5. [Extends and Implements] (#6-class-definition)  
+	6. [Class Properties](#7-class-properties)
+	7. [Class Methods](#8-class-methods)
+	8. [Class Instance](#9-class-instance)
 
 <!-- ---------------------------------------------------------------------- -->
 
@@ -1174,20 +1175,24 @@ This section describes class files, names, definitions, properties, methods and 
 2. [**Class namespace**](#2-class-namespace) MUST be defined
 3. [**Class name**](#3-class-name) MUST start with a capital letter and MUST be camelcased
 	* e.g. `MyCompany`
-5. [**Class definition**](#4-class-definition) MUST place curly braces on the same line after a space
+4. [**Class definition**](#4-class-definition) MUST place curly braces on the same line after a space
 	* i.e. `class User` `·` `{` `↵` `...` `↵` `}`
-6. [**Class properties**](#5-class-properties)
+5. [**Extends keyword**](#5-extends-keyword)
+	* MUST be placed on the same line.
+6. [**Implements keyword**](#6-implements-keyword)
+	* SHOULD be moved to the next line.
+7. [**Class properties**](#7-class-properties)
 	* MUST follow [variable standards](#4-variables)
 	* MUST specify visibility
 	* MUST NOT be prefixed with an underscore
 	* SHOULD be type-hinted if possible
 	* e.g. `protected int $var3;`
-7. [**Class methods**](#6-class-methods)
+8. [**Class methods**](#8-class-methods)
 	* MUST follow [function standards](#6-functions)
 	* MUST specify visibility
 	* MUST NOT be prefixed with an underscore if private or protected
 	* e.g. `protected func3()`
-8. [**Class instance**](#7-class-instance)
+9. [**Class instance**](#9-class-instance)
 	* MUST start with capital letter
 	* MUST be camelcase
 	* MUST include parenthesis
@@ -1306,7 +1311,7 @@ class OfficeProgram {
 
 ### 4. Class Definition
 
-Class definition MUST place curly braces on the same line.
+The opening curly brace MUST be placed on the same line.
 
 #### &#10006; Incorrect
 
@@ -1337,7 +1342,74 @@ class User {
 
 <!-- ------------------------------ -->
 
-### 5. Class Properties
+### 5. Extends Keyword
+
+The `extends` keyword MUST be placed on the same line.
+
+#### &#10006; Incorrect
+
+<pre lang=php>
+&lt;?php
+namespace Core\Model;
+
+class User 
+	extends APrototype {
+	// ...
+}
+</pre>
+
+&#8627; Incorrect because The `extends` keyword is not on the same line.
+
+#### &#10004; Correct
+
+<pre lang=php>
+&lt;?php
+namespace Core\Model;
+
+class User extends APrototype {
+	// ...
+}
+</pre>
+
+&#9650; [Classes](#8-classes)
+
+<!-- ------------------------------ -->
+
+
+### 6. Implements keyword
+
+The `implements` keyword SHOULD be moved to the next line.
+
+#### ~ Acceptable
+
+<pre lang=php>
+&lt;?php
+namespace Core\Model;
+
+class User extends APrototype implements Countable {
+	// ...
+}
+</pre>
+
+&#8627; Incorrect because `{` is not on the same line.
+
+#### &#10004; Preferred
+
+<pre lang=php>
+&lt;?php
+namespace Core\Model;
+
+class User extends APrototype 
+	implements Countable {
+	// ...
+}
+</pre>
+
+&#9650; [Classes](#8-classes)
+
+<!-- ------------------------------ -->
+
+### 7. Class Properties
 
 Class properties:
 
@@ -1411,7 +1483,7 @@ class User {
 
 <!-- ------------------------------ -->
 
-### 6. Class Methods
+### 8. Class Methods
 
 Class methods:
 
@@ -1497,7 +1569,7 @@ class User {
 
 <!-- ------------------------------ -->
 
-### 7. Class Instance
+### 9. Class Instance
 
 Class instance:
 
