@@ -1033,7 +1033,6 @@ if ($expr1) {
 
 <pre lang=php>
 &lt;?php
-
 switch ($expr) {
 case 0:
 	echo 'First case, with a break';
@@ -1052,16 +1051,12 @@ default:
 	echo 'Default case';
 	break;
 }
-
-// EOF
- 
 </pre>
 
 &#8627; Incorrect because `case 0` thru `default` are not indented once.
 
 <pre lang=php>
 &lt;?php
-
 switch ($expr) {
 	case 0:
 	echo 'First case, with a break';
@@ -1080,44 +1075,14 @@ switch ($expr) {
 	echo 'Default case';
 	break;
 }
-
-// EOF
- 
 </pre>
 
 &#8627; Incorrect because `echo`, `break` and `return` are not indented twice.
-
-<pre lang=php>
-&lt;?php
-
-switch ($expr) {
-	case 0:
-		echo 'First case, with a break';
-		break;
-	case 1:
-		echo 'Second case, which falls through';
-		// no break
-	case 2:
-	case 3:
-	case 4:
-		echo 'Third case, return instead of break';
-		return;
-	default:
-		echo 'Default case';
-		break;
-}
-
-// EOF
- 
-</pre>
-
-&#8627; Incorrect because `case 0`, `case 1` thru `case 4`, and `default` are not separated by one blank line.
 
 #### &#10004; Correct
 
 <pre lang=php>
 &lt;?php
-
 switch ($expr) {
 	case 0:
 		echo 'First case, with a break';
@@ -1136,9 +1101,6 @@ switch ($expr) {
 		echo 'Default case';
 		break;
 }
-
-// EOF
- 
 </pre>
 
 &#9650; [Control Structures](#7-control-structures)
