@@ -1497,9 +1497,6 @@ class User {
 		return $this->var3;
 	}
 }
-
-// EOF
- 
 </pre>
 
 &#9650; [Classes](#8-classes)
@@ -1510,31 +1507,23 @@ class User {
 
 Class instance:
 
-* MUST follow [variable standards](#7-variables)
+* MUST follow [variable standards](#4-variables)
 * MUST include parenthesis
 
 #### &#10006; Incorrect
 
 <pre lang=php>
 &lt;?php
-
 $office_program = new OfficeProgram;
-
-// EOF
- 
 </pre>
 
-&#8627; Incorrect because `new OfficeProgram` is missing parenthesis.
+&#8627; Incorrect because a lack of parenthesis.
 
 #### &#10004; Correct
 
 <pre lang=php>
 &lt;?php
-
 $office_program = new OfficeProgram();
-
-// EOF
- 
 </pre>
 
 &#9650; [Classes](#8-classes)
