@@ -1192,7 +1192,7 @@ This section describes class files, names, definitions, properties, methods and 
 	* MUST follow [function standards](#9-functions)
 	* MUST specify visibility
 	* MUST NOT be prefixed with an underscore if private or protected
-	* e.g. `func1()`, `private func2()`, `protected func3()`
+	* e.g. `protected func3()`
 8. [**Class instance**](#8-class-instance)
 	* MUST start with capital letter
 	* MUST be camelcase
@@ -1421,91 +1421,79 @@ class User {
 
 Class methods:
 
-* MUST follow [function standards](#9-functions)
+* MUST follow [function standards](#6-functions)
 * MUST specify visibility
-* MUST NOT be prefixed with an underscore if private or protected
+* MUST NOT be prefixed with an underscore
 
 #### &#10006; Incorrect
 
 <pre lang=php>
 &lt;?php
-
 namespace Core\Model;
 
-class User
-{
+class User {
 	// ...
 
 	// Public
-	function get_var1() {
+	function getVar1(): int {
 		return $this->var1;
 	}
 
 	// Protected
-	function get_var2() {
+	function getVar2(): string {
 		return $this->var2;
 	}
 
 	// Private
-	function get_var3() {
+	function getVar3(): bool {
 		return $this->var3;
 	}
 }
-
-// EOF
- 
 </pre>
 
-&#8627; Incorrect because visibility is not specified for `get_var1()`, `get_var2()` and `get_var3()`.
+&#8627; Incorrect because visibility is not specified.
 
 <pre lang=php>
 &lt;?php
-
 namespace Core\Model;
 
-class User
-{
+class User {
 	// ...
 
-	public function get_var1() {
+	public function getVar1(): int {
 		return $this->var1;
 	}
 
-	protected function _get_var2() {
+	protected function _getVar2(): string {
 		return $this->var2;
 	}
 
-	private function _get_var3() {
+	private function _getVar3(): bool {
 		return $this->var3;
 	}
 }
-
-// EOF
- 
 </pre>
 
-&#8627; Incorrect because `protected` and `private` methods are prefixed with `_`.
+&#8627; Incorrect because some methods are prefixed by the underscore.
 
 #### &#10004; Correct
 
 <pre lang=php>
 &lt;?php
+namespace Core\Model;
 
-namespace MyCompany\Model;
-
-class User
-{
+class User {
 	// ...
 
-	public function get_var1() {
+	public function getVar1(): int {
 		return $this->var1;
 	}
 
-	protected function get_var2() {
+	protected function getVar2(): string {
 		return $this->var2;
 	}
 
-	private function get_var3() {
+	private function getVar3(): bool {
 		return $this->var3;
 	}
 }
