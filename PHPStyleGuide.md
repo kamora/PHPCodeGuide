@@ -1113,17 +1113,13 @@ switch ($expr) {
 
 <pre lang=php>
 &lt;?php
-
 while ($expr) {
-	// structure body
+	// ...
 }
 
 do {
-	// structure body;
+	// ...
 } while ($expr);
-
-// EOF
- 
 </pre>
 
 &#9650; [Control Structures](#7-control-structures)
@@ -1136,17 +1132,13 @@ do {
 
 <pre lang=php>
 &lt;?php
-
 for ($i = 0; $i &lt; 10; $i++) {
-	// for body
+	// ...
 }
 
 foreach ($iterable as $key => $value) {
-	// foreach body
+	// ...
 }
-
-// EOF
- 
 </pre>
 
 &#9650; [Control Structures](#7-control-structures)
@@ -1159,19 +1151,15 @@ foreach ($iterable as $key => $value) {
 
 <pre lang=php>
 &lt;?php
-
 try {
-	// try body
+	// ...
 }
-catch (FirstExceptionType $e) {
-	// catch body
+catch (FirstExceptionType $Exception) {
+	// ...
 }
-catch (OtherExceptionType $e) {
-	// catch body
+catch (OtherExceptionType $Exception) {
+	// ...
 }
-
-// EOF
- 
 </pre>
 
 &#8627; Incorrect because `catch` is not between `}` and `{` on one line.
@@ -1180,17 +1168,13 @@ catch (OtherExceptionType $e) {
 
 <pre lang=php>
 &lt;?php
-
 try {
-	// try body
-} catch (FirstExceptionType $e) {
-	// catch body
-} catch (OtherExceptionType $e) {
-	// catch body
+	// ...
+} catch (FirstExceptionType $Exception) {
+	// ...
+} catch (OtherExceptionType $Exception) {
+	// ...
 }
-
-// EOF
- 
 </pre>
 
 &#9650; [Control Structures](#7-control-structures)
