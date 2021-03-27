@@ -1000,10 +1000,8 @@ else {
 
 <pre lang=php>
 &lt;?php
-$result1 = if ($expr1) ? true : false;
-
-if($expr2)
-	$result2 = true;
+if($expr)
+	$result = 100;
 </pre>
 
 &#8627; Incorrect because structure body is not wrapped in curly braces.
