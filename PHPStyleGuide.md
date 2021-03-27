@@ -1358,7 +1358,7 @@ class User
 }
 </pre>
 
-&#8627; Incorrect because The `extends` keyword is not on the same line.
+&#8627; Incorrect because the `extends` keyword is not on the same line.
 
 #### &#10004; Correct
 
@@ -1391,7 +1391,7 @@ class User extends APrototype implements Countable {
 }
 </pre>
 
-&#8627; Incorrect because `{` is not on the same line.
+&#8627; Incorrect because the `implements` keyword is not on the new line.
 
 #### &#10004; Preferred
 
