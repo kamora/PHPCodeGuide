@@ -36,40 +36,32 @@ The icons are used to designate the character sequences around this document sim
 5. [**Formatting**](#5-formatting)
 	1. [Line Length](#1-line-length)
 	2. [Line Indentation](#2-line-indentation)
-	3. [Blank Lines](#3-blank-lines)
-	4. [Text Alignment](#4-text-alignment)
-	5. [Trailing Whitespace](#5-trailing-whitespace)
-	6. [Keywords](#6-keywords)
-	7. [Variables](#7-variables)
-	8. [Global Variables](#8-global-variables)
-	9. [Constants](#9-constants)
-	10. [Statements](#10-statements)
-	11. [Operators](#11-operators)
-	12. [Unary Operators](#12-unary-operators)
-	13. [Concatenation Period](#13-concatenation-period)
-	14. [Single Quotes](#14-single-quotes)
-	15. [Double Quotes](#15-double-quotes)
-6. [**Functions**](#9-functions)
+	6. [Keywords](#3-keywords)
+	7. [Variables](#4-variables)
+	9. [Constants](#5-constants)
+	10. [Statements](#6-statements)
+	11. [Operators](#7-operators)
+	12. [Unary Operators](#8-unary-operators)
+	13. [Concatenation Period](#9-concatenation-period)
+6. [**Functions**](#6-functions)
 	1. [Function Name](#1-function-name)
-	2. [Function Prefix](#2-function-prefix)
-	3. [Function Call](#3-function-call)
-	4. [Function Arguments](#4-function-arguments)
-	5. [Function Declaration](#5-function-declaration)
-	6. [Function Return](#6-function-return)
+	3. [Function Call](#2-function-call)
+	4. [Function Arguments](#3-function-arguments)
+	5. [Function Declaration](#4-function-declaration)
+	6. [Function Return](#5-function-return)
 7. [**Control Structures**](#7-control-structures)
 	1. [If, Elseif, Else](#1-if-elseif-else)
 	2. [Switch, Case](#2-switch-case)
 	3. [While, Do While](#3-while-do-while)
 	4. [For, Foreach](#4-for-foreach)
 	5. [Try, Catch](#5-try-catch)
-8. [**Classes**](#11-classes)
+8. [**Classes**](#8-classes)
 	1. [Class File](#1-class-file)
 	2. [Class Namespace](#2-class-namespace)
 	3. [Class Name](#3-class-name)
-	4. [Class Documentation](#4-class-documentation)
-	5. [Class Definition](#5-class-definition)
-	6. [Class Properties](#6-class-properties)
-	7. [Class Methods](#7-class-methods)
+	5. [Class Definition](#4-class-definition)
+	6. [Class Properties](#5-class-properties)
+	7. [Class Methods](#6-class-methods)
 	8. [Class Instance](#8-class-instance)
 9. [**Best Practices**](#12-best-practices)
 	1. [Variable Initialization](#1-variable-initialization)
@@ -724,9 +716,9 @@ This section describes the format for function names, calls, arguments and decla
 	* e.g. `func();`
 3. [**Function arguments**](#3-function-arguments)
 	* MUST NOT have a space before the comma
-	* MUST have a space after the comma
+	* MUST have a space after the comma 
+	* SHOULD be type-hinted if possible
 	* MAY use line breaks for long arguments
-	* MUST use type hinting
 	* e.g. `func($arg1, $arg2 = 'asc', $arg3 = 100);`
 4. [**Function declaration**](#4-function-declaration) MUST be documented using [phpDocumentor](http://phpdoc.org/docs/latest/index.html) tag style and SHOULD include
 	* Short description
@@ -897,7 +889,7 @@ function someFunction(int $id, int $width, int $height): string {
 
 <!-- ------------------------------ -->
 
-### 6. Function Return
+### 5. Function Return
 
 Function return:
 
@@ -1181,22 +1173,18 @@ try {
 
 <!-- ---------------------------------------------------------------------- -->
 
-## 11. Classes
+## 8. Classes
 
 This section describes class files, names, definitions, properties, methods and instantiation.
 
-1. [**Class file**](#1-class-file) MUST only contain one definition and MUST be prefixed with `class-`
-	* i.e. `class User` &rarr; `class-user.php`, `class Office` &rarr; `class-office.php`
-2. [**Class namespace**](#2-class-namespace) MUST be defined and MUST include vendor name
-	* e.g. `namespace MyCompany\Model;`, `namespace MyCompany\View;`, `namespace MyCompany\Controller;`
-3. [**Class name**](#3-class-name) MUST start with a capital letter and MUST be camelcase
+1. [**Class file**](#1-class-file) MUST only contain one definition
+2. [**Class namespace**](#2-class-namespace) MUST be defined
+3. [**Class name**](#3-class-name) MUST start with a capital letter and MUST be camelcased
 	* e.g. `MyCompany`
-4. [**Class documentation**](#4-class-documentation) MUST be present and MUST use [phpDocumentor](http://phpdoc.org/docs/latest/index.html) tag style
-	* i.e. `@author`, `@global`, `@package`
-5. [**Class definition**](#5-class-definition) MUST place curly braces on their own line
-	* i.e. `class User` `↵` `{` `↵` `...` `↵` `}`
-6. [**Class properties**](#6-class-properties)
-	* MUST follow [variable standards](#7-variables)
+5. [**Class definition**](#4-class-definition) MUST place curly braces on the same line after a space
+	* i.e. `class User` `·` `{` `↵` `...` `↵` `}`
+6. [**Class properties**](#5-class-properties)
+	* MUST follow [variable standards](#6-variables)
 	* MUST specify visibility
 	* MUST NOT be prefixed with an underscore if private or protected
 	* e.g. `$var1;`, `private $var2;`, `protected $var3;`
@@ -1217,86 +1205,36 @@ This section describes class files, names, definitions, properties, methods and 
 
 ### 1. Class File
 
-Class file MUST only contain one definition and MUST be prefixed with `class-`.
+Class file MUST only contain one definition.
 
 #### &#10006; Incorrect
 
-Filename: `class-user.php`
-
 <pre lang=php>
 &lt;?php
+namespace MyCompany\Models;
 
-namespace MyCompany\Model;
-
-class User
-{
+class User {
 	// ...
 }
 
-class Office
-{
+class Office {
 	// ...
 }
-
-// EOF
- 
 </pre>
 
 &#8627; Incorrect because `User` and `Office` are defined in one file.
 
-Filename: `user.php`
-
-<pre lang=php>
-&lt;?php
-
-namespace MyCompany\Model;
-
-class User
-{
-	// ...
-}
-
-// EOF
- 
-</pre>
-
-&#8627; Incorrect because filename is not prefixed with `class-`.
-
 #### &#10004; Correct
-
-Filename: `class-user.php`
-
 <pre lang=php>
 &lt;?php
+namespace MyCompany\Models;
 
-namespace MyCompany\Model;
-
-class User
-{
+class User {
 	// ...
 }
-
-// EOF
- 
 </pre>
 
-Filename: `class-office.php`
-
-<pre lang=php>
-&lt;?php
-
-namespace MyCompany\Model;
-
-class Office
-{
-	// ...
-}
-
-// EOF
- 
-</pre>
-
-&#9650; [Classes](#11-classes)
+&#9650; [Classes](#8-classes)
 
 <!-- ------------------------------ -->
 
@@ -1308,88 +1246,51 @@ Class namespace MUST be defined and MUST include vendor name.
 
 <pre lang=php>
 &lt;?php
-
-class User
-{
+class User {
 	// ...
 }
-
-// EOF
- 
 </pre>
 
 &#8627; Incorrect because there is no namespace defined.
-
-<pre lang=php>
-&lt;?php
-
-namespace Model;
-
-class User
-{
-	// ...
-}
-
-// EOF
- 
-</pre>
-
-&#8627; Incorrect because vendor name is missing in the namespace name.
 
 #### &#10004; Correct
 
 <pre lang=php>
 &lt;?php
+namespace Core\Models;
 
-namespace MyCompany\Model;
-
-class User
-{
+class User {
 	// ...
 }
-
-// EOF
- 
 </pre>
 
-&#9650; [Classes](#11-classes)
+&#9650; [Classes](#8-classes)
 
 <!-- ------------------------------ -->
 
 ### 3. Class Name
 
-Class name MUST start with a capital letter and MUST be camelcase.
+Class name MUST start with a capital letter and MUST be camelcased.
 
 #### &#10006; Incorrect
 
 <pre lang=php>
 &lt;?php
-
 namespace MyCompany\Model;
-
-class officeProgram
-{
+class officeProgram {
 	// ...
 }
-
-// EOF
- 
 </pre>
 
 &#8627; Incorrect because `officeProgram` does not start with a capital letter.
 
 <pre lang=php>
 &lt;?php
-
 namespace MyCompany\Model;
 
-class Officeprogram
-{
+class Officeprogram {
 	// ...
 }
-
-// EOF
- 
 </pre>
 
 &#8627; Incorrect because `Officeprogram` is not camelcase.
@@ -1398,91 +1299,18 @@ class Officeprogram
 
 <pre lang=php>
 &lt;?php
-
 namespace MyCompany\Model;
 
-class OfficeProgram
-{
+class OfficeProgram {
 	// ...
 }
-
-// EOF
- 
 </pre>
 
-&#9650; [Classes](#11-classes)
+&#9650; [Classes](#8-classes)
 
 <!-- ------------------------------ -->
 
-### 4. Class Documentation
-
-Class documentation MUST be present and MUST use [phpDocumentor](http://phpdoc.org/docs/latest/index.html) tag style.
-
-#### &#10006; Incorrect
-
-<pre lang=php>
-&lt;?php
-
-namespace MyCompany\Model;
-
-class User
-{
-	// ...
-}
-
-// EOF
- 
-</pre>
-
-&#8627; Incorrect because `User` is missing documentation.
-
-<pre lang=php>
-&lt;?php
-
-namespace MyCompany\View;
-
-/**
- * User View
- */
-class User
-{
-	// ...
-}
-
-// EOF
- 
-</pre>
-
-&#8627; Incorrect because `User` is missing [phpDocumentor](http://phpdoc.org/docs/latest/index.html) tags.
-
-#### &#10004; Correct
-
-<pre lang=php>
-&lt;?php
-
-namespace MyCompany\View;
-
-/**
- * User View
- *
- * @author Firstname Lastname
- * @global object $post
- * @package MyCompany\API
- */
-class User
-{
-	// ...
-}
-
-// EOF
- 
-</pre>
-
-&#9650; [Classes](#11-classes)
-
-<!-- ------------------------------ -->
-
-### 5. Class Definition
+### 4. Class Definition
 
 Class definition MUST place curly braces on their own line.
 
@@ -1490,56 +1318,47 @@ Class definition MUST place curly braces on their own line.
 
 <pre lang=php>
 &lt;?php
+namespace Core\Model;
 
-namespace MyCompany\Model;
-
-class User {
+class User 
+{
 	// ...
 }
-
-// EOF
- 
 </pre>
 
-&#8627; Incorrect because `{` is not on its own line.
+&#8627; Incorrect because `{` is not on the same line.
 
 #### &#10004; Correct
 
 <pre lang=php>
 &lt;?php
+namespace Core\Model;
 
-namespace MyCompany\Model;
-
-class User
-{
+class User {
 	// ...
 }
-
-// EOF
- 
 </pre>
 
-&#9650; [Classes](#11-classes)
+&#9650; [Classes](#8-classes)
 
 <!-- ------------------------------ -->
 
-### 6. Class Properties
+### 5. Class Properties
 
 Class properties:
 
-* MUST follow [variable standards](#7-variables)
+* MUST follow [variable standards](#4-variables)
 * MUST specify visibility
-* MUST NOT be prefixed with an underscore if private or protected
+* MUST NOT be prefixed with an underscore
+* SHOULD be type-hinted if possible
 
 #### &#10006; Incorrect
 
 <pre lang=php>
 &lt;?php
+namespace Core\Model;
 
-namespace MyCompany\Model;
-
-class User
-{
+class User {
 	// Public
 	$var1;
 
@@ -1549,50 +1368,52 @@ class User
 	// Private
 	$var3;
 }
-
-// EOF
- 
 </pre>
 
-&#8627; Incorrect because visibility is not specified for `$var1`, `$var2` and `$var3`.
+&#8627; Incorrect because visibility is not specified.
 
 <pre lang=php>
 &lt;?php
+namespace Core\Model;
 
-namespace MyCompany\Model;
-
-class User
-{
+class User {
 	public $var1;
 	protected $_var2;
 	private $_var3;
 }
-
-// EOF
- 
 </pre>
 
-&#8627; Incorrect because `protected` and `private` properties are prefixed with `_`.
+&#8627; Incorrect because some properties are prefixed with `_`.
 
-#### &#10004; Correct
+#### ~ Acceptable
 
 <pre lang=php>
 &lt;?php
+namespace Core\Model;
 
-namespace MyCompany\Model;
-
-class User
-{
+class User {
 	public $var1;
 	protected $var2;
 	private $var3;
 }
-
-// EOF
- 
 </pre>
 
-&#9650; [Classes](#11-classes)
+&#8627; Acceptable, but the properties are not type-hinted.
+
+#### &#10004; Preferred
+
+<pre lang=php>
+&lt;?php
+namespace Core\Model;
+
+class User {
+	public int $var1;
+	protected string $var2;
+	private bool $var3;
+}
+</pre>
+
+&#9650; [Classes](#8-classes)
 
 <!-- ------------------------------ -->
 
@@ -1693,7 +1514,7 @@ class User
  
 </pre>
 
-&#9650; [Classes](#11-classes)
+&#9650; [Classes](#8-classes)
 
 <!-- ------------------------------ -->
 
@@ -1728,7 +1549,7 @@ $office_program = new OfficeProgram();
  
 </pre>
 
-&#9650; [Classes](#11-classes)
+&#9650; [Classes](#8-classes)
 
 <!-- ---------------------------------------------------------------------- -->
 
