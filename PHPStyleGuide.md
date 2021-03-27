@@ -1276,7 +1276,7 @@ Class name MUST start with a capital letter and MUST be camelcased.
 
 <pre lang=php>
 &lt;?php
-namespace MyCompany\Model;
+namespace Core\Model;
 class officeProgram {
 	// ...
 }
@@ -1286,7 +1286,7 @@ class officeProgram {
 
 <pre lang=php>
 &lt;?php
-namespace MyCompany\Model;
+namespace Core\Model;
 
 class Officeprogram {
 	// ...
@@ -1299,7 +1299,7 @@ class Officeprogram {
 
 <pre lang=php>
 &lt;?php
-namespace MyCompany\Model;
+namespace Core\Model;
 
 class OfficeProgram {
 	// ...
@@ -1430,7 +1430,7 @@ Class methods:
 <pre lang=php>
 &lt;?php
 
-namespace MyCompany\Model;
+namespace Core\Model;
 
 class User
 {
@@ -1461,7 +1461,7 @@ class User
 <pre lang=php>
 &lt;?php
 
-namespace MyCompany\Model;
+namespace Core\Model;
 
 class User
 {
