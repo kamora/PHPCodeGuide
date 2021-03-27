@@ -1211,7 +1211,7 @@ Class file MUST only contain one definition.
 
 <pre lang=php>
 &lt;?php
-namespace MyCompany\Models;
+namespace Core\Model;
 
 class User {
 	// ...
@@ -1227,7 +1227,7 @@ class Office {
 #### &#10004; Correct
 <pre lang=php>
 &lt;?php
-namespace MyCompany\Models;
+namespace Core\Model;
 
 class User {
 	// ...
