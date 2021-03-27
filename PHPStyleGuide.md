@@ -450,7 +450,6 @@ Multi-line comments MUST use the block format and follow the [PHPDoc](https://do
 This section outline various, general formatting rules related to whitespace and text.
 
 1. [**Line length**](#1-line-length) MUST NOT be hard limited
-	* i.e. `|---- 80+ chars ----|` &rarr; refactor expression and/or break list values
 2. [**Line indentation**](#2-line-indentation) MUST be accomplished using tabs
 	* i.e. `function func() {` `↵` `⇥` `...` `↵` `}`
 3. [**Keywords**](#3-keywords) MUST be all lowercase
