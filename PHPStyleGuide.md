@@ -9,8 +9,9 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 ## Table of Contents
 
 1. [**Files**](#1-files)
-	1. [File Format](#file-format)
-	2. [Filename](#filename)
+	1. [Encoding](#1-encoding)
+	2. [Line Ends](#2-line-ends)
+	2. [File Format](#3-filename)
 2. [**Tags**](#2-php-tags)
 	1. [Open Tag](#1-open-tag)
 	2. [Close Tag](#2-close-tag)
@@ -61,24 +62,43 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 <!-- ---------------------------------------------------------------------- -->
 
 ## 1. Files
+This section describes the format of PHP files.
 
-This section describes the format and naming convention of PHP files.
+1. [**Encoding**](#1-encoding)
+2. [**Close tag**](#2-line-ends)
+3. [**Short open tag**](#3-filename)
 
-#### File Format
+&#9650; [Table of Contents](#table-of-contents)
 
-1. **Characters encoding** MUST be set to UTF-8 without BOM
-2. **Line endings** MUST be set to Unix (LF)
+<!-- ------------------------------ -->
 
-#### Filename
+### 1. Encoding
 
-1. **Names** MUST follow the [PSR-4](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md) convention 
+* MUST be set to UTF-8 without BOM
+
+&#9650; [PHP Tags](#1-files)
+
+<!-- ------------------------------ -->
+
+### 2. Line Ends
+
+* MUST be set to Unix (LF)
+
+&#9650; [PHP Tags](#1-files)
+
+<!-- ------------------------------ -->
+
+### 3. Filename
+* MUST follow the [PSR-4](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md) convention 
 	* e.g. `Controller.php` but not `controller.php`
-2. **Words** MUST NOT be separated with a hyphen or underscore
+* MUST NOT be separated by a hyphen or underscore
 	* e.g. `AppConfig.php` but not `app-config.php` or `app_config.php` 
 
 &#9650; [Table of Contents](#table-of-contents)
 
-<!-- ---------------------------------------------------------------------- -->
+&#9650; [PHP Tags](#1-files)
+
+<!-- ------------------------------ -->
 
 ## 2. PHP Tags
 
