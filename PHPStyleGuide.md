@@ -245,7 +245,7 @@ print_welcome_message();
 namespace SomeNamespace;
 </pre>
 
-&#8627; Incorrect because `namespace SomeNamespace;` is not the first statement.
+&#8627; Incorrect because `namespace SomeNamespace` is not the first statement.
 
 <pre lang=php>
 &lt;?php
@@ -253,7 +253,7 @@ namespace SomeNamespace;
 print_welcome_message();
 </pre>
 
-&#8627; Incorrect because `namespace SomeNamespace;` is not followed by a blank line.
+&#8627; Incorrect because `namespace SomeNamespace` is not followed by a blank line.
 
 #### &#10004; Correct
 
