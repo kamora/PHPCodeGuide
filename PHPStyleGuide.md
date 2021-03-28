@@ -76,7 +76,7 @@ This section describes the format of PHP files.
 
 * MUST be set to UTF-8 without BOM
 
-&#9650; [PHP Tags](#1-files)
+&#9650; [Files](#1-files)
 
 <!-- ------------------------------ -->
 
@@ -84,7 +84,7 @@ This section describes the format of PHP files.
 
 * MUST be set to Unix (LF)
 
-&#9650; [PHP Tags](#1-files)
+&#9650; [Files](#1-files)
 
 <!-- ------------------------------ -->
 
@@ -94,7 +94,7 @@ This section describes the format of PHP files.
 * MUST NOT be separated by a hyphen or underscore
 	* e.g. `AppConfig.php` but not `app-config.php` or `app_config.php` 
 
-&#9650; [PHP Tags](#1-files)
+&#9650; [Files](#1-files)
 
 <!-- ------------------------------ -->
 
