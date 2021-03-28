@@ -94,8 +94,6 @@ This section describes the format of PHP files.
 * MUST NOT be separated by a hyphen or underscore
 	* e.g. `AppConfig.php` but not `app-config.php` or `app_config.php` 
 
-&#9650; [Table of Contents](#table-of-contents)
-
 &#9650; [PHP Tags](#1-files)
 
 <!-- ------------------------------ -->
