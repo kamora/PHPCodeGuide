@@ -12,7 +12,7 @@ The icons are used to designate the character sequences around this document sim
 1. `·` means `Space`
 2. `⇥` means `Tab`
 3. `↵` means `Enter`
-4. `...` mean `anything`
+4. `...` means  `anything`
 
 <!-- ---------------------------------------------------------------------- -->
 
@@ -23,9 +23,9 @@ The icons are used to designate the character sequences around this document sim
 	2. [Filename](#filename)
 2. [**Tags**](#2-php-tags)
 	1. [Open Tag](#1-open-tag)
-	2. [Close Tag](#2-close-tag)
-	3. [Short Open Tag](#3-short-open-tag)
-	4. [Short Echo Tag](#4-short-echo-tag)
+	3. [Short Open Tag](#2-short-open-tag)
+	2. [Short Echo Tag](#3-short-echo-tag)
+	4. [Close Tag](#4-close-tag)
 3. [**Namespaces**](#3-namespaces)
 	1. [Namespace Declaration](#1-namespace-declaration)
 	2. [Namespace Definition](#2-namespace-definition)
@@ -98,7 +98,6 @@ This section describes the use of PHP tags in PHP and PHP/HTML files.
 	* i.e. `<?php` `↵` `...` but not `<?php` `↵` `↵` `...`
 2. [**Short open tag**](#2-short-open-tag) MUST NOT be used
 3. [**Short echo tag**](#3-short-echo-tag) SHOULD be used inside PHP/HTML files when possible
-	* i.e. `<?=` SHOULD be used over `<?php echo` when possible
 2. [**Close tag**](#4-close-tag) MUST NOT be used in PHP files
 
 &#9650; [Table of Contents](#table-of-contents)
