@@ -12,6 +12,7 @@ The icons are used to designate the character sequences around this document sim
 1. `·` means `Space`
 2. `⇥` means `Tab`
 3. `↵` means `Enter`
+4. `...` mean `anything`
 
 <!-- ---------------------------------------------------------------------- -->
 
