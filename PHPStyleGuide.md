@@ -96,9 +96,9 @@ This section describes the use of PHP tags in PHP and PHP/HTML files.
 
 1. [**Open tag**](#1-open-tag) MUST be on its own line and MUST NOT be followed by a blank line
 	* i.e. `<?php` `↵` `...` but not `<?php` `↵` `↵` `...`
-2. [**Short open tag**](#2-short-open-tag) MUST NOT be used
-3. [**Short echo tag**](#3-short-echo-tag) SHOULD be used inside PHP/HTML files when possible
-2. [**Close tag**](#4-close-tag) MUST NOT be used in PHP files
+2. [**Close tag**](#2-close-tag) MUST NOT be used in PHP files
+3. [**Short open tag**](#3-short-open-tag) MUST NOT be used
+4. [**Short echo tag**](#4-short-echo-tag) SHOULD be used inside PHP/HTML files when possible
 
 &#9650; [Table of Contents](#table-of-contents)
 
@@ -135,7 +135,32 @@ print_welcome_message();
 
 <!-- ------------------------------ -->
 
-### 2. Short Open Tag
+### 2. Close Tag
+
+Close tag MUST NOT be used in PHP files.
+
+#### &#10006; Incorrect
+
+<pre lang=php>
+&lt;?php
+print_welcome_message();
+?&gt;
+</pre>
+
+&#8627; Incorrect because `?>` was used.
+
+#### &#10004; Correct
+
+<pre lang=php>
+&lt;?php
+print_welcome_message();
+</pre>
+
+&#9650; [PHP Tags](#2-php-tags)
+
+<!-- ------------------------------ -->
+
+### 3. Short Open Tag
 
 Short open tag MUST NOT be used.
 
@@ -159,7 +184,7 @@ print_welcome_message();
 
 <!-- ------------------------------ -->
 
-### 3. Short Echo Tag
+### 4. Short Echo Tag
 
 SHOULD be used inside PHP/HTML files when possible.
 
@@ -184,31 +209,6 @@ SHOULD be used inside PHP/HTML files when possible.
 &#9650; [PHP Tags](#2-php-tags)
 
 <!-- ---------------------------------------------------------------------- -->
-
-### 4. Close Tag
-
-Close tag MUST NOT be used in PHP files.
-
-#### &#10006; Incorrect
-
-<pre lang=php>
-&lt;?php
-print_welcome_message();
-?&gt;
-</pre>
-
-&#8627; Incorrect because `?>` was used.
-
-#### &#10004; Correct
-
-<pre lang=php>
-&lt;?php
-print_welcome_message();
-</pre>
-
-&#9650; [PHP Tags](#2-php-tags)
-
-<!-- ------------------------------ -->
 
 ## 3. Namespaces
 
