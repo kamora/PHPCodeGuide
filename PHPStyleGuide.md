@@ -6,16 +6,6 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 
 <!-- ---------------------------------------------------------------------- -->
 
-## Icons Legend
-The icons are used to designate the character sequences around this document simply and unambiguously.
-
-1. `·` means `Space`
-2. `⇥` means `Tab`
-3. `↵` means `Enter`
-4. `...` means  `anything`
-
-<!-- ---------------------------------------------------------------------- -->
-
 ## Table of Contents
 
 1. [**Files**](#1-files)
@@ -94,11 +84,10 @@ This section describes the format and naming convention of PHP files.
 
 This section describes the use of PHP tags in PHP and PHP/HTML files.
 
-1. [**Open tag**](#1-open-tag) MUST be on its own line and MUST NOT be followed by a blank line
-	* i.e. `<?php` `↵` `...` but not `<?php` `↵` `↵` `...`
-2. [**Close tag**](#2-close-tag) MUST NOT be used in PHP files
-3. [**Short open tag**](#3-short-open-tag) MUST NOT be used
-4. [**Short echo tag**](#4-short-echo-tag) SHOULD be used inside PHP/HTML files when possible
+1. [**Open tag**](#1-open-tag) 
+2. [**Close tag**](#2-close-tag) 
+3. [**Short open tag**](#3-short-open-tag) 
+4. [**Short echo tag**](#4-short-echo-tag) 
 
 &#9650; [Table of Contents](#table-of-contents)
 
@@ -106,7 +95,8 @@ This section describes the use of PHP tags in PHP and PHP/HTML files.
 
 ### 1. Open Tag
 
-Open tag MUST be on its own line and MUST NOT be followed by a blank line.
+* MUST be on its own line 
+* MUST NOT be followed by a blank line. 
 
 #### &#10006; Incorrect
 
@@ -137,7 +127,7 @@ print_welcome_message();
 
 ### 2. Close Tag
 
-Close tag MUST NOT be used in PHP files.
+* MUST NOT be used in PHP files
 
 #### &#10006; Incorrect
 
@@ -162,7 +152,7 @@ print_welcome_message();
 
 ### 3. Short Open Tag
 
-Short open tag MUST NOT be used.
+* MUST NOT be used
 
 #### &#10006; Incorrect
 
@@ -186,7 +176,7 @@ print_welcome_message();
 
 ### 4. Short Echo Tag
 
-SHOULD be used inside PHP/HTML files when possible.
+* SHOULD be used inside PHP/HTML files when possible
 
 #### ~ Acceptable
 
