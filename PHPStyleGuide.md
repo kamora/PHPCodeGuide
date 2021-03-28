@@ -29,6 +29,7 @@ The icons are used to designate the character sequences around this document sim
 	1. [Namespace Declaration](#1-namespace-declaration)
 	2. [Namespace Definition](#2-namespace-definition)
 	3. [Multiple Namespaces](#3-multiple-namespaces)
+	4. [Import Section](#4-import-section)
 4. [**Comments**](#4-comments)
 	1. [Single-line Comments](#1-single-line-comments)
 	2. [Multi-line Comments](#2-multi-line-comments)
@@ -130,7 +131,6 @@ print_welcome_message();
 <pre lang=php>
 &lt;?php
 print_welcome_message();
-
 </pre>
 
 &#9650; [PHP Tags](#2-php-tags)
@@ -146,7 +146,6 @@ Close tag MUST NOT be used in PHP files.
 <pre lang=php>
 &lt;?php
 print_welcome_message();
-
 ?&gt;
 </pre>
 
@@ -218,11 +217,15 @@ Short echo tag MAY be used inside PHP/HTML files and SHOULD be used over `<?php 
 This section describes how to use one or more namespaces and their naming convention.
 
 1. [**Namespace declaration**](#1-namespace-declaration) MUST be the first statement and MUST be followed by a blank line
-	* e.g. `<?php` `↵` `namespace MyCompany;` `↵` `↵` `...`
+	* e.g. `<?php` `↵` `namespace SomeNamespace;` `↵` `↵` `...`
 2. [**Namespace definition**](#2-namespace-definition) MUST start with a capital letter and MUST be camelcased
-	* e.g. `namespace MyCompany;`
+	* e.g. `namespace SomeNamespace;`
 3. [**Multiple namespaces**](#3-multiple-namespaces) MUST use the curly brace syntax
-	* e.g. `namespace MyCompany { ... }`
+	* e.g. `namespace SomeNamespace { ... }`
+4. [**Import section**](#4-import-section)
+	* MUST be followed by a blank line
+	* MUST use leading backslash characters
+	* MUST import a single namespace per declaration
 
 &#9650; [Table of Contents](#table-of-contents)
 
@@ -238,26 +241,24 @@ Namespace declaration MUST be the first statement and MUST be followed by a blan
 &lt;?php
 print_welcome_message();
 
-namespace MyCompany;
-
+namespace SomeNamespace;
 </pre>
 
-&#8627; Incorrect because `namespace MyCompany;` is not the first statement.
+&#8627; Incorrect because `namespace SomeNamespace;` is not the first statement.
 
 <pre lang=php>
 &lt;?php
-namespace MyCompany;
+namespace SomeNamespace;
 print_welcome_message();
-
 </pre>
 
-&#8627; Incorrect because `namespace MyCompany;` is not followed by a blank line.
+&#8627; Incorrect because `namespace SomeNamespace;` is not followed by a blank line.
 
 #### &#10004; Correct
 
 <pre lang=php>
 &lt;?php
-namespace MyCompany;
+namespace SomeNamespace;
 
 print_welcome_message();
 </pre>
@@ -274,25 +275,25 @@ Namespace name MUST start with a capital letter and MUST be camelcased.
 
 <pre lang=php>
 &lt;?php
-namespace myCompany;
- 
+namespace SomeNamespace;
+
 </pre>
 
-&#8627; Incorrect because `myCompany` does not start with a capital letter.
+&#8627; Incorrect because `SomeNamespace` does not start with a capital letter.
 
 <pre lang=php>
 &lt;?php
-namespace MyCOMPANY;
+namespace SomeNAMESPACE;
 
 </pre>
 
-&#8627; Incorrect because `MyCOMPANY` is not camelcased.
+&#8627; Incorrect because `SomeNAMESPACE` is not camelcased.
 
 #### &#10004; Correct
 
 <pre lang=php>
 &lt;?php
-namespace MyCompany;
+namespace SomeNamespace;
 
 </pre>
 
@@ -308,9 +309,9 @@ Multiple namespaces MUST use the curly brace syntax.
 
 <pre lang=php>
 &lt;?php
-namespace MyCompany\Model;
+namespace SomeNamespace\Model;
 
-namespace MyCompany\View;
+namespace SomeNamespace\View;
 
 </pre>
 
@@ -320,14 +321,82 @@ namespace MyCompany\View;
 
 <pre lang=php>
 &lt;?php
-namespace MyCompany\Model {
+namespace SomeNamespace\Model {
 	// model body
 }
 
-namespace MyCompany\View {
+namespace SomeNamespace\View {
 	// view body
 }
+</pre>
 
+&#9650; [Namespaces](#3-namespaces)
+
+<!-- ------------------------------ -->
+
+### 4. Import Section 
+
+* MUST be followed by a blank line
+* MUST use leading backslash characters
+* MUST import a single namespace per declaration
+
+#### &#10006; Incorrect
+
+<pre lang=php>
+&lt;?php
+namespace Core\Model;
+
+use  Core\Facades\Log;
+use  Core\Facades\View;
+use  Core\Facades\Input;
+class Model {
+	// ...
+}
+</pre>
+
+&#8627; Incorrect because the section a not followed by a blank line.
+
+<pre lang=php>
+&lt;?php
+namespace Core\Model;
+
+use  Core\Facades\Log;
+use  Core\Facades\View;
+use  Core\Facades\
+
+class Model {
+	// ...
+}
+</pre>
+
+&#8627; Incorrect because the leading backslash characters are not using.
+
+<pre lang=php>
+&lt;?php
+namespace Core\Model;
+
+use  \Core\Facades\Log, \Core\Facades\View;
+
+class Model {
+	// ...
+}
+</pre>
+
+&#8627; Incorrect because multiple namespaces are imported per declaration.
+
+#### &#10004; Correct
+
+<pre lang=php>
+&lt;?php
+namespace Core\Model;
+
+use  \Core\Facades\Log;
+use  \Core\Facades\View;
+use  \Core\Facades\
+
+class Model {
+	// ...
+}
 </pre>
 
 &#9650; [Namespaces](#3-namespaces)
@@ -724,8 +793,6 @@ This section describes the format for function names, calls, arguments and decla
 	* @param: Parameters with data type, variable name, and description
 	* @return: Return data type, if applicable
 5. [**Function return**](#5-function-return)
-	* MUST occur as early as possible 
-	* MUST be initialized prior at top
 	* MUST be preceded by blank line, except inside control statement
 	* i.e. `if (!$expr) { return false; }`
 
@@ -785,8 +852,6 @@ printWelcomeMessage();
 <!-- ------------------------------ -->
 
 ### 3. Function Arguments
-
-Function arguments:
 
 * MUST NOT have a space before the comma
 * MUST have a space after the comma
@@ -1175,7 +1240,6 @@ This section describes class files, names, definitions, properties, methods and 
 1. [**Class file**](#1-class-file) MUST only contain one definition
 2. [**Class namespace**](#2-class-namespace) MUST be defined
 3. [**Class name**](#3-class-name) MUST start with a capital letter and MUST be camelcased
-	* e.g. `MyCompany`
 4. [**Class definition**](#4-class-definition) MUST place curly braces on the same line after a space
 	* i.e. `class User` `·` `{` `↵` `...` `↵` `}`
 5. [**Extends keyword**](#5-extends-keyword)
