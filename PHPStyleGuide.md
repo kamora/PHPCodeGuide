@@ -222,16 +222,10 @@ print_welcome_message();
 
 This section describes how to use one or more namespaces and their naming convention.
 
-1. [**Namespace declaration**](#1-namespace-declaration) MUST be the first statement and MUST be followed by a blank line
-	* e.g. `<?php` `↵` `namespace SomeNamespace;` `↵` `↵` `...`
-2. [**Namespace definition**](#2-namespace-definition) MUST start with a capital letter and MUST be camelcased
-	* e.g. `namespace SomeNamespace;`
-3. [**Multiple namespaces**](#3-multiple-namespaces) MUST use the curly brace syntax
-	* e.g. `namespace SomeNamespace { ... }`
+1. [**Namespace declaration**](#1-namespace-declaration) 
+2. [**Namespace definition**](#2-namespace-definition) 
+3. [**Multiple namespaces**](#3-multiple-namespaces) 
 4. [**Import section**](#4-import-section)
-	* MUST be followed by a blank line
-	* MUST use leading backslash characters
-	* MUST import a single namespace per declaration
 
 &#9650; [Table of Contents](#table-of-contents)
 
@@ -239,7 +233,8 @@ This section describes how to use one or more namespaces and their naming conven
 
 ### 1. Namespace Declaration
 
-Namespace declaration MUST be the first statement and MUST be followed by a blank line.
+* MUST be the first statement 
+* MUST be followed by a blank line
 
 #### &#10006; Incorrect
 
@@ -275,7 +270,8 @@ print_welcome_message();
 
 ### 2. Namespace Definition
 
-Namespace name MUST start with a capital letter and MUST be camelcased.
+* MUST start with a capital letter 
+* MUST be camelcased
 
 #### &#10006; Incorrect
 
@@ -309,7 +305,7 @@ namespace SomeNamespace;
 
 ### 3. Multiple Namespaces
 
-Multiple namespaces MUST use the curly brace syntax.
+* MUST use the curly brace syntax
 
 #### &#10006; Incorrect
 
@@ -321,7 +317,7 @@ namespace SomeNamespace\View;
 
 </pre>
 
-&#8627; Incorrect because there are two namespaces, but the curly brace syntax was not used.
+&#8627; Incorrect because the curly brace syntax was not used.
 
 #### &#10004; Correct
 
