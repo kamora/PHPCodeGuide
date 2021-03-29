@@ -512,14 +512,11 @@ This section describes how comments should be formatted and used.
 
 This section outline various, general formatting rules related to whitespace and text.
 
-1. [**Line length**](#1-line-length) MUST NOT be hard limited
-2. [**Line indentation**](#2-line-indentation) MUST be accomplished using tabs
-	* i.e. `function func() {` `↵` `⇥` `...` `↵` `}`
-3. [**Keywords**](#3-keywords) MUST be all lowercase
-	* e.g. `false`, `true`, `null`, etc.
-4. [**Variables**](#4-variables) MUST be all camelcased and MUST NOT be separated by an underscore.
-	* e.g. `$shortWelcomeMessage` instead of `$short_welcome_message`
-9. [**Constants**](#5-constants) MUST be all uppercase and words MUST be separated by an underscore
+1. [**Line length**](#1-line-length)
+2. [**Line indentation**](#2-line-indentation) 
+3. [**Keywords**](#3-keywords) 
+4. [**Variables**](#4-variables) 
+9. [**Constants**](#5-constants) 
 	* e.g. `WELCOME_MESSAGE`
 10. [**Statements**](#6-statements) MUST be placed on their own line and MUST end with a semicolon
 	* e.g. `welcome_message();`
@@ -536,13 +533,15 @@ This section outline various, general formatting rules related to whitespace and
 
 ### 1. Line Length
 
-The soft limit on line length MUST be 120 characters; automated style checkers MAY warn but MUST NOT error at the soft limit.
+* MUST NOT be hard limited
+* The soft limit MUST be 120 characters
+	* i.e. Automated style checkers SHOULD warn but MUST NOT error
 
 &#9650; [Formatting](#5-formatting)
 
 ### 2. Line Indentation
-
-The line indentation MUST be accomplished by using `TAB` characters only.
+* MUST be accomplished using tabs
+	* i.e. Space characters are not allowed for indentation
 
 &#9650; [Formatting](#5-formatting)
 
@@ -550,16 +549,16 @@ The line indentation MUST be accomplished by using `TAB` characters only.
 
 ### 3. Keywords
 
-Keywords MUST be all lowercase.
+* MUST be all lowercase
+	* e.g. `false`, `true`, `null`, etc.
 
 #### &#10006; Incorrect
 
 <pre lang=php>
 &lt;?php
-$is_true = FALSE;
-$is_false = TRUE:
-$movie_quote = NULL;
-
+$isTrue = FALSE;
+$isFalse = TRUE:
+$value = NULL;
 </pre>
 
 &#8627; Incorrect because `FALSE`, `TRUE` and `NULL` are not all lowercase.
@@ -568,10 +567,9 @@ $movie_quote = NULL;
 
 <pre lang=php>
 &lt;?php
-$is_true = false;
-$is_false = true:
-$movie_quote = null;
- 
+$isTrue = false;
+$isFalse = true:
+$value = null;
 </pre>
 
 &#9650; [Formatting](#5-formatting)
@@ -580,13 +578,11 @@ $movie_quote = null;
 
 ### 4. Variables
 
-Variables MUST be all camelcased and MUST NOT be separated by an underscore. 
-The first letter case MUST slightly determine the variable type:
-
-1. Variables of object type MUST starts from an uppercase letter
-2. Variables of primitive types MUST starts from a lowercase letter
-3. Arrays MAY be tract as primitives or as objects in accordance to the situation
-
+* MUST be all camelcased 
+* MUST NOT be separated by an underscore
+* Variables of object type MUST starts from an uppercase letter
+* Variables of primitive types MUST starts from a lowercase letter
+* Arrays MAY be tract as primitives or as objects in accordance with the situation
 
 #### &#10006; Incorrect
 
@@ -626,7 +622,8 @@ $SomeObject = new SomeClass();
 
 ### 5. Constants
 
-Constants MUST be all uppercase and words MUST be separated by an underscore.
+* MUST be all uppercase 
+* MUST be separated by underscores
 
 #### &#10006; Incorrect
 
@@ -635,7 +632,6 @@ Constants MUST be all uppercase and words MUST be separated by an underscore.
 define('welcome_Message', '');
 define('Welcome_Message', '');
 define('welcome_message', '');
-
 </pre>
 
 &#8627; Incorrect because the constants are not all uppercase.
@@ -643,17 +639,15 @@ define('welcome_message', '');
 <pre lang=php>
 &lt;?php
 define('WELCOMEMESSAGE', '');
- 
 </pre>
 
-&#8627; Incorrect because `WELCOME` and `MESSAGE` are not separated with an underscore.
+&#8627; Incorrect because `WELCOME` and `MESSAGE` are not separated by an underscore.
 
 #### &#10004; Correct
 
 <pre lang=php>
 &lt;?php
 define('WELCOME_MESSAGE', '');
-
 </pre>
 
 &#9650; [Formatting](#5-formatting)
