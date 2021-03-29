@@ -411,12 +411,9 @@ class Model {
 
 This section describes how comments should be formatted and used.
 
-1. **[Single-line comments](#1-single-line-comments)** MUST use two forward slashes
-	* e.g. `// My comment`
-2. **[Multi-line comments](#2-multi-line-comments)** MUST use the block format
-	* i.e. `/*` `↵` ` My comment` `↵` `*/`
-3. **[PHPDoc comments](#3-phpdoc-comments)** MUST use the block format and follow the [PHPDoc](https://docs.phpdoc.org/3.0/guide/getting-started/what-is-a-docblock.html) syntax requirements.
-	* i.e. `/**` `↵` `* My comment` `↵` `*/`
+1. **[Single-line comments](#1-single-line-comments)**
+2. **[Multi-line comments](#2-multi-line-comments)**
+3. **[PHPDoc comments](#3-phpdoc-comments)** 
 
 &#9650; [Table of Contents](#table-of-contents)
 
@@ -424,14 +421,14 @@ This section describes how comments should be formatted and used.
 
 ### 1. Single-line Comments
 
-Single-line comments MUST use two forward slashes.
+* MUST use two forward slashes
+	* e.g. `// The comment`
 
 #### &#10006; Incorrect
 
 <pre lang=php>
 &lt;?php
 /* This is a comment */
-
 </pre>
 
 &#8627; Incorrect because it uses `/*` and `*/` for a single-line comment.
@@ -441,7 +438,6 @@ Single-line comments MUST use two forward slashes.
 <pre lang=php>
 &lt;?php
 // This is a comment
-
 </pre>
 
 &#9650; [Comments](#4-comments)
@@ -450,7 +446,8 @@ Single-line comments MUST use two forward slashes.
 
 ### 2. Multi-line Comments
 
-Multi-line comments MUST use the block format.
+* MUST use the block format
+	* i.e. `/*` `↵` ` My comment` `↵` `*/`
 
 #### &#10006; Incorrect
 
@@ -480,10 +477,9 @@ Multi-line comments MUST use the block format.
 
 <!-- ------------------------------ -->
 
-
 ### 3. PHPDoc Comments
-
-Multi-line comments MUST use the block format and follow the [PHPDoc](https://docs.phpdoc.org/3.0/guide/getting-started/what-is-a-docblock.html) syntax requirements.
+* MUST use the block format and follow the [PHPDoc](https://docs.phpdoc.org/3.0/guide/getting-started/what-is-a-docblock.html) syntax requirements.
+	* i.e. `/**` `↵` `* My comment` `↵` `*/`
 
 #### &#10006; Incorrect
 
@@ -494,10 +490,9 @@ Multi-line comments MUST use the block format and follow the [PHPDoc](https://do
  multi-line
  comment
 */
- 
 </pre>
 
-&#8627; Incorrect because it uses `/*` for a PHPDoc comment.
+&#8627; Incorrect because uses `/*` for a PHPDoc comment.
 
 #### &#10004; Correct
 
@@ -507,7 +502,6 @@ Multi-line comments MUST use the block format and follow the [PHPDoc](https://do
  * This is a
  * PHPDoc comment 
  */
-
 </pre>
 
 &#9650; [Comments](#4-comments)
