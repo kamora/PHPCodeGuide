@@ -356,7 +356,7 @@ class Model {
 }
 </pre>
 
-&#8627; Incorrect because the section a not followed by a blank line.
+&#8627; Incorrect because not followed by a blank line.
 
 <pre lang=php>
 &lt;?php
