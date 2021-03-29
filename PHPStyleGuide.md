@@ -364,7 +364,7 @@ namespace Core\Model;
 
 use  Core\Facades\Log;
 use  Core\Facades\View;
-use  Core\Facades\
+use  Core\Facades\Import;
 
 class Model {
 	// ...
@@ -377,7 +377,7 @@ class Model {
 &lt;?php
 namespace Core\Model;
 
-use  \Core\Facades\Log, \Core\Facades\View;
+use  \Core\Facades\Log, \Core\Facades\View, \Core\Facades\Import;
 
 class Model {
 	// ...
@@ -394,7 +394,7 @@ namespace Core\Model;
 
 use  \Core\Facades\Log;
 use  \Core\Facades\View;
-use  \Core\Facades\
+use  \Core\Facades\Import;
 
 class Model {
 	// ...
