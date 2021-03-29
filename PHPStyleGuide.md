@@ -535,13 +535,13 @@ This section outline various, general formatting rules related to whitespace and
 
 * MUST NOT be hard limited
 * The soft limit MUST be 120 characters
-	* i.e. Automated style checkers SHOULD warn but MUST NOT error
+	* i.e. automated style checkers SHOULD warn but MUST NOT error
 
 &#9650; [Formatting](#5-formatting)
 
 ### 2. Line Indentation
 * MUST be accomplished using tabs
-	* i.e. Space characters are not allowed for indentation
+	* i.e. space characters are not allowed for indentation
 
 &#9650; [Formatting](#5-formatting)
 
