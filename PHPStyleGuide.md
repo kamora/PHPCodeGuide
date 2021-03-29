@@ -541,7 +541,7 @@ This section outline various, general formatting rules related to whitespace and
 
 ### 2. Line Indentation
 * MUST be accomplished using tabs
-	* i.e. space characters are not allowed for indentation
+	* i.e. space characters are strictly not allowed for indentation
 
 &#9650; [Formatting](#5-formatting)
 
