@@ -225,7 +225,7 @@ This section describes how to use one or more namespaces and their naming conven
 1. [**Namespace declaration**](#1-namespace-declaration) 
 2. [**Namespace definition**](#2-namespace-definition) 
 3. [**Multiple namespaces**](#3-multiple-namespaces) 
-4. [**Import section**](#4-import-section)
+4. [**List of imports**](#4-list-of-imports)
 
 &#9650; [Table of Contents](#table-of-contents)
 
@@ -336,10 +336,10 @@ namespace SomeNamespace\View {
 
 <!-- ------------------------------ -->
 
-### 4. Import Section 
+### 4. List of Imports
 
 * MUST be followed by a blank line
-* MUST use leading backslash characters
+* MUST use leading backslash characters 
 * MUST import a single namespace per declaration
 
 #### &#10006; Incorrect
@@ -371,7 +371,7 @@ class Model {
 }
 </pre>
 
-&#8627; Incorrect because the leading backslash characters are not using.
+&#8627; Incorrect because no leading backslash characters are using.
 
 <pre lang=php>
 &lt;?php
