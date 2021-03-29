@@ -346,7 +346,7 @@ namespace SomeNamespace\View {
 
 <pre lang=php>
 &lt;?php
-namespace Core\Model;
+namespace Core\Models;
 
 use  Core\Facades\Log;
 use  Core\Facades\View;
@@ -360,7 +360,7 @@ class Model {
 
 <pre lang=php>
 &lt;?php
-namespace Core\Model;
+namespace Core\Models;
 
 use  \Core\Facades\Log, \Core\Facades\View, \Core\Facades\Input;
 
@@ -375,7 +375,7 @@ class Model {
 
 <pre lang=php>
 &lt;?php
-namespace Core\Model;
+namespace Core\Models;
 
 use  Core\Facades\Log;
 use  Core\Facades\View;
@@ -392,7 +392,7 @@ class Model {
 
 <pre lang=php>
 &lt;?php
-namespace Core\Model;
+namespace Core\Models;
 
 use  \Core\Facades\Log;
 use  \Core\Facades\View;
@@ -1279,7 +1279,7 @@ Class file MUST only contain one definition.
 
 <pre lang=php>
 &lt;?php
-namespace Core\Model;
+namespace Core\Models;
 
 class User {
 	// ...
@@ -1295,7 +1295,7 @@ class Office {
 #### &#10004; Correct
 <pre lang=php>
 &lt;?php
-namespace Core\Model;
+namespace Core\Models;
 
 class User {
 	// ...
@@ -1344,7 +1344,7 @@ Class name MUST start with a capital letter and MUST be camelcased.
 
 <pre lang=php>
 &lt;?php
-namespace Core\Model;
+namespace Core\Models;
 class officeProgram {
 	// ...
 }
@@ -1354,7 +1354,7 @@ class officeProgram {
 
 <pre lang=php>
 &lt;?php
-namespace Core\Model;
+namespace Core\Models;
 
 class Officeprogram {
 	// ...
@@ -1367,7 +1367,7 @@ class Officeprogram {
 
 <pre lang=php>
 &lt;?php
-namespace Core\Model;
+namespace Core\Models;
 
 class OfficeProgram {
 	// ...
@@ -1386,7 +1386,7 @@ The opening curly brace MUST be placed on the same line.
 
 <pre lang=php>
 &lt;?php
-namespace Core\Model;
+namespace Core\Models;
 
 class User 
 {
@@ -1400,7 +1400,7 @@ class User
 
 <pre lang=php>
 &lt;?php
-namespace Core\Model;
+namespace Core\Models;
 
 class User {
 	// ...
@@ -1419,7 +1419,7 @@ The `extends` keyword MUST be placed on the same line.
 
 <pre lang=php>
 &lt;?php
-namespace Core\Model;
+namespace Core\Models;
 
 class User 
 	extends APrototype {
@@ -1433,7 +1433,7 @@ class User
 
 <pre lang=php>
 &lt;?php
-namespace Core\Model;
+namespace Core\Models;
 
 class User extends APrototype {
 	// ...
@@ -1453,7 +1453,7 @@ The `implements` keyword SHOULD be moved to the next line.
 
 <pre lang=php>
 &lt;?php
-namespace Core\Model;
+namespace Core\Models;
 
 class User extends APrototype implements Countable {
 	// ...
@@ -1466,7 +1466,7 @@ class User extends APrototype implements Countable {
 
 <pre lang=php>
 &lt;?php
-namespace Core\Model;
+namespace Core\Models;
 
 class User extends APrototype 
 	implements Countable {
@@ -1491,7 +1491,7 @@ Class properties:
 
 <pre lang=php>
 &lt;?php
-namespace Core\Model;
+namespace Core\Models;
 
 class User {
 	// Public
@@ -1509,7 +1509,7 @@ class User {
 
 <pre lang=php>
 &lt;?php
-namespace Core\Model;
+namespace Core\Models;
 
 class User {
 	public $var1;
@@ -1524,7 +1524,7 @@ class User {
 
 <pre lang=php>
 &lt;?php
-namespace Core\Model;
+namespace Core\Models;
 
 class User {
 	public $var1;
@@ -1539,7 +1539,7 @@ class User {
 
 <pre lang=php>
 &lt;?php
-namespace Core\Model;
+namespace Core\Models;
 
 class User {
 	public int $var1;
@@ -1564,7 +1564,7 @@ Class methods:
 
 <pre lang=php>
 &lt;?php
-namespace Core\Model;
+namespace Core\Models;
 
 class User {
 	// ...
@@ -1590,7 +1590,7 @@ class User {
 
 <pre lang=php>
 &lt;?php
-namespace Core\Model;
+namespace Core\Models;
 
 class User {
 	// ...
@@ -1615,7 +1615,7 @@ class User {
 
 <pre lang=php>
 &lt;?php
-namespace Core\Model;
+namespace Core\Models;
 
 class User {
 	// ...
