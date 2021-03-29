@@ -21,7 +21,7 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 	1. [Namespace Declaration](#1-namespace-declaration)
 	2. [Namespace Definition](#2-namespace-definition)
 	3. [Multiple Namespaces](#3-multiple-namespaces)
-	4. [Import Section](#4-import-section)
+	4. [List of imports](#4-list-of-imports)
 4. [**Comments**](#4-comments)
 	1. [Single-line Comments](#1-single-line-comments)
 	2. [Multi-line Comments](#2-multi-line-comments)
