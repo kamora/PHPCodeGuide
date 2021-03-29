@@ -549,7 +549,7 @@ This section outline various, general formatting rules related to whitespace and
 
 ### 3. Keywords
 
-* MUST be all lowercase
+* MUST be all lowercased
 	* e.g. `false`, `true`, `null`, etc.
 
 #### &#10006; Incorrect
@@ -561,7 +561,7 @@ $isFalse = TRUE:
 $value = NULL;
 </pre>
 
-&#8627; Incorrect because `FALSE`, `TRUE` and `NULL` are not all lowercase.
+&#8627; Incorrect because `FALSE`, `TRUE` and `NULL` are not all lowercased.
 
 #### &#10004; Correct
 
