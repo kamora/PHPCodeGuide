@@ -447,7 +447,7 @@ This section describes how comments should be formatted and used.
 ### 2. Multi-line Comments
 
 * MUST use the block format
-	* i.e. `/*` `↵` ` My comment` `↵` `*/`
+	* i.e. `/*` `↵` ` The comment` `↵` `*/`
 
 #### &#10006; Incorrect
 
@@ -478,8 +478,8 @@ This section describes how comments should be formatted and used.
 <!-- ------------------------------ -->
 
 ### 3. PHPDoc Comments
-* MUST use the block format and follow the [PHPDoc](https://docs.phpdoc.org/3.0/guide/getting-started/what-is-a-docblock.html) syntax requirements.
-	* i.e. `/**` `↵` `* My comment` `↵` `*/`
+* MUST use the [PHPDoc](https://docs.phpdoc.org/3.0/guide/getting-started/what-is-a-docblock.html) block format.
+	* i.e. `/**` `↵` `* The comment` `↵` `*/`
 
 #### &#10006; Incorrect
 
@@ -492,7 +492,7 @@ This section describes how comments should be formatted and used.
 */
 </pre>
 
-&#8627; Incorrect because uses `/*` for a PHPDoc comment.
+&#8627; Incorrect because doesn't use the PHPDoc block format.
 
 #### &#10004; Correct
 
