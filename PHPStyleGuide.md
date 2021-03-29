@@ -340,7 +340,7 @@ namespace SomeNamespace\View {
 
 * MUST be followed by a blank line
 * MUST import a single namespace per declaration
-* SHOULD use leading backslash characters 
+* SHOULD use leading backslashes
 
 #### &#10006; Incorrect
 
@@ -369,7 +369,7 @@ class Model {
 }
 </pre>
 
-&#8627; Incorrect because multiple namespaces are imported per declaration.
+&#8627; Incorrect because the multiple namespaces are imported per declaration.
 
 #### ~ Acceptable
 
@@ -386,7 +386,7 @@ class Model {
 }
 </pre>
 
-&#8627; Acceptable, but no leading backslash characters are using.
+&#8627; Acceptable, but no leading backslashes are using.
 
 #### &#10004; Preferred
 
