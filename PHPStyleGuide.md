@@ -339,8 +339,8 @@ namespace SomeNamespace\View {
 ### 4. List of Imports
 
 * MUST be followed by a blank line
-* MUST use leading backslash characters 
 * MUST import a single namespace per declaration
+* SHOULD use leading backslash characters 
 
 #### &#10006; Incorrect
 
@@ -362,21 +362,6 @@ class Model {
 &lt;?php
 namespace Core\Model;
 
-use  Core\Facades\Log;
-use  Core\Facades\View;
-use  Core\Facades\Input;
-
-class Model {
-	// ...
-}
-</pre>
-
-&#8627; Incorrect because no leading backslash characters are using.
-
-<pre lang=php>
-&lt;?php
-namespace Core\Model;
-
 use  \Core\Facades\Log, \Core\Facades\View, \Core\Facades\Input;
 
 class Model {
@@ -386,7 +371,24 @@ class Model {
 
 &#8627; Incorrect because multiple namespaces are imported per declaration.
 
-#### &#10004; Correct
+#### ~ Acceptable
+
+<pre lang=php>
+&lt;?php
+namespace Core\Model;
+
+use  Core\Facades\Log;
+use  Core\Facades\View;
+use  Core\Facades\Input;
+
+class Model {
+	// ...
+}
+</pre>
+
+&#8627; Acceptable, but no leading backslash characters are using.
+
+#### &#10004; Preferred
 
 <pre lang=php>
 &lt;?php
