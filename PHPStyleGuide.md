@@ -1171,9 +1171,9 @@ try {
 
 This section describes class files, names, definitions, properties, methods and instantiation.
 
-1. [**Class file**](#1-class-file) MUST only contain one definition
-2. [**Class namespace**](#2-class-namespace) MUST be defined
-3. [**Class name**](#3-class-name) MUST start with a capital letter and MUST be camelcased
+1. [**Class file**](#1-class-file)
+2. [**Class namespace**](#2-class-namespace) 
+3. [**Class name**](#3-class-name) 
 4. [**Class definition**](#4-class-definition) MUST place curly braces on the same line after a space
 	* i.e. `class User` `·` `{` `↵` `...` `↵` `}`
 5. [**Extends keyword**](#5-extends-keyword)
@@ -1203,7 +1203,7 @@ This section describes class files, names, definitions, properties, methods and 
 
 ### 1. Class File
 
-Class file MUST only contain one definition.
+*  MUST only contain one definition
 
 #### &#10006; Incorrect
 
@@ -1220,7 +1220,7 @@ class Office {
 }
 </pre>
 
-&#8627; Incorrect because `User` and `Office` are defined in one file.
+&#8627; Incorrect because two classes are defined in one file.
 
 #### &#10004; Correct
 <pre lang=php>
@@ -1238,7 +1238,7 @@ class User {
 
 ### 2. Class Namespace
 
-Class namespace MUST be defined.
+* MUST be defined
 
 #### &#10006; Incorrect
 
@@ -1268,7 +1268,8 @@ class User {
 
 ### 3. Class Name
 
-Class name MUST start with a capital letter and MUST be camelcased.
+* MUST start with a capital letter 
+* MUST be camelcased
 
 #### &#10006; Incorrect
 
@@ -1280,7 +1281,7 @@ class officeProgram {
 }
 </pre>
 
-&#8627; Incorrect because `officeProgram` does not start with a capital letter.
+&#8627; Incorrect because the class name doesn't start with a capital letter.
 
 <pre lang=php>
 &lt;?php
@@ -1291,7 +1292,7 @@ class Officeprogram {
 }
 </pre>
 
-&#8627; Incorrect because `Officeprogram` is not camelcased.
+&#8627; Incorrect because the class name is not camelcased.
 
 #### &#10004; Correct
 
