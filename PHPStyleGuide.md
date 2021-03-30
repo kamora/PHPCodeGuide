@@ -579,7 +579,7 @@ $value = null;
 
 * MUST be all camelcased 
 * MUST NOT be separated by underscores
-* Variables of object type MUST starts from an uppercase letter
+* Variables of object type MUST starts from a capital letter
 * Variables of primitive types MUST starts from a lowercase letter
 * Arrays MAY be tract both: as primitives or as objects
 
