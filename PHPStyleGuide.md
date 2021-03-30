@@ -849,13 +849,13 @@ function addUsersToOffice(array $users, Office $Office): bool {
 
 ### 4. Function Declaration
 
-* MUST be documented via [phpDOC](http://phpdoc.org/docs/latest/index.html) and SHOULD include but not be limited by:
+* SHOULD be documented via [phpDOC](http://phpdoc.org/docs/latest/index.html) and SHOULD include but not be limited by:
 	* short description if needed
 	* argument data type and name
 	* return data type, if applicable
 	* throwable exceptions if any
 
-#### &#10006; Incorrect
+#### ~ Acceptable
 
 <pre lang=php>
 &lt;?php
@@ -864,9 +864,9 @@ function someFunction(int $id, int $width, int $height): Photo {
 }
 </pre>
 
-&#8627; Incorrect because the function is not documented.
+&#8627; Acceptable but the function is not documented.
 
-#### &#10004; Correct
+#### &#10004; Preferred
 
 <pre lang=php>
 &lt;?php
