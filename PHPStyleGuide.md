@@ -517,8 +517,7 @@ This section outline various, general formatting rules related to whitespace and
 3. [**Keywords**](#3-keywords) 
 4. [**Variables**](#4-variables) 
 9. [**Constants**](#5-constants) 
-	* e.g. `WELCOME_MESSAGE`
-10. [**Statements**](#6-statements) MUST be placed on their own line and MUST end with a semicolon
+10. [**Statements**](#6-statements) 
 	* e.g. `welcome_message();`
 11. [**Operators**](#7-operators) MUST be surrounded by a space
 	* e.g. `$total = 15 + 7;`, `$var .= '';`
@@ -579,10 +578,10 @@ $value = null;
 ### 4. Variables
 
 * MUST be all camelcased 
-* MUST NOT be separated by an underscore
+* MUST NOT be separated by underscores
 * Variables of object type MUST starts from an uppercase letter
 * Variables of primitive types MUST starts from a lowercase letter
-* Arrays MAY be tract as primitives or as objects in accordance with the situation
+* Arrays MAY be tract both: as primitives or as objects
 
 #### &#10006; Incorrect
 
@@ -622,7 +621,7 @@ $SomeObject = new SomeClass();
 
 ### 5. Constants
 
-* MUST be all uppercase 
+* MUST be all uppercases 
 * MUST be separated by underscores
 
 #### &#10006; Incorrect
@@ -656,14 +655,14 @@ define('WELCOME_MESSAGE', '');
 
 ### 6. Statements
 
-Statements MUST be placed on their own line and MUST end with a semicolon.
+* MUST be placed on their own line
+* MUST end with a semicolon
 
 #### &#10006; Incorrect
 
 <pre lang=php>
 &lt;?php
-$quotes_exist = false; print_welcome_message();
-
+$isFalse = false; print_welcome_message();
 </pre>
 
 &#8627; Incorrect because the statements are on the same line.
@@ -672,9 +671,8 @@ $quotes_exist = false; print_welcome_message();
 
 <pre lang=php>
 &lt;?php
-$quotes_exist = false;
+$isFalse = false;
 print_welcome_message();
-
 </pre>
 
 &#9650; [Formatting](#5-formatting)
