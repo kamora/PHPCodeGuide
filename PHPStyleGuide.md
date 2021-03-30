@@ -35,7 +35,6 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 	6. [Statements](#6-statements)
 	7. [Operators](#7-operators)
 	8. [Unary Operators](#8-unary-operators)
-	9. [Concatenation Period](#9-concatenation-period)
 6. [**Functions**](#6-functions)
 	1. [Function Name](#1-function-name)
 	3. [Function Call](#2-function-call)
@@ -518,12 +517,8 @@ This section outline various, general formatting rules related to whitespace and
 4. [**Variables**](#4-variables) 
 9. [**Constants**](#5-constants) 
 10. [**Statements**](#6-statements) 
-	* e.g. `welcome_message();`
-11. [**Operators**](#7-operators) MUST be surrounded by a space
-	* e.g. `$total = 15 + 7;`, `$var .= '';`
-12. [**Unary operators**](#8-unary-operators) MUST be attached to their variable or integer
-	* e.g. `$index++`, `--$index`
-13. [**Concatenation period**](#9-concatenation-period) MUST be surrounded by a space
+11. [**Operators**](#7-operators) 
+12. [**Unary operators**](#8-unary-operators) 
 	* e.g. `echo 'Read:' . $welcome_message;`
 
 &#9650; [Table of Contents](#table-of-contents)
@@ -681,7 +676,7 @@ print_welcome_message();
 
 ### 7. Operators
 
-Operators MUST be surrounded a space.
+* MUST be surrounded by a space
 
 #### &#10006; Incorrect
 
@@ -690,7 +685,7 @@ Operators MUST be surrounded a space.
 $total=3+14;
 $string='Hello, World! ';
 $string.='Today is a good day!';
-
+echo 'Hello, World! Today is '.$date.'!';
 </pre>
 
 &#8627; Incorrect because there is no space surrounding the `=`, `+` or `.=` sign.
@@ -699,11 +694,10 @@ $string.='Today is a good day!';
 
 <pre lang=php>
 &lt;?php
-
 $total = 3 + 14;
 $string = 'Hello, World! ';
 $string .= 'Today is a good day!';
-
+echo 'Hello, World! Today is ' . $date . '!';
 </pre>
 
 &#9650; [Formatting](#5-formatting)
@@ -712,7 +706,7 @@ $string .= 'Today is a good day!';
 
 ### 8. Unary Operators
 
-Unary operators MUST be attached to their operand.
+* MUST be attached to the operand.
 
 #### &#10006; Incorrect
 
@@ -730,30 +724,6 @@ $index ++;
 &lt;?php
 $index++;
 --$index;
-</pre>
-
-&#9650; [Formatting](#5-formatting)
-
-<!-- ------------------------------ -->
-
-### 9. Concatenation Period
-
-Concatenation period MUST be surrounded by a space.
-
-#### &#10006; Incorrect
-
-<pre lang=php>
-&lt;?php
-echo 'Hello, World! Today is '.$date.'!';
-</pre>
-
-&#8627; Incorrect because there is no space surrounding `.`.
-
-#### &#10004; Correct
-
-<pre lang=php>
-&lt;?php
-echo 'Hello, World! Today is ' . $date . '!';
 </pre>
 
 &#9650; [Formatting](#5-formatting)
