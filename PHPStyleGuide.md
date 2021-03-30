@@ -519,7 +519,6 @@ This section outline various, general formatting rules related to whitespace and
 10. [**Statements**](#6-statements) 
 11. [**Operators**](#7-operators) 
 12. [**Unary operators**](#8-unary-operators) 
-	* e.g. `echo 'Read:' . $welcome_message;`
 
 &#9650; [Table of Contents](#table-of-contents)
 
