@@ -687,7 +687,7 @@ $string.='Today is a good day!';
 echo 'Hello, World! Today is '.$date.'!';
 </pre>
 
-&#8627; Incorrect because there is no space surrounding the `=`, `+` or `.=` sign.
+&#8627; Incorrect because there is no space surrounding the `=`, `+`, `.` or `.=` sign.
 
 #### &#10004; Correct
 
@@ -733,27 +733,11 @@ $index++;
 
 This section describes the format for function names, calls, arguments and declarations.
 
-1. [**Function name**](#1-function-name) MUST start from a lowercase letter, MUST be all camelcased, and MUST NOT be separated by an underscore.
-	* e.g. `function welcomeMessage() {`
-2. [**Function call**](#2-function-call) MUST NOT have a space between function name and open parenthesis
-	* e.g. `func();`
+1. [**Function name**](#1-function-name) 
+2. [**Function call**](#2-function-call)
 3. [**Function arguments**](#3-function-arguments)
-	* MUST NOT have a space before the comma
-	* MUST have a space after the comma 
-	* SHOULD be type-hinted if possible
-	* MAY use line breaks for long arguments
-	* e.g. `func($arg1, $arg2 = 'asc', $arg3 = 100);`
-4. [**Function declaration**](#4-function-declaration) MUST be documented using [phpDocumentor](http://phpdoc.org/docs/latest/index.html) tag style and SHOULD include
-	* Short description
-	* Optional long description, if needed
-	* @access: `private` or `protected` (assumed `public`)
-	* @author: Author name
-	* @global: Global variables function uses, if applicable
-	* @param: Parameters with data type, variable name, and description
-	* @return: Return data type, if applicable
+4. [**Function declaration**](#4-function-declaration) 
 5. [**Function return**](#5-function-return)
-	* MUST be preceded by blank line, except inside control statement
-	* i.e. `if (!$expr) { return false; }`
 
 &#9650; [Table of Contents](#table-of-contents)
 
@@ -761,7 +745,9 @@ This section describes the format for function names, calls, arguments and decla
 
 ### 1. Function Name
 
-Function name MUST be all lowercase and words MUST be separated by an underscore.
+* MUST start from a lowercase letter
+* MUST be all camelcased
+* MUST NOT be separated by underscores
 
 #### &#10006; Incorrect
 
@@ -773,7 +759,7 @@ GET_WELCOME_MESSAGE();
 getwelcomemessage();
 </pre>
 
-&#8627; Incorrect because the function names are not all properly camelcased.
+&#8627; Incorrect because the function names are not all properly camelcased or separated by underscores.
 
 #### &#10004; Correct
 
@@ -788,7 +774,7 @@ getWelcomeMessage();
 
 ### 2. Function Call
 
-Function call MUST NOT have a space between function name and open parenthesis.
+* MUST NOT have a space between function name and open parenthesis
 
 #### &#10006; Incorrect
 
@@ -813,7 +799,7 @@ printWelcomeMessage();
 ### 3. Function Arguments
 
 * MUST NOT have a space before the comma
-* MUST have a space after the comma
+* MUST have a space after the comma 
 * SHOULD be type-hinted if possible
 * MAY use line breaks for long arguments
 
@@ -852,10 +838,6 @@ function addUsersToOffice($users, $Office) {
 
 <pre lang=php>
 &lt;?php
-function getObjects(string $type, string $order = 'asc', int $limit = 100): SomeObjectType {
-	// ...
-}
-
 function addUsersToOffice(array $users, Office $Office): bool {
 	// ...
 }
@@ -867,12 +849,11 @@ function addUsersToOffice(array $users, Office $Office): bool {
 
 ### 4. Function Declaration
 
-Function declaration MUST be documented via [phpDOC](http://phpdoc.org/docs/latest/index.html) and SHOULD include but not be limited by:
-
-* short description if needed
-* `@param` - argument data type and name
-* `@return` - return data type, if applicable
-* `@throws` - throwable exceptions if any
+* MUST be documented via [phpDOC](http://phpdoc.org/docs/latest/index.html) and SHOULD include but not be limited by:
+	* short description if needed
+	* argument data type and name
+	* return data type, if applicable
+	* throwable exceptions if any
 
 #### &#10006; Incorrect
 
@@ -909,8 +890,6 @@ function someFunction(int $id, int $width, int $height): string {
 <!-- ------------------------------ -->
 
 ### 5. Function Return
-
-Function return:
 
 * SHOULD be type-hinted if applicable
 
