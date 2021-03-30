@@ -926,9 +926,9 @@ This section defines the layout and usage of control structures. Note that this 
 	* e.g. `($expr`, `($i`
 * **Closing parenthesis** MUST NOT be preceded by a space
 	* e.g. `$expr)`, `$i++)`, `$value)`
-* **Opening brace** MUST be preceded by a space and MUST be followed by a new line
-	* e.g. `$expr) {`, `$i++) {`
-* **Structure body** MUST be indented once and MUST be enclosed with curly braces (no shorthand)
+* **Opening brace** MUST be placed on the same line, preceded by a space and followed by a new line
+	* e.g. `$expr) { ` `↵`, `$i++) {` `↵`, 
+* **Structure body** MUST be indented once and MUST be enclosed with curly braces
 	* e.g. `if ($expr) {` `↵` `⇥` `...` `↵` `}`
 * **Closing brace** MUST start on the next line
 	* i.e. `...` `↵` `}`
@@ -936,19 +936,10 @@ This section defines the layout and usage of control structures. Note that this 
 In addition to the rules above, some control structures have additional requirements:
 
 1. [**If, Elseif, Else**](#1-if-elseif-else)
-	* `elseif` MUST be used instead of `else if`
-	* `elseif` and `else` MUST be between `}` and `{` on one line
 2. [**Switch, Case**](#2-switch-case)
-	* Case statement MUST be indented once
-		* i.e. `⇥` `case 1:`
-	* Case body MUST be indented twice
-		* i.e. `⇥` `⇥` `func();`
-	* Break keyword MUST be indented twice
-		* i.e. `⇥` `⇥` `break;`
 3. [**While, Do While**](#3-while-do-while)
 4. [**For, Foreach**](#4-for-foreach)
 5. [**Try, Catch**](#5-try-catch)
-	* `catch` MUST be between `}` and `{` on one line
 
 &#9650; [Table of Contents](#table-of-contents)
 
@@ -956,7 +947,7 @@ In addition to the rules above, some control structures have additional requirem
 
 ### 1. If, Elseif, Else
 * `elseif` MUST be used instead of `else if`
-* `elseif` and `else` MUST be between `}` and `{` on one line
+* `elseif` or `else` MUST be between `}` and `{` on one line
 
 #### &#10006; Incorrect
 
@@ -986,7 +977,7 @@ else {
 }
 </pre>
 
-&#8627; Incorrect because `elseif` and `else` are not between `}` and `{` on one line.
+&#8627; Incorrect because `elseif` or `else` are not between `}` and `{` on one line.
 
 <pre lang=php>
 &lt;?php
@@ -1014,10 +1005,13 @@ if ($expr1) {
 <!-- ------------------------------ -->
 
 ### 2. Switch, Case
+
 * Case statement MUST be indented once
+	* i.e. `⇥` `case 1:`
 * Case body MUST be indented twice
+	* i.e. `⇥` `⇥` `func();`
 * Break keyword MUST be indented twice
-* Case logic MUST be separated by one blank line
+	* i.e. `⇥` `⇥` `break;`
 
 #### &#10006; Incorrect
 
@@ -1043,7 +1037,7 @@ default:
 }
 </pre>
 
-&#8627; Incorrect because `case 0` thru `default` are not indented once.
+&#8627; Incorrect because statements are not indented once.
 
 <pre lang=php>
 &lt;?php
@@ -1067,7 +1061,7 @@ switch ($expr) {
 }
 </pre>
 
-&#8627; Incorrect because `echo`, `break` and `return` are not indented twice.
+&#8627; Incorrect because body is not indented twice.
 
 #### &#10004; Correct
 
@@ -1136,6 +1130,8 @@ foreach ($iterable as $key => $value) {
 <!-- ------------------------------ -->
 
 ### 5. Try, Catch
+
+* `catch` MUST be between `}` and `{` on one line
 
 #### &#10006; Incorrect
 
