@@ -1174,28 +1174,12 @@ This section describes class files, names, definitions, properties, methods and 
 1. [**Class file**](#1-class-file)
 2. [**Class namespace**](#2-class-namespace) 
 3. [**Class name**](#3-class-name) 
-4. [**Class definition**](#4-class-definition) MUST place curly braces on the same line after a space
-	* i.e. `class User` `·` `{` `↵` `...` `↵` `}`
+4. [**Class definition**](#4-class-definition) 
 5. [**Extends keyword**](#5-extends-keyword)
-	* MUST be placed on the same line.
 6. [**Implements keyword**](#6-implements-keyword)
-	* SHOULD be moved to the next line.
 7. [**Class properties**](#7-class-properties)
-	* MUST follow [variable standards](#4-variables)
-	* MUST specify visibility
-	* MUST NOT be prefixed with an underscore
-	* SHOULD be type-hinted if possible
-	* e.g. `protected int $var3;`
 8. [**Class methods**](#8-class-methods)
-	* MUST follow [function standards](#6-functions)
-	* MUST specify visibility
-	* MUST NOT be prefixed with an underscore if private or protected
-	* e.g. `protected func3()`
 9. [**Class instance**](#9-class-instance)
-	* MUST start with capital letter
-	* MUST be camelcase
-	* MUST include parenthesis
-	* e.g. `$user = new User();`, `$OfficeProgram = new OfficeProgram();`
 
 &#9650; [Table of Contents](#table-of-contents)
 
@@ -1311,7 +1295,8 @@ class OfficeProgram {
 
 ### 4. Class Definition
 
-The opening curly brace MUST be placed on the same line.
+* The opening curly brace MUST be placed on the same line
+	* i.e. `class User` `·` `{` `↵` `...` `↵` `}`
 
 #### &#10006; Incorrect
 
@@ -1342,9 +1327,9 @@ class User {
 
 <!-- ------------------------------ -->
 
-### 5. Extends Keyword
+### 5. `Extends` Keyword
 
-The `extends` keyword MUST be placed on the same line.
+* MUST be placed on the same line
 
 #### &#10006; Incorrect
 
@@ -1376,9 +1361,9 @@ class User extends APrototype {
 <!-- ------------------------------ -->
 
 
-### 6. Implements keyword
+### 6. `Implements` keyword
 
-The `implements` keyword SHOULD be moved to the next line.
+* SHOULD be moved to the next line
 
 #### ~ Acceptable
 
@@ -1410,8 +1395,6 @@ class User extends APrototype
 <!-- ------------------------------ -->
 
 ### 7. Class Properties
-
-Class properties:
 
 * MUST follow [variable standards](#4-variables)
 * MUST specify visibility
@@ -1484,8 +1467,6 @@ class User {
 <!-- ------------------------------ -->
 
 ### 8. Class Methods
-
-Class methods:
 
 * MUST follow [function standards](#6-functions)
 * MUST specify visibility
@@ -1571,9 +1552,8 @@ class User {
 
 ### 9. Class Instance
 
-Class instance:
-
-* MUST follow [variable standards](#4-variables)
+* MUST start with a capital letter
+* MUST be camelcased
 * MUST include parenthesis
 
 #### &#10006; Incorrect
