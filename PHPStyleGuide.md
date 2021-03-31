@@ -1175,13 +1175,14 @@ This section describes class files, names, definitions, properties, methods and 
 1. [**Class file**](#1-class-file)
 2. [**Class namespace**](#2-class-namespace) 
 3. [**Class name**](#3-class-name) 
-4. [**Class definition**](#4-class-definition) 
-5. [**Extends keyword**](#5-extends-keyword)
-6. [**Implements keyword**](#6-implements-keyword)
-6. [**Use keyword**](#7-use-keyword)
-7. [**Class properties**](#8-class-properties)
-8. [**Class methods**](#9-class-methods)
-9. [**Class instance**](#10-class-instance)
+3. [**Class prefix**](#4-class-prefix)
+4. [**Class definition**](#5-class-definition) 
+5. [**Extends keyword**](#6-extends-keyword)
+6. [**Implements keyword**](#7-implements-keyword)
+6. [**Use keyword**](#8-use-keyword)
+7. [**Class properties**](#9-class-properties)
+8. [**Class methods**](#10-class-methods)
+9. [**Class instance**](#11-class-instance)
 
 &#9650; [Table of Contents](#table-of-contents)
 
@@ -1295,7 +1296,44 @@ class OfficeProgram {
 
 <!-- ------------------------------ -->
 
-### 4. Class Definition
+### 4. Class Prefix
+
+Following prefix notation SHOULD be used:
+
+* `A` for abstract classes
+	* e.g. `AController`, `APrototype`, etc
+* `I` for interfaces
+	* e.g. `ICountable`, `IBehavior`, etc
+* `T` for traits
+	* e.g. `TString`, `TNotation`, etc
+* `E` for exceptions
+	* e.g. `EInbvalidArgument`, `EUndefinedVariable`, etc
+
+#### &#10004; Correct
+
+<pre lang=php>
+&lt;?php
+namespace Core\Models\Abstractions;
+
+abstract class AModel {
+	// ...
+}
+</pre>
+
+<pre lang=php>
+&lt;?php
+namespace Core\Interfaces;
+
+interface ICountable {
+	// ...
+}
+</pre>
+
+&#9650; [Classes](#8-classes)
+
+<!-- ------------------------------ -->
+
+### 5. Class Definition
 
 * The opening curly brace MUST be placed on the same line
 	* i.e. `class User` `·` `{` `↵` `...` `↵` `}`
@@ -1329,7 +1367,7 @@ class User {
 
 <!-- ------------------------------ -->
 
-### 5. `Extends` Keyword
+### 6. `Extends` Keyword
 
 * MUST be placed on the same line
 
@@ -1363,7 +1401,7 @@ class User extends APrototype {
 <!-- ------------------------------ -->
 
 
-### 6. `Implements` keyword
+### 7. `Implements` keyword
 
 * SHOULD be moved to the next line
 
@@ -1396,7 +1434,7 @@ class User extends APrototype
 
 <!-- ------------------------------ -->
 
-### 7. `Use` keyword
+### 8. `Use` keyword
 
 * MUST include a single trait per line 
 
@@ -1441,7 +1479,7 @@ class User extends APrototype
 
 <!-- ------------------------------ -->
 
-### 8. Class Properties
+### 9. Class Properties
 
 * MUST follow [variable standards](#4-variables)
 * MUST specify visibility
@@ -1513,7 +1551,7 @@ class User {
 
 <!-- ------------------------------ -->
 
-### 9. Class Methods
+### 10. Class Methods
 
 * MUST follow [function standards](#6-functions)
 * MUST specify visibility
@@ -1597,7 +1635,7 @@ class User {
 
 <!-- ------------------------------ -->
 
-### 10. Class Instance
+### 11. Class Instance
 
 * MUST start with a capital letter
 * MUST be camelcased
