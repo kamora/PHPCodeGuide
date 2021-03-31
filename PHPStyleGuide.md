@@ -54,9 +54,10 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 	4. [Class Definition](#4-class-definition)
 	5. [Extends Keyword](#5-extends-keyword)  
 	5. [Implements Keyword](#6-implements-keyword)  
-	6. [Class Properties](#7-class-properties)
-	7. [Class Methods](#8-class-methods)
-	8. [Class Instance](#9-class-instance)
+	5. [Use Keyword](#7-use-keyword)  
+	6. [Class Properties](#8-class-properties)
+	7. [Class Methods](#9-class-methods)
+	8. [Class Instance](#10-class-instance)
 
 <!-- ---------------------------------------------------------------------- -->
 
@@ -1177,9 +1178,10 @@ This section describes class files, names, definitions, properties, methods and 
 4. [**Class definition**](#4-class-definition) 
 5. [**Extends keyword**](#5-extends-keyword)
 6. [**Implements keyword**](#6-implements-keyword)
-7. [**Class properties**](#7-class-properties)
-8. [**Class methods**](#8-class-methods)
-9. [**Class instance**](#9-class-instance)
+6. [**Use keyword**](#7-use-keyword)
+7. [**Class properties**](#8-class-properties)
+8. [**Class methods**](#9-class-methods)
+9. [**Class instance**](#10-class-instance)
 
 &#9650; [Table of Contents](#table-of-contents)
 
@@ -1394,7 +1396,52 @@ class User extends APrototype
 
 <!-- ------------------------------ -->
 
-### 7. Class Properties
+### 7. `Use` keyword
+
+* MUST include a single trait
+
+#### &#10006; Incorrect
+
+<pre lang=php>
+&lt;?php
+namespace Core\Models;
+
+use \Core\Traits\TNumeric;
+use \Core\Traits\TCountable;
+
+class User extends APrototype 
+	implements Countable {
+
+	use TCountable, TNumeric; 
+	// ...
+}
+</pre>
+
+&#8627; Incorrect because two traits are included per line.
+
+#### &#10004; Correct
+
+<pre lang=php>
+&lt;?php
+namespace Core\Models;
+
+use \Core\Traits\TNumeric;
+use \Core\Traits\TCountable;
+
+class User extends APrototype 
+	implements Countable {
+
+	use TCountable;
+	use TNumeric; 
+	// ...
+}
+</pre>
+
+&#9650; [Classes](#8-classes)
+
+<!-- ------------------------------ -->
+
+### 8. Class Properties
 
 * MUST follow [variable standards](#4-variables)
 * MUST specify visibility
@@ -1466,7 +1513,7 @@ class User {
 
 <!-- ------------------------------ -->
 
-### 8. Class Methods
+### 9. Class Methods
 
 * MUST follow [function standards](#6-functions)
 * MUST specify visibility
@@ -1550,7 +1597,7 @@ class User {
 
 <!-- ------------------------------ -->
 
-### 9. Class Instance
+### 10. Class Instance
 
 * MUST start with a capital letter
 * MUST be camelcased
