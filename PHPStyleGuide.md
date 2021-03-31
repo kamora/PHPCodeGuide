@@ -51,7 +51,7 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 	1. [Class File](#1-class-file)
 	2. [Class Namespace](#2-class-namespace)
 	3. [Class Name](#3-class-name)
-	4. [Class Name](#4-class-prefix)
+	4. [Class Prefix](#4-class-prefix)
 	5. [Class Definition](#5-class-definition)
 	6. [Extends Keyword](#6-extends-keyword)  
 	7. [Implements Keyword](#7-implements-keyword)  
