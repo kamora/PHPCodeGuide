@@ -1398,7 +1398,7 @@ class User extends APrototype
 
 ### 7. `Use` keyword
 
-* MUST include a single trait
+* MUST include a single trait per line 
 
 #### &#10006; Incorrect
 
