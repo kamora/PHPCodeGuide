@@ -176,7 +176,7 @@ print_welcome_message();
 #### &#10006; Incorrect
 
 ```php
-&lt;?
+<?
 print_welcome_message();
 ```
 
@@ -200,9 +200,9 @@ print_welcome_message();
 #### ~ Acceptable
 
 ```html
-&lt;div&gt;
-	&lt;p&gt;<?php echo get_welcome_message(); ?&gt;&lt;/p&gt;
-&lt;/div&gt;
+<div>
+	<p><?php echo get_welcome_message(); ?</p>
+</div>
 ```
 
 &#8627; Acceptable, but `<?=` should be used over `<?php echo` when possible.
@@ -210,9 +210,9 @@ print_welcome_message();
 #### &#10004; Preferred
 
 ```html
-&lt;div&gt;
-	&lt;p&gt;&lt;?=get_welcome_message();?&gt;&lt;/p&gt;
-&lt;/div&gt;
+<div>
+	<p><?=get_welcome_message();?></p>
+</div>
 ```
 
 &#9650; [PHP Tags](#2-php-tags)
@@ -1118,7 +1118,7 @@ do {
 
 ```php
 <?php
-for ($i = 0; $i &lt; 10; $i++) {
+for ($i = 0; $i < 10; $i++) {
 	// ...
 }
 
