@@ -1,4 +1,4 @@
-# PHP Style Guide
+# PHP Code Style Guide
 
 All rules and guidelines in this document apply to PHP files unless otherwise noted. References to PHP/HTML files can be interpreted as files that primarily contain HTML, but use PHP for templating purposes.
 
