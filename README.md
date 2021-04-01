@@ -617,7 +617,7 @@ $SomeObject = new SomeClass();
 
 ### 5. Constants
 
-* MUST be all uppercases 
+* MUST be all uppercased 
 * MUST be separated by underscores
 
 #### &#10006; Incorrect
