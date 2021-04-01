@@ -135,10 +135,10 @@ print_welcome_message();
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 print_welcome_message();
-</pre>
+```
 
 &#9650; [PHP Tags](#2-php-tags)
 
@@ -150,20 +150,20 @@ print_welcome_message();
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 print_welcome_message();
 ?&gt;
-</pre>
+```
 
 &#8627; Incorrect because `?>` was used.
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 print_welcome_message();
-</pre>
+```
 
 &#9650; [PHP Tags](#2-php-tags)
 
@@ -175,19 +175,19 @@ print_welcome_message();
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?
 print_welcome_message();
-</pre>
+```
 
 &#8627; Incorrect because `<?` was used instead of `<?php`.
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 print_welcome_message();
-</pre>
+```
 
 &#9650; [PHP Tags](#2-php-tags)
 
@@ -199,21 +199,21 @@ print_welcome_message();
 
 #### ~ Acceptable
 
-<pre lang=html>
+```html
 &lt;div&gt;
 	&lt;p&gt;&lt;?php echo get_welcome_message(); ?&gt;&lt;/p&gt;
 &lt;/div&gt;
-</pre>
+```
 
 &#8627; Acceptable, but `<?=` should be used over `<?php echo` when possible.
 
 #### &#10004; Preferred
 
-<pre lang=html>
+```html
 &lt;div&gt;
 	&lt;p&gt;&lt;?=get_welcome_message();?&gt;&lt;/p&gt;
 &lt;/div&gt;
-</pre>
+```
 
 &#9650; [PHP Tags](#2-php-tags)
 
@@ -239,31 +239,31 @@ This section describes how to use one or more namespaces and their naming conven
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 print_welcome_message();
 
 namespace SomeNamespace;
-</pre>
+```
 
 &#8627; Incorrect because `namespace SomeNamespace` is not the first statement.
 
-<pre lang=php>
+```php
 &lt;?php
 namespace SomeNamespace;
 print_welcome_message();
-</pre>
+```
 
 &#8627; Incorrect because `namespace SomeNamespace` is not followed by a blank line.
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 namespace SomeNamespace;
 
 print_welcome_message();
-</pre>
+```
 
 &#9650; [Namespaces](#3-namespaces)
 
@@ -276,29 +276,29 @@ print_welcome_message();
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 namespace SomeNamespace;
 
-</pre>
+```
 
 &#8627; Incorrect because `SomeNamespace` does not start with a capital letter.
 
-<pre lang=php>
+```php
 &lt;?php
 namespace SomeNAMESPACE;
 
-</pre>
+```
 
 &#8627; Incorrect because `SomeNAMESPACE` is not camelcased.
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 namespace SomeNamespace;
 
-</pre>
+```
 
 &#9650; [Namespaces](#3-namespaces)
 
@@ -310,19 +310,19 @@ namespace SomeNamespace;
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 namespace SomeNamespace\Model;
 
 namespace SomeNamespace\View;
 
-</pre>
+```
 
 &#8627; Incorrect because the curly brace syntax was not used.
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 namespace SomeNamespace\Model {
 	// model body
@@ -331,7 +331,7 @@ namespace SomeNamespace\Model {
 namespace SomeNamespace\View {
 	// view body
 }
-</pre>
+```
 
 &#9650; [Namespaces](#3-namespaces)
 
@@ -345,7 +345,7 @@ namespace SomeNamespace\View {
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 namespace Core\Models;
 
@@ -355,11 +355,11 @@ use  Core\Facades\Input;
 class Model {
 	// ...
 }
-</pre>
+```
 
 &#8627; Incorrect because not followed by a blank line.
 
-<pre lang=php>
+```php
 &lt;?php
 namespace Core\Models;
 
@@ -368,13 +368,13 @@ use  \Core\Facades\Log, \Core\Facades\View, \Core\Facades\Input;
 class Model {
 	// ...
 }
-</pre>
+```
 
 &#8627; Incorrect because the multiple namespaces are imported per declaration.
 
 #### ~ Acceptable
 
-<pre lang=php>
+```php
 &lt;?php
 namespace Core\Models;
 
@@ -385,13 +385,13 @@ use  Core\Facades\Input;
 class Model {
 	// ...
 }
-</pre>
+```
 
 &#8627; Acceptable, but no leading backslashes are using.
 
 #### &#10004; Preferred
 
-<pre lang=php>
+```php
 &lt;?php
 namespace Core\Models;
 
@@ -402,7 +402,7 @@ use  \Core\Facades\Input;
 class Model {
 	// ...
 }
-</pre>
+```
 
 &#9650; [Namespaces](#3-namespaces)
 
@@ -427,19 +427,19 @@ This section describes how comments should be formatted and used.
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 /* This is a comment */
-</pre>
+```
 
 &#8627; Incorrect because it uses `/*` and `*/` for a single-line comment.
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 // This is a comment
-</pre>
+```
 
 &#9650; [Comments](#4-comments)
 
@@ -452,19 +452,19 @@ This section describes how comments should be formatted and used.
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 // This is a
 // multi-line
 // comment
  
-</pre>
+```
 
 &#8627; Incorrect because it uses `//` for a multi-line comment.
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 /*
  This is a
@@ -472,7 +472,7 @@ This section describes how comments should be formatted and used.
  comment
 */
 
-</pre>
+```
 
 &#9650; [Comments](#4-comments)
 
@@ -484,26 +484,26 @@ This section describes how comments should be formatted and used.
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 /*
  This is a
  multi-line
  comment
 */
-</pre>
+```
 
 &#8627; Incorrect because doesn't use the PHPDoc block format.
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 /**
  * This is a
  * PHPDoc comment 
  */
-</pre>
+```
 
 &#9650; [Comments](#4-comments)
 
@@ -549,23 +549,23 @@ This section outline various, general formatting rules related to whitespace and
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 $isTrue = FALSE;
 $isFalse = TRUE:
 $value = NULL;
-</pre>
+```
 
 &#8627; Incorrect because `FALSE`, `TRUE` and `NULL` are not all lowercased.
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 $isTrue = false;
 $isFalse = true:
 $value = null;
-</pre>
+```
 
 &#9650; [Formatting](#5-formatting)
 
@@ -581,35 +581,35 @@ $value = null;
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 $welcome_message = '';
 $WelcomeMESSAGE = '';
-</pre>
+```
 
 &#8627; Incorrect because variables are not camelcased properly.
 
-<pre lang=php>
+```php
 &lt;?php
 $WelcomeMessage = '';
-</pre>
+```
 
 &#8627; Incorrect because the variable contains a primitive type but starts from an uppercase letter.
 
-<pre lang=php>
+```php
 &lt;?php
 $someObject = new SomeClass();
-</pre>
+```
 
 &#8627; Incorrect because the variable contains an object but doesn't start from an uppercase letter.
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 $welcomeMessage = '';
 $SomeObject = new SomeClass();
-</pre>
+```
 
 &#9650; [Formatting](#5-formatting)
 
@@ -622,28 +622,28 @@ $SomeObject = new SomeClass();
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 define('welcome_Message', '');
 define('Welcome_Message', '');
 define('welcome_message', '');
-</pre>
+```
 
 &#8627; Incorrect because the constants are not all uppercase.
 
-<pre lang=php>
+```php
 &lt;?php
 define('WELCOMEMESSAGE', '');
-</pre>
+```
 
 &#8627; Incorrect because `WELCOME` and `MESSAGE` are not separated by an underscore.
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 define('WELCOME_MESSAGE', '');
-</pre>
+```
 
 &#9650; [Formatting](#5-formatting)
 
@@ -656,20 +656,20 @@ define('WELCOME_MESSAGE', '');
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 $isFalse = false; print_welcome_message();
-</pre>
+```
 
 &#8627; Incorrect because the statements are on the same line.
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 $isFalse = false;
 print_welcome_message();
-</pre>
+```
 
 &#9650; [Formatting](#5-formatting)
 
@@ -681,25 +681,25 @@ print_welcome_message();
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 $total=3+14;
 $string='Hello, World! ';
 $string.='Today is a good day!';
 echo 'Hello, World! Today is '.$date.'!';
-</pre>
+```
 
 &#8627; Incorrect because there is no space surrounding the `=`, `+`, `.` or `.=` sign.
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 $total = 3 + 14;
 $string = 'Hello, World! ';
 $string .= 'Today is a good day!';
 echo 'Hello, World! Today is ' . $date . '!';
-</pre>
+```
 
 &#9650; [Formatting](#5-formatting)
 
@@ -711,21 +711,21 @@ echo 'Hello, World! Today is ' . $date . '!';
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 $index ++;
 -- $index;
-</pre>
+```
 
 &#8627; Incorrect because there is a space before `++` and after `--`.
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 $index++;
 --$index;
-</pre>
+```
 
 &#9650; [Formatting](#5-formatting)
 
@@ -753,22 +753,22 @@ This section describes the format for function names, calls, arguments and decla
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 get_WelcomeMessage();
 GetWelcomeMessage();
 GET_WELCOME_MESSAGE();
 getwelcomemessage();
-</pre>
+```
 
 &#8627; Incorrect because the function names are not all properly camelcased or separated by underscores.
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 getWelcomeMessage();
-</pre>
+```
 
 &#9650; [Functions](#6-functions)
 
@@ -780,19 +780,19 @@ getWelcomeMessage();
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 printWelcomeMessage ();
-</pre>
+```
 
 &#8627; Incorrect because there is a space between `getWelcomeMessage` and `()`.
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 printWelcomeMessage();
-</pre>
+```
 
 &#9650; [Functions](#6-functions)
 
@@ -807,43 +807,43 @@ printWelcomeMessage();
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 someFunction($arg1 , $arg2 , $arg3) {
 	// ...
 }
-</pre>
+```
 
 &#8627; Incorrect because there is a space before `,`.
 
-<pre lang=php>
+```php
 &lt;?php
 someFunction($arg1,$arg2,$arg3) {
 	// ...
 }
-</pre>
+```
 
 &#8627; Incorrect because there is no space after `,`.
 
 #### ~ Acceptable
 
-<pre lang=php>
+```php
 &lt;?php
 function addUsersToOffice($users, $Office) {
 	// ...
 }
-</pre>
+```
 
 &#8627; Acceptable, but `$users` and `$office` are missing their data types.
 
 #### &#10004; Preferred
 
-<pre lang=php>
+```php
 &lt;?php
 function addUsersToOffice(array $users, Office $Office): bool {
 	// ...
 }
-</pre>
+```
 
 &#9650; [Functions](#6-functions)
 
@@ -859,18 +859,18 @@ function addUsersToOffice(array $users, Office $Office): bool {
 
 #### ~ Acceptable
 
-<pre lang=php>
+```php
 &lt;?php
 function someFunction(int $id, int $width, int $height): Photo {
 	// ...
 }
-</pre>
+```
 
 &#8627; Acceptable but the function is not documented.
 
 #### &#10004; Preferred
 
-<pre lang=php>
+```php
 &lt;?php
 /**
  * Get profile photo of a customer
@@ -885,7 +885,7 @@ function someFunction(int $id, int $width, int $height): Photo {
 function someFunction(int $id, int $width, int $height): string {
 	// ...
 }
-</pre>
+```
 
 &#9650; [Functions](#6-functions)
 
@@ -897,23 +897,23 @@ function someFunction(int $id, int $width, int $height): string {
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 function getValue() {
 	// ...
 }
-</pre>
+```
 
 &#8627; Incorrect because the return type is not hinted.
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 function getValue(): string {
 	// ...
 }
-</pre>
+```
 
 &#9650; [Functions](#6-functions)
 
@@ -953,7 +953,7 @@ In addition to the rules above, some control structures have additional requirem
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 if ($expr1) {
 	// if body
@@ -962,11 +962,11 @@ if ($expr1) {
 } else {
 	// else body
 }
-</pre>
+```
 
 &#8627; Incorrect because `else if` was used instead of `elseif`.
 
-<pre lang=php>
+```php
 &lt;?php
 if ($expr1) {
 	// if body
@@ -977,21 +977,21 @@ elseif ($expr2) {
 else {
 	// else body
 }
-</pre>
+```
 
 &#8627; Incorrect because `elseif` or `else` are not between `}` and `{` on one line.
 
-<pre lang=php>
+```php
 &lt;?php
 if($expr)
 	$result = 100;
-</pre>
+```
 
 &#8627; Incorrect because structure body is not wrapped in curly braces.
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 if ($expr1) {
 	// if body
@@ -1000,7 +1000,7 @@ if ($expr1) {
 } else {
 	// else body
 }
-</pre>
+```
 
 &#9650; [Control Structures](#7-control-structures)
 
@@ -1017,7 +1017,7 @@ if ($expr1) {
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 switch ($expr) {
 case 0:
@@ -1037,11 +1037,11 @@ default:
 	echo 'Default case';
 	break;
 }
-</pre>
+```
 
 &#8627; Incorrect because statements are not indented once.
 
-<pre lang=php>
+```php
 &lt;?php
 switch ($expr) {
 	case 0:
@@ -1061,13 +1061,13 @@ switch ($expr) {
 	echo 'Default case';
 	break;
 }
-</pre>
+```
 
 &#8627; Incorrect because body is not indented twice.
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 switch ($expr) {
 	case 0:
@@ -1087,7 +1087,7 @@ switch ($expr) {
 		echo 'Default case';
 		break;
 }
-</pre>
+```
 
 &#9650; [Control Structures](#7-control-structures)
 
@@ -1097,7 +1097,7 @@ switch ($expr) {
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 while ($expr) {
 	// ...
@@ -1106,7 +1106,7 @@ while ($expr) {
 do {
 	// ...
 } while ($expr);
-</pre>
+```
 
 &#9650; [Control Structures](#7-control-structures)
 
@@ -1116,7 +1116,7 @@ do {
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 for ($i = 0; $i &lt; 10; $i++) {
 	// ...
@@ -1125,7 +1125,7 @@ for ($i = 0; $i &lt; 10; $i++) {
 foreach ($iterable as $key => $value) {
 	// ...
 }
-</pre>
+```
 
 &#9650; [Control Structures](#7-control-structures)
 
@@ -1137,7 +1137,7 @@ foreach ($iterable as $key => $value) {
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 try {
 	// ...
@@ -1148,13 +1148,13 @@ catch (FirstExceptionType $Exception) {
 catch (OtherExceptionType $Exception) {
 	// ...
 }
-</pre>
+```
 
 &#8627; Incorrect because `catch` is not between `}` and `{` on one line.
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 try {
 	// ...
@@ -1163,7 +1163,7 @@ try {
 } catch (OtherExceptionType $Exception) {
 	// ...
 }
-</pre>
+```
 
 &#9650; [Control Structures](#7-control-structures)
 
@@ -1195,7 +1195,7 @@ This section describes class files, names, definitions, properties, methods and 
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 namespace Core\Models;
 
@@ -1206,19 +1206,19 @@ class User {
 class Office {
 	// ...
 }
-</pre>
+```
 
 &#8627; Incorrect because two classes are defined in one file.
 
 #### &#10004; Correct
-<pre lang=php>
+```php
 &lt;?php
 namespace Core\Models;
 
 class User {
 	// ...
 }
-</pre>
+```
 
 &#9650; [Classes](#8-classes)
 
@@ -1230,25 +1230,25 @@ class User {
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 class User {
 	// ...
 }
-</pre>
+```
 
 &#8627; Incorrect because there is no namespace defined.
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 namespace Core\Models;
 
 class User {
 	// ...
 }
-</pre>
+```
 
 &#9650; [Classes](#8-classes)
 
@@ -1261,37 +1261,37 @@ class User {
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 namespace Core\Models;
 class officeProgram {
 	// ...
 }
-</pre>
+```
 
 &#8627; Incorrect because the class name doesn't start with a capital letter.
 
-<pre lang=php>
+```php
 &lt;?php
 namespace Core\Models;
 
 class Officeprogram {
 	// ...
 }
-</pre>
+```
 
 &#8627; Incorrect because the class name is not camelcased.
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 namespace Core\Models;
 
 class OfficeProgram {
 	// ...
 }
-</pre>
+```
 
 &#9650; [Classes](#8-classes)
 
@@ -1312,23 +1312,23 @@ Following prefix notation SHOULD be used:
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 namespace Core\Models\Abstractions;
 
 abstract class AModel {
 	// ...
 }
-</pre>
+```
 
-<pre lang=php>
+```php
 &lt;?php
 namespace Core\Interfaces;
 
 interface ICountable {
 	// ...
 }
-</pre>
+```
 
 &#9650; [Classes](#8-classes)
 
@@ -1341,7 +1341,7 @@ interface ICountable {
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 namespace Core\Models;
 
@@ -1349,20 +1349,20 @@ class User
 {
 	// ...
 }
-</pre>
+```
 
 &#8627; Incorrect because `{` is not on the same line.
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 namespace Core\Models;
 
 class User {
 	// ...
 }
-</pre>
+```
 
 &#9650; [Classes](#8-classes)
 
@@ -1374,7 +1374,7 @@ class User {
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 namespace Core\Models;
 
@@ -1382,20 +1382,20 @@ class User
 	extends APrototype {
 	// ...
 }
-</pre>
+```
 
 &#8627; Incorrect because the `extends` keyword is not on the same line.
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 namespace Core\Models;
 
 class User extends APrototype {
 	// ...
 }
-</pre>
+```
 
 &#9650; [Classes](#8-classes)
 
@@ -1408,20 +1408,20 @@ class User extends APrototype {
 
 #### ~ Acceptable
 
-<pre lang=php>
+```php
 &lt;?php
 namespace Core\Models;
 
 class User extends APrototype implements Countable {
 	// ...
 }
-</pre>
+```
 
 &#8627; Incorrect because the `implements` keyword is not on the new line.
 
 #### &#10004; Preferred
 
-<pre lang=php>
+```php
 &lt;?php
 namespace Core\Models;
 
@@ -1429,7 +1429,7 @@ class User extends APrototype
 	implements Countable {
 	// ...
 }
-</pre>
+```
 
 &#9650; [Classes](#8-classes)
 
@@ -1441,7 +1441,7 @@ class User extends APrototype
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 namespace Core\Models;
 
@@ -1454,13 +1454,13 @@ class User extends APrototype
 	use TCountable, TNumeric; 
 	// ...
 }
-</pre>
+```
 
 &#8627; Incorrect because two traits are included per line.
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 namespace Core\Models;
 
@@ -1474,7 +1474,7 @@ class User extends APrototype
 	use TNumeric; 
 	// ...
 }
-</pre>
+```
 
 &#9650; [Classes](#8-classes)
 
@@ -1489,7 +1489,7 @@ class User extends APrototype
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 namespace Core\Models;
 
@@ -1503,11 +1503,11 @@ class User {
 	// Private
 	$var3;
 }
-</pre>
+```
 
 &#8627; Incorrect because visibility is not specified.
 
-<pre lang=php>
+```php
 &lt;?php
 namespace Core\Models;
 
@@ -1516,13 +1516,13 @@ class User {
 	protected $_var2;
 	private $_var3;
 }
-</pre>
+```
 
 &#8627; Incorrect because some properties are prefixed by the underscore.
 
 #### ~ Acceptable
 
-<pre lang=php>
+```php
 &lt;?php
 namespace Core\Models;
 
@@ -1531,13 +1531,13 @@ class User {
 	protected $var2;
 	private $var3;
 }
-</pre>
+```
 
 &#8627; Acceptable, but the properties are not type-hinted.
 
 #### &#10004; Preferred
 
-<pre lang=php>
+```php
 &lt;?php
 namespace Core\Models;
 
@@ -1546,7 +1546,7 @@ class User {
 	protected string $var2;
 	private bool $var3;
 }
-</pre>
+```
 
 &#9650; [Classes](#8-classes)
 
@@ -1560,7 +1560,7 @@ class User {
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 namespace Core\Models;
 
@@ -1582,11 +1582,11 @@ class User {
 		return $this->var3;
 	}
 }
-</pre>
+```
 
 &#8627; Incorrect because visibility is not specified.
 
-<pre lang=php>
+```php
 &lt;?php
 namespace Core\Models;
 
@@ -1605,13 +1605,13 @@ class User {
 		return $this->var3;
 	}
 }
-</pre>
+```
 
 &#8627; Incorrect because some methods are prefixed by the underscore.
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 namespace Core\Models;
 
@@ -1630,7 +1630,7 @@ class User {
 		return $this->var3;
 	}
 }
-</pre>
+```
 
 &#9650; [Classes](#8-classes)
 
@@ -1644,19 +1644,19 @@ class User {
 
 #### &#10006; Incorrect
 
-<pre lang=php>
+```php
 &lt;?php
 $office_program = new OfficeProgram;
-</pre>
+```
 
 &#8627; Incorrect because a lack of parenthesis.
 
 #### &#10004; Correct
 
-<pre lang=php>
+```php
 &lt;?php
 $office_program = new OfficeProgram();
-</pre>
+```
 
 &#9650; [Classes](#8-classes)
 
