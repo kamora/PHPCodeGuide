@@ -1299,7 +1299,7 @@ class OfficeProgram {
 
 ### 4. Class Prefix
 
-Following prefix notation SHOULD be used:
+The following prefix notation SHOULD be used:
 
 * `A` for abstract classes
 	* e.g. `AController`, `APrototype`, etc
