@@ -136,7 +136,7 @@ print_welcome_message();
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 print_welcome_message();
 ```
 
@@ -151,7 +151,7 @@ print_welcome_message();
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 print_welcome_message();
 ?&gt;
 ```
@@ -161,7 +161,7 @@ print_welcome_message();
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 print_welcome_message();
 ```
 
@@ -185,7 +185,7 @@ print_welcome_message();
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 print_welcome_message();
 ```
 
@@ -201,7 +201,7 @@ print_welcome_message();
 
 ```html
 &lt;div&gt;
-	&lt;p&gt;&lt;?php echo get_welcome_message(); ?&gt;&lt;/p&gt;
+	&lt;p&gt;<?php echo get_welcome_message(); ?&gt;&lt;/p&gt;
 &lt;/div&gt;
 ```
 
@@ -240,7 +240,7 @@ This section describes how to use one or more namespaces and their naming conven
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 print_welcome_message();
 
 namespace SomeNamespace;
@@ -249,7 +249,7 @@ namespace SomeNamespace;
 &#8627; Incorrect because `namespace SomeNamespace` is not the first statement.
 
 ```php
-&lt;?php
+<?php
 namespace SomeNamespace;
 print_welcome_message();
 ```
@@ -259,7 +259,7 @@ print_welcome_message();
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 namespace SomeNamespace;
 
 print_welcome_message();
@@ -277,7 +277,7 @@ print_welcome_message();
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 namespace SomeNamespace;
 
 ```
@@ -285,7 +285,7 @@ namespace SomeNamespace;
 &#8627; Incorrect because `SomeNamespace` does not start with a capital letter.
 
 ```php
-&lt;?php
+<?php
 namespace SomeNAMESPACE;
 
 ```
@@ -295,7 +295,7 @@ namespace SomeNAMESPACE;
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 namespace SomeNamespace;
 
 ```
@@ -311,7 +311,7 @@ namespace SomeNamespace;
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 namespace SomeNamespace\Model;
 
 namespace SomeNamespace\View;
@@ -323,7 +323,7 @@ namespace SomeNamespace\View;
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 namespace SomeNamespace\Model {
 	// model body
 }
@@ -346,7 +346,7 @@ namespace SomeNamespace\View {
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 namespace Core\Models;
 
 use  Core\Facades\Log;
@@ -360,7 +360,7 @@ class Model {
 &#8627; Incorrect because not followed by a blank line.
 
 ```php
-&lt;?php
+<?php
 namespace Core\Models;
 
 use  \Core\Facades\Log, \Core\Facades\View, \Core\Facades\Input;
@@ -375,7 +375,7 @@ class Model {
 #### ~ Acceptable
 
 ```php
-&lt;?php
+<?php
 namespace Core\Models;
 
 use  Core\Facades\Log;
@@ -392,7 +392,7 @@ class Model {
 #### &#10004; Preferred
 
 ```php
-&lt;?php
+<?php
 namespace Core\Models;
 
 use  \Core\Facades\Log;
@@ -428,7 +428,7 @@ This section describes how comments should be formatted and used.
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 /* This is a comment */
 ```
 
@@ -437,7 +437,7 @@ This section describes how comments should be formatted and used.
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 // This is a comment
 ```
 
@@ -453,7 +453,7 @@ This section describes how comments should be formatted and used.
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 // This is a
 // multi-line
 // comment
@@ -465,7 +465,7 @@ This section describes how comments should be formatted and used.
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 /*
  This is a
  multi-line
@@ -485,7 +485,7 @@ This section describes how comments should be formatted and used.
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 /*
  This is a
  multi-line
@@ -498,7 +498,7 @@ This section describes how comments should be formatted and used.
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 /**
  * This is a
  * PHPDoc comment 
@@ -550,7 +550,7 @@ This section outline various, general formatting rules related to whitespace and
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 $isTrue = FALSE;
 $isFalse = TRUE:
 $value = NULL;
@@ -561,7 +561,7 @@ $value = NULL;
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 $isTrue = false;
 $isFalse = true:
 $value = null;
@@ -582,7 +582,7 @@ $value = null;
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 $welcome_message = '';
 $WelcomeMESSAGE = '';
 ```
@@ -590,14 +590,14 @@ $WelcomeMESSAGE = '';
 &#8627; Incorrect because variables are not camelcased properly.
 
 ```php
-&lt;?php
+<?php
 $WelcomeMessage = '';
 ```
 
 &#8627; Incorrect because the variable contains a primitive type but starts from an uppercase letter.
 
 ```php
-&lt;?php
+<?php
 $someObject = new SomeClass();
 ```
 
@@ -606,7 +606,7 @@ $someObject = new SomeClass();
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 $welcomeMessage = '';
 $SomeObject = new SomeClass();
 ```
@@ -623,7 +623,7 @@ $SomeObject = new SomeClass();
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 define('welcome_Message', '');
 define('Welcome_Message', '');
 define('welcome_message', '');
@@ -632,7 +632,7 @@ define('welcome_message', '');
 &#8627; Incorrect because the constants are not all uppercase.
 
 ```php
-&lt;?php
+<?php
 define('WELCOMEMESSAGE', '');
 ```
 
@@ -641,7 +641,7 @@ define('WELCOMEMESSAGE', '');
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 define('WELCOME_MESSAGE', '');
 ```
 
@@ -657,7 +657,7 @@ define('WELCOME_MESSAGE', '');
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 $isFalse = false; print_welcome_message();
 ```
 
@@ -666,7 +666,7 @@ $isFalse = false; print_welcome_message();
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 $isFalse = false;
 print_welcome_message();
 ```
@@ -682,7 +682,7 @@ print_welcome_message();
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 $total=3+14;
 $string='Hello, World! ';
 $string.='Today is a good day!';
@@ -694,7 +694,7 @@ echo 'Hello, World! Today is '.$date.'!';
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 $total = 3 + 14;
 $string = 'Hello, World! ';
 $string .= 'Today is a good day!';
@@ -712,7 +712,7 @@ echo 'Hello, World! Today is ' . $date . '!';
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 $index ++;
 -- $index;
 ```
@@ -722,7 +722,7 @@ $index ++;
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 $index++;
 --$index;
 ```
@@ -754,7 +754,7 @@ This section describes the format for function names, calls, arguments and decla
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 get_WelcomeMessage();
 GetWelcomeMessage();
 GET_WELCOME_MESSAGE();
@@ -766,7 +766,7 @@ getwelcomemessage();
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 getWelcomeMessage();
 ```
 
@@ -781,7 +781,7 @@ getWelcomeMessage();
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 printWelcomeMessage ();
 ```
 
@@ -790,7 +790,7 @@ printWelcomeMessage ();
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 printWelcomeMessage();
 ```
 
@@ -808,7 +808,7 @@ printWelcomeMessage();
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 someFunction($arg1 , $arg2 , $arg3) {
 	// ...
 }
@@ -817,7 +817,7 @@ someFunction($arg1 , $arg2 , $arg3) {
 &#8627; Incorrect because there is a space before `,`.
 
 ```php
-&lt;?php
+<?php
 someFunction($arg1,$arg2,$arg3) {
 	// ...
 }
@@ -828,7 +828,7 @@ someFunction($arg1,$arg2,$arg3) {
 #### ~ Acceptable
 
 ```php
-&lt;?php
+<?php
 function addUsersToOffice($users, $Office) {
 	// ...
 }
@@ -839,7 +839,7 @@ function addUsersToOffice($users, $Office) {
 #### &#10004; Preferred
 
 ```php
-&lt;?php
+<?php
 function addUsersToOffice(array $users, Office $Office): bool {
 	// ...
 }
@@ -860,7 +860,7 @@ function addUsersToOffice(array $users, Office $Office): bool {
 #### ~ Acceptable
 
 ```php
-&lt;?php
+<?php
 function someFunction(int $id, int $width, int $height): Photo {
 	// ...
 }
@@ -871,7 +871,7 @@ function someFunction(int $id, int $width, int $height): Photo {
 #### &#10004; Preferred
 
 ```php
-&lt;?php
+<?php
 /**
  * Get profile photo of a customer
  *
@@ -898,7 +898,7 @@ function someFunction(int $id, int $width, int $height): string {
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 function getValue() {
 	// ...
 }
@@ -909,7 +909,7 @@ function getValue() {
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 function getValue(): string {
 	// ...
 }
@@ -954,7 +954,7 @@ In addition to the rules above, some control structures have additional requirem
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 if ($expr1) {
 	// if body
 } else if ($expr2) {
@@ -967,7 +967,7 @@ if ($expr1) {
 &#8627; Incorrect because `else if` was used instead of `elseif`.
 
 ```php
-&lt;?php
+<?php
 if ($expr1) {
 	// if body
 }
@@ -982,7 +982,7 @@ else {
 &#8627; Incorrect because `elseif` or `else` are not between `}` and `{` on one line.
 
 ```php
-&lt;?php
+<?php
 if($expr)
 	$result = 100;
 ```
@@ -992,7 +992,7 @@ if($expr)
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 if ($expr1) {
 	// if body
 } elseif ($expr2) {
@@ -1018,7 +1018,7 @@ if ($expr1) {
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 switch ($expr) {
 case 0:
 	echo 'First case, with a break';
@@ -1042,7 +1042,7 @@ default:
 &#8627; Incorrect because statements are not indented once.
 
 ```php
-&lt;?php
+<?php
 switch ($expr) {
 	case 0:
 	echo 'First case, with a break';
@@ -1068,7 +1068,7 @@ switch ($expr) {
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 switch ($expr) {
 	case 0:
 		echo 'First case, with a break';
@@ -1098,7 +1098,7 @@ switch ($expr) {
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 while ($expr) {
 	// ...
 }
@@ -1117,7 +1117,7 @@ do {
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 for ($i = 0; $i &lt; 10; $i++) {
 	// ...
 }
@@ -1138,7 +1138,7 @@ foreach ($iterable as $key => $value) {
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 try {
 	// ...
 }
@@ -1155,7 +1155,7 @@ catch (OtherExceptionType $Exception) {
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 try {
 	// ...
 } catch (FirstExceptionType $Exception) {
@@ -1196,7 +1196,7 @@ This section describes class files, names, definitions, properties, methods and 
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 namespace Core\Models;
 
 class User {
@@ -1212,7 +1212,7 @@ class Office {
 
 #### &#10004; Correct
 ```php
-&lt;?php
+<?php
 namespace Core\Models;
 
 class User {
@@ -1231,7 +1231,7 @@ class User {
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 class User {
 	// ...
 }
@@ -1242,7 +1242,7 @@ class User {
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 namespace Core\Models;
 
 class User {
@@ -1262,7 +1262,7 @@ class User {
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 namespace Core\Models;
 class officeProgram {
 	// ...
@@ -1272,7 +1272,7 @@ class officeProgram {
 &#8627; Incorrect because the class name doesn't start with a capital letter.
 
 ```php
-&lt;?php
+<?php
 namespace Core\Models;
 
 class Officeprogram {
@@ -1285,7 +1285,7 @@ class Officeprogram {
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 namespace Core\Models;
 
 class OfficeProgram {
@@ -1313,7 +1313,7 @@ Following prefix notation SHOULD be used:
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 namespace Core\Models\Abstractions;
 
 abstract class AModel {
@@ -1322,7 +1322,7 @@ abstract class AModel {
 ```
 
 ```php
-&lt;?php
+<?php
 namespace Core\Interfaces;
 
 interface ICountable {
@@ -1342,7 +1342,7 @@ interface ICountable {
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 namespace Core\Models;
 
 class User 
@@ -1356,7 +1356,7 @@ class User
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 namespace Core\Models;
 
 class User {
@@ -1375,7 +1375,7 @@ class User {
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 namespace Core\Models;
 
 class User 
@@ -1389,7 +1389,7 @@ class User
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 namespace Core\Models;
 
 class User extends APrototype {
@@ -1409,7 +1409,7 @@ class User extends APrototype {
 #### ~ Acceptable
 
 ```php
-&lt;?php
+<?php
 namespace Core\Models;
 
 class User extends APrototype implements Countable {
@@ -1422,7 +1422,7 @@ class User extends APrototype implements Countable {
 #### &#10004; Preferred
 
 ```php
-&lt;?php
+<?php
 namespace Core\Models;
 
 class User extends APrototype 
@@ -1442,7 +1442,7 @@ class User extends APrototype
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 namespace Core\Models;
 
 use \Core\Traits\TNumeric;
@@ -1461,7 +1461,7 @@ class User extends APrototype
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 namespace Core\Models;
 
 use \Core\Traits\TNumeric;
@@ -1490,7 +1490,7 @@ class User extends APrototype
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 namespace Core\Models;
 
 class User {
@@ -1508,7 +1508,7 @@ class User {
 &#8627; Incorrect because visibility is not specified.
 
 ```php
-&lt;?php
+<?php
 namespace Core\Models;
 
 class User {
@@ -1523,7 +1523,7 @@ class User {
 #### ~ Acceptable
 
 ```php
-&lt;?php
+<?php
 namespace Core\Models;
 
 class User {
@@ -1538,7 +1538,7 @@ class User {
 #### &#10004; Preferred
 
 ```php
-&lt;?php
+<?php
 namespace Core\Models;
 
 class User {
@@ -1561,7 +1561,7 @@ class User {
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 namespace Core\Models;
 
 class User {
@@ -1587,7 +1587,7 @@ class User {
 &#8627; Incorrect because visibility is not specified.
 
 ```php
-&lt;?php
+<?php
 namespace Core\Models;
 
 class User {
@@ -1612,7 +1612,7 @@ class User {
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 namespace Core\Models;
 
 class User {
@@ -1645,7 +1645,7 @@ class User {
 #### &#10006; Incorrect
 
 ```php
-&lt;?php
+<?php
 $office_program = new OfficeProgram;
 ```
 
@@ -1654,7 +1654,7 @@ $office_program = new OfficeProgram;
 #### &#10004; Correct
 
 ```php
-&lt;?php
+<?php
 $office_program = new OfficeProgram();
 ```
 
