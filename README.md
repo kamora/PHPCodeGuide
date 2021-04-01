@@ -119,17 +119,17 @@ This section describes the use of PHP tags in PHP and PHP/HTML files.
 
 #### &#10006; Incorrect
 
-<pre lang=php>
-&lt;?php print_welcome_message();
-</pre>
+```php
+<?php print_welcome_message();
+```
 
 &#8627; Incorrect because `<?php` is not on its own line.
 
-<pre lang=php>
-&lt;?php
+```php
+<?php
 
 print_welcome_message();
-</pre>
+```
 
 &#8627; Incorrect because `<?php` is followed by a blank line.
 
