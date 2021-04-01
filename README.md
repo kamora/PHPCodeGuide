@@ -199,7 +199,7 @@ print_welcome_message();
 
 #### ~ Acceptable
 
-```html
+```php
 <div>
 	<p><?php echo get_welcome_message(); ?</p>
 </div>
@@ -209,7 +209,7 @@ print_welcome_message();
 
 #### &#10004; Preferred
 
-```html
+```php
 <div>
 	<p><?=get_welcome_message();?></p>
 </div>
