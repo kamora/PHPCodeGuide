@@ -66,8 +66,8 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 This section describes the format of PHP files.
 
 1. [**Encoding**](#1-encoding)
-2. [**Close tag**](#2-line-ends)
-3. [**Short open tag**](#3-filename)
+2. [**Line Ends**](#2-line-ends)
+3. [**Filename**](#3-filename)
 
 &#9650; [Table of Contents](#table-of-contents)
 
