@@ -1,4 +1,4 @@
-# PHP Code Style Guide
+# PHP Style Guide
 
 All rules and guidelines in this document apply to PHP files unless otherwise noted. References to PHP/HTML files can be interpreted as files that primarily contain HTML, but use PHP for templating purposes.
 
@@ -153,7 +153,7 @@ print_welcome_message();
 ```php
 <?php
 print_welcome_message();
-?&gt;
+?>
 ```
 
 &#8627; Incorrect because `?>` was used.
