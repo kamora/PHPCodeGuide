@@ -4,14 +4,13 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 
 > The keywords "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](http://www.ietf.org/rfc/rfc2119.txt).
 
-<!-- ---------------------------------------------------------------------- -->
 
 ## Table of Contents
 
 1. [**Files**](#1-files)
 	1. [Encoding](#1-encoding)
 	2. [Line Ends](#2-line-ends)
-	2. [File Format](#3-filename)
+	3. [File Format](#3-filename)
 2. [**Tags**](#2-php-tags)
 	1. [Open Tag](#1-open-tag)
 	2. [Close Tag](#2-close-tag)
@@ -38,9 +37,9 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 6. [**Functions**](#6-functions)
 	1. [Function Name](#1-function-name)
 	3. [Function Call](#2-function-call)
-	3. [Function Arguments](#3-function-arguments)
-	4. [Function Declaration](#4-function-declaration)
-	5. [Function Return](#5-function-return)
+	4. [Function Arguments](#3-function-arguments)
+	5. [Function Declaration](#4-function-declaration)
+	6. [Function Return](#5-function-return)
 7. [**Control Structures**](#7-control-structures)
 	1. [If, Elseif, Else](#1-if-elseif-else)
 	2. [Switch, Case](#2-switch-case)
@@ -60,7 +59,6 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 	10. [Class Methods](#10-class-methods)
 	11. [Class Instance](#11-class-instance)
 
-<!-- ---------------------------------------------------------------------- -->
 
 ## 1. Files
 This section describes the format of PHP files.
@@ -71,7 +69,6 @@ This section describes the format of PHP files.
 
 &#9650; [Table of Contents](#table-of-contents)
 
-<!-- ------------------------------ -->
 
 ### 1. Encoding
 
@@ -79,7 +76,6 @@ This section describes the format of PHP files.
 
 &#9650; [Files](#1-files)
 
-<!-- ------------------------------ -->
 
 ### 2. Line Ends
 
@@ -87,7 +83,6 @@ This section describes the format of PHP files.
 
 &#9650; [Files](#1-files)
 
-<!-- ------------------------------ -->
 
 ### 3. Filename
 * MUST follow the [PSR-4](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md) convention 
@@ -97,7 +92,6 @@ This section describes the format of PHP files.
 
 &#9650; [Files](#1-files)
 
-<!-- ------------------------------ -->
 
 ## 2. PHP Tags
 
@@ -110,7 +104,6 @@ This section describes the use of PHP tags in PHP and PHP/HTML files.
 
 &#9650; [Table of Contents](#table-of-contents)
 
-<!-- ------------------------------ -->
 
 ### 1. Open Tag
 
@@ -142,7 +135,6 @@ print_welcome_message();
 
 &#9650; [PHP Tags](#2-php-tags)
 
-<!-- ------------------------------ -->
 
 ### 2. Close Tag
 
@@ -167,7 +159,6 @@ print_welcome_message();
 
 &#9650; [PHP Tags](#2-php-tags)
 
-<!-- ------------------------------ -->
 
 ### 3. Short Open Tag
 
@@ -191,7 +182,6 @@ print_welcome_message();
 
 &#9650; [PHP Tags](#2-php-tags)
 
-<!-- ------------------------------ -->
 
 ### 4. Short Echo Tag
 
@@ -217,7 +207,6 @@ print_welcome_message();
 
 &#9650; [PHP Tags](#2-php-tags)
 
-<!-- ---------------------------------------------------------------------- -->
 
 ## 3. Namespaces
 
@@ -230,7 +219,6 @@ This section describes how to use one or more namespaces and their naming conven
 
 &#9650; [Table of Contents](#table-of-contents)
 
-<!-- ------------------------------ -->
 
 ### 1. Namespace Declaration
 
@@ -267,7 +255,6 @@ print_welcome_message();
 
 &#9650; [Namespaces](#3-namespaces)
 
-<!-- ------------------------------ -->
 
 ### 2. Namespace Definition
 
@@ -302,7 +289,6 @@ namespace SomeNamespace;
 
 &#9650; [Namespaces](#3-namespaces)
 
-<!-- ------------------------------ -->
 
 ### 3. Multiple Namespaces
 
@@ -335,7 +321,6 @@ namespace SomeNamespace\View {
 
 &#9650; [Namespaces](#3-namespaces)
 
-<!-- ------------------------------ -->
 
 ### 4. List of Imports
 
@@ -406,7 +391,6 @@ class Model {
 
 &#9650; [Namespaces](#3-namespaces)
 
-<!-- ------------------------------ -->
 
 ## 4. Comments
 
@@ -418,7 +402,6 @@ This section describes how comments should be formatted and used.
 
 &#9650; [Table of Contents](#table-of-contents)
 
-<!-- ------------------------------ -->
 
 ### 1. Single-line Comments
 
@@ -443,7 +426,6 @@ This section describes how comments should be formatted and used.
 
 &#9650; [Comments](#4-comments)
 
-<!-- ------------------------------ -->
 
 ### 2. Multi-line Comments
 
@@ -476,7 +458,6 @@ This section describes how comments should be formatted and used.
 
 &#9650; [Comments](#4-comments)
 
-<!-- ------------------------------ -->
 
 ### 3. PHPDoc Comments
 * MUST use the [PHPDoc](https://docs.phpdoc.org/3.0/guide/getting-started/what-is-a-docblock.html) block format.
@@ -507,7 +488,6 @@ This section describes how comments should be formatted and used.
 
 &#9650; [Comments](#4-comments)
 
-<!-- ------------------------------ -->
 
 ## 5. Formatting
 
@@ -524,7 +504,6 @@ This section outline various, general formatting rules related to whitespace and
 
 &#9650; [Table of Contents](#table-of-contents)
 
-<!-- ------------------------------ -->
 
 ### 1. Line Length
 
@@ -540,7 +519,6 @@ This section outline various, general formatting rules related to whitespace and
 
 &#9650; [Formatting](#5-formatting)
 
-<!-- ------------------------------ -->
 
 ### 3. Keywords
 
@@ -569,7 +547,6 @@ $value = null;
 
 &#9650; [Formatting](#5-formatting)
 
-<!-- ------------------------------ -->
 
 ### 4. Variables
 
@@ -613,7 +590,6 @@ $SomeObject = new SomeClass();
 
 &#9650; [Formatting](#5-formatting)
 
-<!-- ------------------------------ -->
 
 ### 5. Constants
 
@@ -647,7 +623,6 @@ define('WELCOME_MESSAGE', '');
 
 &#9650; [Formatting](#5-formatting)
 
-<!-- ------------------------------ -->
 
 ### 6. Statements
 
@@ -673,7 +648,6 @@ print_welcome_message();
 
 &#9650; [Formatting](#5-formatting)
 
-<!-- ------------------------------ -->
 
 ### 7. Operators
 
@@ -703,7 +677,6 @@ echo 'Hello, World! Today is ' . $date . '!';
 
 &#9650; [Formatting](#5-formatting)
 
-<!-- ------------------------------ -->
 
 ### 8. Unary Operators
 
@@ -729,7 +702,6 @@ $index++;
 
 &#9650; [Formatting](#5-formatting)
 
-<!-- ------------------------------ -->
 
 ## 6. Functions
 
@@ -743,7 +715,6 @@ This section describes the format for function names, calls, arguments and decla
 
 &#9650; [Table of Contents](#table-of-contents)
 
-<!-- ------------------------------ -->
 
 ### 1. Function Name
 
@@ -772,7 +743,6 @@ getWelcomeMessage();
 
 &#9650; [Functions](#6-functions)
 
-<!-- ------------------------------ -->
 
 ### 2. Function Call
 
@@ -796,7 +766,6 @@ printWelcomeMessage();
 
 &#9650; [Functions](#6-functions)
 
-<!-- ------------------------------ -->
 
 ### 3. Function Arguments
 
@@ -847,7 +816,6 @@ function addUsersToOffice(array $users, Office $Office): bool {
 
 &#9650; [Functions](#6-functions)
 
-<!-- ------------------------------ -->
 
 ### 4. Function Declaration
 
@@ -889,7 +857,6 @@ function someFunction(int $id, int $width, int $height): string {
 
 &#9650; [Functions](#6-functions)
 
-<!-- ------------------------------ -->
 
 ### 5. Function Return
 
@@ -917,7 +884,6 @@ function getValue(): string {
 
 &#9650; [Functions](#6-functions)
 
-<!-- ---------------------------------------------------------------------- -->
 
 ## 7. Control Structures
 This section defines the layout and usage of control structures. Note that this section is separated into rules that are applicable to all structures, followed by specific rules for individual structures.
@@ -945,7 +911,6 @@ In addition to the rules above, some control structures have additional requirem
 
 &#9650; [Table of Contents](#table-of-contents)
 
-<!-- ------------------------------ -->
 
 ### 1. If, Elseif, Else
 * `elseif` MUST be used instead of `else if`
@@ -1004,7 +969,6 @@ if ($expr1) {
 
 &#9650; [Control Structures](#7-control-structures)
 
-<!-- ------------------------------ -->
 
 ### 2. Switch, Case
 
@@ -1091,7 +1055,6 @@ switch ($expr) {
 
 &#9650; [Control Structures](#7-control-structures)
 
-<!-- ------------------------------ -->
 
 ### 3. While, Do While
 
@@ -1110,7 +1073,6 @@ do {
 
 &#9650; [Control Structures](#7-control-structures)
 
-<!-- ------------------------------ -->
 
 ### 4. For, Foreach
 
@@ -1129,7 +1091,6 @@ foreach ($iterable as $key => $value) {
 
 &#9650; [Control Structures](#7-control-structures)
 
-<!-- ------------------------------ -->
 
 ### 5. Try, Catch
 
@@ -1167,7 +1128,6 @@ try {
 
 &#9650; [Control Structures](#7-control-structures)
 
-<!-- ---------------------------------------------------------------------- -->
 
 ## 8. Classes
 
@@ -1187,7 +1147,6 @@ This section describes class files, names, definitions, properties, methods and 
 
 &#9650; [Table of Contents](#table-of-contents)
 
-<!-- ------------------------------ -->
 
 ### 1. Class File
 
@@ -1222,7 +1181,6 @@ class User {
 
 &#9650; [Classes](#8-classes)
 
-<!-- ------------------------------ -->
 
 ### 2. Class Namespace
 
@@ -1252,7 +1210,6 @@ class User {
 
 &#9650; [Classes](#8-classes)
 
-<!-- ------------------------------ -->
 
 ### 3. Class Name
 
@@ -1295,7 +1252,6 @@ class OfficeProgram {
 
 &#9650; [Classes](#8-classes)
 
-<!-- ------------------------------ -->
 
 ### 4. Class Prefix
 
@@ -1332,7 +1288,6 @@ interface ICountable {
 
 &#9650; [Classes](#8-classes)
 
-<!-- ------------------------------ -->
 
 ### 5. Class Definition
 
@@ -1366,7 +1321,6 @@ class User {
 
 &#9650; [Classes](#8-classes)
 
-<!-- ------------------------------ -->
 
 ### 6. `Extends` Keyword
 
@@ -1399,7 +1353,6 @@ class User extends APrototype {
 
 &#9650; [Classes](#8-classes)
 
-<!-- ------------------------------ -->
 
 
 ### 7. `Implements` keyword
@@ -1433,7 +1386,6 @@ class User extends APrototype
 
 &#9650; [Classes](#8-classes)
 
-<!-- ------------------------------ -->
 
 ### 8. `Use` keyword
 
@@ -1478,7 +1430,6 @@ class User extends APrototype
 
 &#9650; [Classes](#8-classes)
 
-<!-- ------------------------------ -->
 
 ### 9. Class Properties
 
@@ -1550,7 +1501,6 @@ class User {
 
 &#9650; [Classes](#8-classes)
 
-<!-- ------------------------------ -->
 
 ### 10. Class Methods
 
@@ -1634,7 +1584,6 @@ class User {
 
 &#9650; [Classes](#8-classes)
 
-<!-- ------------------------------ -->
 
 ### 11. Class Instance
 
@@ -1660,4 +1609,3 @@ $office_program = new OfficeProgram();
 
 &#9650; [Classes](#8-classes)
 
-<!-- ---------------------------------------------------------------------- -->
