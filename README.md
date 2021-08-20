@@ -46,18 +46,18 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 	- [While, Do While](#3-while-do-while)
 	- [For, Foreach](#for-foreach)
 	- [Try, Catch](#try-catch)
-- [**Classes**](#8-classes)
-	- [Class File](#1-class-file)
-	- [Class Namespace](#2-class-namespace)
-	- [Class Name](#3-class-name)
-	- [Class Prefix](#4-class-prefix)
-	- [Class Definition](#5-class-definition)
-	- [Extends Keyword](#6-extends-keyword)  
-	- [Implements Keyword](#7-implements-keyword)  
-	- [Use Keyword](#8-use-keyword)  
-	- [Class Properties](#9-class-properties)
-	- [Class Methods](#10-class-methods)
-	- [Class Instance](#11-class-instance)
+- [**Classes**](#classes)
+	- [Class File](#class-file)
+	- [Class Namespace](#class-namespace)
+	- [Class Name](#class-name)
+	- [Class Prefix](#class-prefix)
+	- [Class Definition](#class-definition)
+	- [Extends Keyword](#extends-keyword)  
+	- [Implements Keyword](#implements-keyword)  
+	- [Use Keyword](#use-keyword)  
+	- [Class Properties](#class-properties)
+	- [Class Methods](#class-methods)
+	- [Class Instance](#class-instance)
 
 
 ## Files
@@ -1133,17 +1133,17 @@ try {
 
 This section describes class files, names, definitions, properties, methods and instantiation.
 
-1. [**Class file**](#1-class-file)
-2. [**Class namespace**](#2-class-namespace) 
-3. [**Class name**](#3-class-name) 
-4. [**Class prefix**](#4-class-prefix)
-5. [**Class definition**](#5-class-definition) 
-6. [**Extends keyword**](#6-extends-keyword)
-7. [**Implements keyword**](#7-implements-keyword)
-8. [**Use keyword**](#8-use-keyword)
-9. [**Class properties**](#9-class-properties)
-10. [**Class methods**](#10-class-methods)
-11. [**Class instance**](#11-class-instance)
+1. [**Class file**](#class-file)
+2. [**Class namespace**](#class-namespace) 
+3. [**Class name**](#class-name) 
+4. [**Class prefix**](#class-prefix)
+5. [**Class definition**](#class-definition) 
+6. [**Extends keyword**](#extends-keyword)
+7. [**Implements keyword**](#implements-keyword)
+8. [**Use keyword**](#use-keyword)
+9. [**Class properties**](#class-properties)
+10. [**Class methods**](#class-methods)
+11. [**Class instance**](#class-instance)
 
 &#9650; [Table of Contents](#table-of-contents)
 
@@ -1179,7 +1179,7 @@ class User {
 }
 ```
 
-&#9650; [Classes](#8-classes)
+&#9650; [Classes](#classes)
 
 
 ### Class Namespace
@@ -1208,7 +1208,7 @@ class User {
 }
 ```
 
-&#9650; [Classes](#8-classes)
+&#9650; [Classes](#classes)
 
 
 ### Class Name
@@ -1250,7 +1250,7 @@ class OfficeProgram {
 }
 ```
 
-&#9650; [Classes](#8-classes)
+&#9650; [Classes](#classes)
 
 
 ### Class Prefix
@@ -1286,7 +1286,7 @@ interface ICountable {
 }
 ```
 
-&#9650; [Classes](#8-classes)
+&#9650; [Classes](#classes)
 
 
 ### Class Definition
@@ -1319,7 +1319,7 @@ class User {
 }
 ```
 
-&#9650; [Classes](#8-classes)
+&#9650; [Classes](#classes)
 
 
 ### `Extends` Keyword
@@ -1351,7 +1351,7 @@ class User extends APrototype {
 }
 ```
 
-&#9650; [Classes](#8-classes)
+&#9650; [Classes](#classes)
 
 
 
@@ -1384,7 +1384,7 @@ class User extends APrototype
 }
 ```
 
-&#9650; [Classes](#8-classes)
+&#9650; [Classes](#classes)
 
 
 ### `Use` keyword
@@ -1428,7 +1428,7 @@ class User extends APrototype
 }
 ```
 
-&#9650; [Classes](#8-classes)
+&#9650; [Classes](#classes)
 
 
 ### Class Properties
@@ -1499,7 +1499,7 @@ class User {
 }
 ```
 
-&#9650; [Classes](#8-classes)
+&#9650; [Classes](#classes)
 
 
 ### Class Methods
@@ -1582,7 +1582,7 @@ class User {
 }
 ```
 
-&#9650; [Classes](#8-classes)
+&#9650; [Classes](#classes)
 
 
 ### Class Instance
@@ -1607,5 +1607,5 @@ $office_program = new OfficeProgram;
 $office_program = new OfficeProgram();
 ```
 
-&#9650; [Classes](#8-classes)
+&#9650; [Classes](#classes)
 
