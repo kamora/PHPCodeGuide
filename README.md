@@ -40,12 +40,12 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 	- [Function Arguments](#function-arguments)
 	- [Function Declaration](#function-declaration)
 	- [Function Return](#function-return)
-- [**Control Structures**](#7-control-structures)
-	- [If, Elseif, Else](#1-if-elseif-else)
-	- [Switch, Case](#2-switch-case)
+- [**Control Structures**](#control-structures)
+	- [If, Elseif, Else](#if-elseif-else)
+	- [Switch, Case](#switch-case)
 	- [While, Do While](#3-while-do-while)
-	- [For, Foreach](#4-for-foreach)
-	- [Try, Catch](#5-try-catch)
+	- [For, Foreach](#for-foreach)
+	- [Try, Catch](#try-catch)
 - [**Classes**](#8-classes)
 	- [Class File](#1-class-file)
 	- [Class Namespace](#2-class-namespace)
@@ -903,11 +903,11 @@ This section defines the layout and usage of control structures. Note that this 
 
 In addition to the rules above, some control structures have additional requirements:
 
-1. [**If, Elseif, Else**](#1-if-elseif-else)
-2. [**Switch, Case**](#2-switch-case)
+1. [**If, Elseif, Else**](#if-elseif-else)
+2. [**Switch, Case**](#switch-case)
 3. [**While, Do While**](#3-while-do-while)
-4. [**For, Foreach**](#4-for-foreach)
-5. [**Try, Catch**](#5-try-catch)
+4. [**For, Foreach**](#for-foreach)
+5. [**Try, Catch**](#try-catch)
 
 &#9650; [Table of Contents](#table-of-contents)
 
@@ -967,7 +967,7 @@ if ($expr1) {
 }
 ```
 
-&#9650; [Control Structures](#7-control-structures)
+&#9650; [Control Structures](#control-structures)
 
 
 ### Switch, Case
@@ -1053,7 +1053,7 @@ switch ($expr) {
 }
 ```
 
-&#9650; [Control Structures](#7-control-structures)
+&#9650; [Control Structures](#control-structures)
 
 
 ### While, Do While
@@ -1071,7 +1071,7 @@ do {
 } while ($expr);
 ```
 
-&#9650; [Control Structures](#7-control-structures)
+&#9650; [Control Structures](#control-structures)
 
 
 ### For, Foreach
@@ -1089,7 +1089,7 @@ foreach ($iterable as $key => $value) {
 }
 ```
 
-&#9650; [Control Structures](#7-control-structures)
+&#9650; [Control Structures](#control-structures)
 
 
 ### Try, Catch
@@ -1126,7 +1126,7 @@ try {
 }
 ```
 
-&#9650; [Control Structures](#7-control-structures)
+&#9650; [Control Structures](#control-structures)
 
 
  ## Classes
