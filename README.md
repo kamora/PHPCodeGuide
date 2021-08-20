@@ -17,9 +17,9 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 	- [Short Open Tag](#short-open-tag)
 	- [Short Echo Tag](#short-echo-tag)
 - [**Namespaces**](#namespaces)
-	- [Declaration](#namespace-declaration)
-	- [Definition](#namespace-definition)
-	- [Multiple Namespaces](#multiple-namespaces)
+	- [Declaration](#declaration)
+	- [Definition](#definition)
+	- [Multiple Namespaces](#namespaces)
 	- [List of imports](#list-of-imports)
 - [**Comments**](#4-comments)
 	- [Single-line Comments](#1-single-line-comments)
@@ -212,15 +212,15 @@ print_welcome_message();
 
 This section describes how to use one or more namespaces and their naming convention.
 
-1. [**Namespace declaration**](#namespace-declaration) 
-2. [**Namespace definition**](#namespace-definition) 
-3. [**Multiple namespaces**](#multiple-namespaces) 
+1. [**Declaration**](#declaration) 
+2. [**Definition**](#definition) 
+3. [**Multiple namespaces**](#namespaces) 
 4. [**List of imports**](#list-of-imports)
 
 &#9650; [Table of Contents](#table-of-contents)
 
 
-### Namespace Declaration
+### Declaration
 
 * MUST be the first statement 
 * MUST be followed by a blank line
@@ -256,7 +256,7 @@ print_welcome_message();
 &#9650; [Namespaces](#namespaces)
 
 
-### Namespace Definition
+### Definition
 
 * MUST start with a capital letter 
 * MUST be camelcased
