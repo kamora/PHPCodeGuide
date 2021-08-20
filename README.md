@@ -10,11 +10,12 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 - [Encoding](#encoding)
 - [Line Ends](#line-ends)
 - [Indentation](#indentation)
+- [Line Length](#line-length)
 - [Filename](#filenames)
 - [Opening Tag](#opening-tag)
 - [Closing Tag](#closing-tag)
 - [Short Tag](#short-tag)
-- [Short Echo Tag](#short-echo-tag)
+- [Echo Tag](#echo-tag)
 - [Namespace Declaration](#namespace-declaration)
 - [Namespace Definition](#namespace-definition)
 - [Multiple Namespaces](#multiple-namespaces)
@@ -22,19 +23,17 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 - [Single-line Comments](#single-line-comments)
 - [Multi-line Comments](#multi-line-comments)
 - [PHPDoc Comments](#phpdoc-comments)
-- [Line Length](#line-length)
 - [Keywords](#keywords)
 - [Variables](#variables)
 - [Constants](#constants)
 - [Statements](#statements)
 - [Operators](#operators)
 - [Unary Operators](#unary-operators)
-- [**Functions**](#functions)
-    - [Function Name](#function-name)
-    - [Function Call](#function-call)
-    - [Function Arguments](#function-arguments)
-    - [Function Declaration](#function-declaration)
-    - [Function Return](#function-return)
+- [Function Name](#function-name)
+- [Function Call](#function-call)
+- [Function Arguments](#function-arguments)
+- [Function Declaration](#function-declaration)
+- [Function Return](#function-return)
 - [**Control Structures**](#control-structures)
     - [If, Elseif, Else](#if-elseif-else)
     - [Switch, Case](#switch-case)
@@ -69,7 +68,15 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 
 ## Indentation
 * MUST be accomplished using tabs
-	* i.e. space characters are strictly not allowed for indentation
+	* i.e. space characters are strictly **not allowed** for indentation
+
+&#9650; [Table of Contents](#table-of-contents)
+
+
+## Line Length
+* MUST NOT be hard limited
+* The soft limit MUST be 120 characters
+	* i.e. automated style checkers SHOULD warn but MUST NOT error
 
 &#9650; [Table of Contents](#table-of-contents)
 
@@ -110,11 +117,10 @@ print_welcome_message();
 print_welcome_message();
 ```
 
-&#9650; [PHP Tags](#php-tags)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## Closing Tag
-
 * MUST NOT be used in PHP files
 
 ### &#10006; Incorrect
@@ -159,7 +165,7 @@ print_welcome_message();
 &#9650; [Table of Contents](#table-of-contents)
 
 
-## Short Echo Tag
+## Echo Tag
 * SHOULD be used inside PHP/HTML files when possible
 
 ### ~ Acceptable
@@ -284,7 +290,6 @@ namespace SomeNamespace\View {
 
 
 ## Imports
-
 * MUST be followed by a blank line
 * MUST import a single namespace per declaration
 * SHOULD use leading backslashes
@@ -352,8 +357,8 @@ class Model {
 
 &#9650; [Table of Contents](#table-of-contents)
 
-## Single-line Comments
 
+## Single-line Comments
 * MUST use two forward slashes
 	* e.g. `// The comment`
 
@@ -377,7 +382,6 @@ class Model {
 
 
 ## Multi-line Comments
-
 * MUST use the block format
 	* i.e. `/*` `↵` ` The comment` `↵` `*/`
 
@@ -438,17 +442,7 @@ class Model {
 &#9650; [Table of Contents](#table-of-contents)
 
 
-## Line Length
-
-* MUST NOT be hard limited
-* The soft limit MUST be 120 characters
-	* i.e. automated style checkers SHOULD warn but MUST NOT error
-
-&#9650; [Table of Contents](#table-of-contents)
-
-
 ## Keywords
-
 * MUST be all lowercased
 	* e.g. `false`, `true`, `null`, etc.
 
@@ -476,7 +470,6 @@ $value = null;
 
 
 ## Variables
-
 * MUST be all camelcased 
 * MUST NOT be separated by underscores
 * Variables of object type MUST starts from a capital letter
@@ -519,7 +512,6 @@ $SomeObject = new SomeClass();
 
 
 ## Constants
-
 * MUST be all uppercased 
 * MUST be separated by underscores
 
@@ -552,7 +544,6 @@ define('WELCOME_MESSAGE', '');
 
 
 ## Statements
-
 * MUST be placed on their own line
 * MUST end with a semicolon
 
@@ -577,7 +568,6 @@ print_welcome_message();
 
 
 ## Operators
-
 * MUST be surrounded by a space
 
 ### &#10006; Incorrect
@@ -606,7 +596,6 @@ echo 'Hello, World! Today is ' . $date . '!';
 
 
 ## Unary Operators
-
 * MUST be attached to the operand.
 
 ### &#10006; Incorrect
@@ -630,21 +619,7 @@ $index++;
 &#9650; [Table of Contents](#table-of-contents)
 
 
- ## Functions
-
-This section describes the format for function names, calls, arguments and declarations.
-
-1. [**Function name**](#function-name) 
-2. [**Function call**](#function-call)
-3. [**Function arguments**](#function-arguments)
-4. [**Function declaration**](#function-declaration) 
-5. [**Function return**](#function-return)
-
-&#9650; [Table of Contents](#table-of-contents)
-
-
 ## Function Name
-
 * MUST start from a lowercase letter
 * MUST be all camelcased
 * MUST NOT be separated by underscores
@@ -668,11 +643,10 @@ getwelcomemessage();
 getWelcomeMessage();
 ```
 
-&#9650; [Functions](#functions)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## Function Call
-
 * MUST NOT have a space between function name and open parenthesis
 
 ### &#10006; Incorrect
@@ -691,11 +665,10 @@ printWelcomeMessage ();
 printWelcomeMessage();
 ```
 
-&#9650; [Functions](#functions)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## Function Arguments
-
 * MUST NOT have a space before the comma
 * MUST have a space after the comma 
 * SHOULD be type-hinted if possible
@@ -741,11 +714,10 @@ function addUsersToOffice(array $users, Office $Office): bool {
 }
 ```
 
-&#9650; [Functions](#functions)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## Function Declaration
-
 * SHOULD be documented via [phpDOC](http://phpdoc.org/docs/latest/index.html) and SHOULD include but not be limited by:
 	* short description if needed
 	* argument data type and name
@@ -782,11 +754,10 @@ function someFunction(int $id, int $width, int $height): string {
 }
 ```
 
-&#9650; [Functions](#functions)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## Function Return
-
 * MUST be type-hinted if applicable
 
 ### &#10006; Incorrect
@@ -809,10 +780,10 @@ function getValue(): string {
 }
 ```
 
-&#9650; [Functions](#functions)
+&#9650; [Table of Contents](#table-of-contents)
 
 
- ## Control Structures
+## Control Structures
 This section defines the layout and usage of control structures. Note that this section is separated into rules that are applicable to all structures, followed by specific rules for individual structures.
 
 * **Keyword** MUST be followed by a space
@@ -827,14 +798,6 @@ This section defines the layout and usage of control structures. Note that this 
 	* e.g. `if ($expr) {` `↵` `⇥` `...` `↵` `}`
 * **Closing brace** MUST start on the next line
 	* i.e. `...` `↵` `}`
-
-In addition to the rules above, some control structures have additional requirements:
-
-1. [**If, Elseif, Else**](#if-elseif-else)
-2. [**Switch, Case**](#switch-case)
-3. [**While, Do While**](#while-do-while)
-4. [**For, Foreach**](#for-foreach)
-5. [**Try, Catch**](#try-catch)
 
 &#9650; [Table of Contents](#table-of-contents)
 
@@ -894,7 +857,7 @@ if ($expr1) {
 }
 ```
 
-&#9650; [Control Structures](#control-structures)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## Switch, Case
@@ -980,7 +943,7 @@ switch ($expr) {
 }
 ```
 
-&#9650; [Control Structures](#control-structures)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## While, Do While
@@ -998,7 +961,7 @@ do {
 } while ($expr);
 ```
 
-&#9650; [Control Structures](#control-structures)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## For, Foreach
@@ -1016,7 +979,7 @@ foreach ($iterable as $key => $value) {
 }
 ```
 
-&#9650; [Control Structures](#control-structures)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## Try, Catch
@@ -1053,7 +1016,7 @@ try {
 }
 ```
 
-&#9650; [Control Structures](#control-structures)
+&#9650; [Table of Contents](#table-of-contents)
 
 
  ## Classes
