@@ -801,6 +801,7 @@ This section defines the layout and usage of control structures. Note that this 
 
 
 ## If, Elseif, Else
+* MUST follow the [control structures standards](#control-structures)
 * `elseif` MUST be used instead of `else if`
 * `elseif` or `else` MUST be between `}` and `{` on one line
 
@@ -859,6 +860,7 @@ if ($expr1) {
 
 
 ## Switch, Case
+* MUST follow the [control structures standards](#control-structures)
 * Case statement MUST be indented once
 	* i.e. `⇥` `case 1:`
 * Case body MUST be indented twice
@@ -944,6 +946,7 @@ switch ($expr) {
 
 
 ## While, Do While
+* MUST follow the [control structures standards](#control-structures)
 
 ### &#10004; Correct
 
@@ -962,6 +965,7 @@ do {
 
 
 ## For, Foreach
+* MUST follow the [control structures standards](#control-structures)
 
 ### &#10004; Correct
 
@@ -980,6 +984,7 @@ foreach ($iterable as $key => $value) {
 
 
 ## Try, Catch
+* MUST follow the [control structures standards](#control-structures)
 * `catch` MUST be between `}` and `{` on one line
 
 ### &#10006; Incorrect
