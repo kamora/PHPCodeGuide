@@ -22,7 +22,7 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 - [Imports](#imports)
 - [Single-line Comments](#single-line-comments)
 - [Multi-line Comments](#multi-line-comments)
-- [PHPDoc Comments](#phpdoc-comments)
+- [PHPDoc](#phpdoc)
 - [Keywords](#keywords)
 - [Variables](#variables)
 - [Constants](#constants)
@@ -411,7 +411,7 @@ class Model {
 &#9650; [Table of Contents](#table-of-contents)
 
 
-## PHPDoc Comments
+## PHPDoc
 * MUST use the [PHPDoc](https://docs.phpdoc.org/3.0/guide/getting-started/what-is-a-docblock.html) block format.
 	* i.e. `/**` `↵` `* The comment` `↵` `*/`
 
