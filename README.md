@@ -16,11 +16,11 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 	- [Close Tag](#close-tag)
 	- [Short Open Tag](#short-open-tag)
 	- [Short Echo Tag](#short-echo-tag)
-- [**Namespaces**](#3-namespaces)
-	- [Declaration](#1-namespace-declaration)
-	- [Definition](#2-namespace-definition)
-	- [Multiple Namespaces](#3-multiple-namespaces)
-	- [List of imports](#4-list-of-imports)
+- [**Namespaces**](#namespaces)
+	- [Declaration](#namespace-declaration)
+	- [Definition](#namespace-definition)
+	- [Multiple Namespaces](#multiple-namespaces)
+	- [List of imports](#list-of-imports)
 - [**Comments**](#4-comments)
 	- [Single-line Comments](#1-single-line-comments)
 	- [Multi-line Comments](#2-multi-line-comments)
@@ -212,10 +212,10 @@ print_welcome_message();
 
 This section describes how to use one or more namespaces and their naming convention.
 
-1. [**Namespace declaration**](#1-namespace-declaration) 
-2. [**Namespace definition**](#2-namespace-definition) 
-3. [**Multiple namespaces**](#3-multiple-namespaces) 
-4. [**List of imports**](#4-list-of-imports)
+1. [**Namespace declaration**](#namespace-declaration) 
+2. [**Namespace definition**](#namespace-definition) 
+3. [**Multiple namespaces**](#multiple-namespaces) 
+4. [**List of imports**](#list-of-imports)
 
 &#9650; [Table of Contents](#table-of-contents)
 
@@ -253,7 +253,7 @@ namespace SomeNamespace;
 print_welcome_message();
 ```
 
-&#9650; [Namespaces](#3-namespaces)
+&#9650; [Namespaces](#namespaces)
 
 
 ### Namespace Definition
@@ -287,7 +287,7 @@ namespace SomeNamespace;
 
 ```
 
-&#9650; [Namespaces](#3-namespaces)
+&#9650; [Namespaces](#namespaces)
 
 
 ### Multiple Namespaces
@@ -319,7 +319,7 @@ namespace SomeNamespace\View {
 }
 ```
 
-&#9650; [Namespaces](#3-namespaces)
+&#9650; [Namespaces](#namespaces)
 
 
 ### List of Imports
@@ -389,7 +389,7 @@ class Model {
 }
 ```
 
-&#9650; [Namespaces](#3-namespaces)
+&#9650; [Namespaces](#namespaces)
 
 
  ## Comments
