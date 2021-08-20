@@ -10,7 +10,7 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 - [Encoding](#encoding)
 - [Filename](#filenames)
 - [Indentation](#indentation)
-- [Line Ends](#line-ends)
+- [Line Endings](#line-endings)
 - [Line Length](#line-length)
 - [Opening Tag](#opening-tag)
 - [Closing Tag](#closing-tag)
@@ -75,7 +75,7 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 &#9650; [Table of Contents](#table-of-contents)
 
 
-## Line Ends
+## Line Endings
 * MUST be set to Unix (LF)
 
 &#9650; [Table of Contents](#table-of-contents)
