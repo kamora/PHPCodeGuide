@@ -8,10 +8,10 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 ## Table of Contents
 
 - [Encoding](#encoding)
+- [Filename](#filenames)
 - [Indentation](#indentation)
 - [Line Ends](#line-ends)
 - [Line Length](#line-length)
-- [Filename](#filenames)
 - [Opening Tag](#opening-tag)
 - [Closing Tag](#closing-tag)
 - [Short Tag](#short-tag)
@@ -59,6 +59,15 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 &#9650; [Table of Contents](#table-of-contents)
 
 
+## Filenames
+* MUST follow the [PSR-4](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md) convention 
+	* e.g. `Controller.php` but not `controller.php`
+* MUST NOT be separated by a hyphen or underscore
+	* e.g. `AppConfig.php` but not `app-config.php` or `app_config.php` 
+
+&#9650; [Table of Contents](#table-of-contents)
+
+
 ## Indentation
 * MUST be accomplished using tabs
 	* i.e. space characters are strictly **not allowed** for indentation
@@ -76,15 +85,6 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 * MUST NOT be hard limited
 * The soft limit MUST be 120 characters
 	* i.e. automated style checkers SHOULD warn but MUST NOT error
-
-&#9650; [Table of Contents](#table-of-contents)
-
-
-## Filenames
-* MUST follow the [PSR-4](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md) convention 
-	* e.g. `Controller.php` but not `controller.php`
-* MUST NOT be separated by a hyphen or underscore
-	* e.g. `AppConfig.php` but not `app-config.php` or `app_config.php` 
 
 &#9650; [Table of Contents](#table-of-contents)
 
