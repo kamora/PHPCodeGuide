@@ -21,15 +21,15 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 	- [Definition](#definition)
 	- [Multiple Namespaces](#namespaces)
 	- [List of imports](#list-of-imports)
-- [**Comments**](#4-comments)
-	- [Single-line Comments](#1-single-line-comments)
-	- [Multi-line Comments](#2-multi-line-comments)
-	- [PHPDoc Comments](#3-phpdoc-comments)
-- [**Formatting**](#5-formatting)
-	- [Line Length](#1-line-length)
-	- [Indentation](#2-line-indentation)
-	- [Keywords](#3-keywords)
-	- [Variables](#4-variables)
+- [**Comments**](#comments)
+	- [Single-line Comments](#single-line-comments)
+	- [Multi-line Comments](#multi-line-comments)
+	- [PHPDoc Comments](#phpdoc-comments)
+- [**Formatting**](#formatting)
+	- [Line Length](#line-length)
+	- [Indentation](#line-indentation)
+	- [Keywords](#keywords)
+	- [Variables](#variables)
 	- [Constants](#5-constants)
 	- [Statements](#6-statements)
 	- [Operators](#7-operators)
@@ -396,9 +396,9 @@ class Model {
 
 This section describes how comments should be formatted and used.
 
-1. **[Single-line comments](#1-single-line-comments)**
-2. **[Multi-line comments](#2-multi-line-comments)**
-3. **[PHPDoc comments](#3-phpdoc-comments)** 
+1. **[Single-line comments](#single-line-comments)**
+2. **[Multi-line comments](#multi-line-comments)**
+3. **[PHPDoc comments](#phpdoc-comments)** 
 
 &#9650; [Table of Contents](#table-of-contents)
 
@@ -424,7 +424,7 @@ This section describes how comments should be formatted and used.
 // This is a comment
 ```
 
-&#9650; [Comments](#4-comments)
+&#9650; [Comments](#comments)
 
 
 ### Multi-line Comments
@@ -456,7 +456,7 @@ This section describes how comments should be formatted and used.
 
 ```
 
-&#9650; [Comments](#4-comments)
+&#9650; [Comments](#comments)
 
 
 ### PHPDoc Comments
@@ -486,17 +486,17 @@ This section describes how comments should be formatted and used.
  */
 ```
 
-&#9650; [Comments](#4-comments)
+&#9650; [Comments](#comments)
 
 
  ## Formatting
 
 This section outline various, general formatting rules related to whitespace and text.
 
-1. [**Line length**](#1-line-length)
-2. [**Line indentation**](#2-line-indentation) 
-3. [**Keywords**](#3-keywords) 
-4. [**Variables**](#4-variables) 
+1. [**Line length**](#line-length)
+2. [**Line indentation**](#line-indentation) 
+3. [**Keywords**](#keywords) 
+4. [**Variables**](#variables) 
 9. [**Constants**](#5-constants) 
 10. [**Statements**](#6-statements) 
 11. [**Operators**](#7-operators) 
@@ -511,13 +511,13 @@ This section outline various, general formatting rules related to whitespace and
 * The soft limit MUST be 120 characters
 	* i.e. automated style checkers SHOULD warn but MUST NOT error
 
-&#9650; [Formatting](#5-formatting)
+&#9650; [Formatting](#formatting)
 
 ### Line Indentation
 * MUST be accomplished using tabs
 	* i.e. space characters are strictly not allowed for indentation
 
-&#9650; [Formatting](#5-formatting)
+&#9650; [Formatting](#formatting)
 
 
 ### Keywords
@@ -545,7 +545,7 @@ $isFalse = true:
 $value = null;
 ```
 
-&#9650; [Formatting](#5-formatting)
+&#9650; [Formatting](#formatting)
 
 
 ### Variables
@@ -588,7 +588,7 @@ $welcomeMessage = '';
 $SomeObject = new SomeClass();
 ```
 
-&#9650; [Formatting](#5-formatting)
+&#9650; [Formatting](#formatting)
 
 
 ### Constants
@@ -621,7 +621,7 @@ define('WELCOMEMESSAGE', '');
 define('WELCOME_MESSAGE', '');
 ```
 
-&#9650; [Formatting](#5-formatting)
+&#9650; [Formatting](#formatting)
 
 
 ### Statements
@@ -646,7 +646,7 @@ $isFalse = false;
 print_welcome_message();
 ```
 
-&#9650; [Formatting](#5-formatting)
+&#9650; [Formatting](#formatting)
 
 
 ### Operators
@@ -675,7 +675,7 @@ $string .= 'Today is a good day!';
 echo 'Hello, World! Today is ' . $date . '!';
 ```
 
-&#9650; [Formatting](#5-formatting)
+&#9650; [Formatting](#formatting)
 
 
 ### Unary Operators
@@ -700,7 +700,7 @@ $index++;
 --$index;
 ```
 
-&#9650; [Formatting](#5-formatting)
+&#9650; [Formatting](#formatting)
 
 
  ## Functions
@@ -1433,7 +1433,7 @@ class User extends APrototype
 
 ### Class Properties
 
-* MUST follow [variable standards](#4-variables)
+* MUST follow [variable standards](#variables)
 * MUST specify visibility
 * MUST NOT be prefixed with an underscore
 * SHOULD be type-hinted if possible
