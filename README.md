@@ -30,7 +30,7 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 - [Operators](#operators)
 - [Unary Operators](#unary-operators)
 - [Function Name](#function-name)
-- [Function Call](#function-call)
+- [Function Calls](#function-calls)
 - [Function Arguments](#function-arguments)
 - [Function Declaration](#function-declaration)
 - [Function Return](#function-return)
@@ -45,9 +45,9 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 - [Class Name](#class-name)
 - [Class Prefix](#class-prefix)
 - [Class Definition](#class-definition)
-- [Extends Keyword](#extends-keyword)  
-- [Implements Keyword](#implements-keyword)  
-- [Use Keyword](#use-keyword)  
+- [`Extends` Keyword](#extends-keyword)  
+- [`Implements` Keyword](#implements-keyword)  
+- [`Use` Keyword](#use-keyword)  
 - [Class Properties](#class-properties)
 - [Class Methods](#class-methods)
 - [Class Instance](#class-instance)
@@ -645,7 +645,7 @@ getWelcomeMessage();
 &#9650; [Table of Contents](#table-of-contents)
 
 
-## Function Call
+## Function Calls
 * MUST NOT have a space between function name and open parenthesis
 
 ### &#10006; Incorrect
