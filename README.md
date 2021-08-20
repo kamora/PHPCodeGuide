@@ -160,7 +160,7 @@ print_welcome_message();
 &#9650; [PHP Tags](#php-tags)
 
 
-### 3. Short Open Tag
+### Short Open Tag
 
 * MUST NOT be used
 
@@ -183,7 +183,7 @@ print_welcome_message();
 &#9650; [PHP Tags](#2-php-tags)
 
 
-### 4. Short Echo Tag
+### Short Echo Tag
 
 * SHOULD be used inside PHP/HTML files when possible
 
@@ -208,7 +208,7 @@ print_welcome_message();
 &#9650; [PHP Tags](#2-php-tags)
 
 
-## 3. Namespaces
+ ## Namespaces
 
 This section describes how to use one or more namespaces and their naming convention.
 
@@ -220,7 +220,7 @@ This section describes how to use one or more namespaces and their naming conven
 &#9650; [Table of Contents](#table-of-contents)
 
 
-### 1. Namespace Declaration
+### Namespace Declaration
 
 * MUST be the first statement 
 * MUST be followed by a blank line
@@ -256,7 +256,7 @@ print_welcome_message();
 &#9650; [Namespaces](#3-namespaces)
 
 
-### 2. Namespace Definition
+### Namespace Definition
 
 * MUST start with a capital letter 
 * MUST be camelcased
@@ -290,7 +290,7 @@ namespace SomeNamespace;
 &#9650; [Namespaces](#3-namespaces)
 
 
-### 3. Multiple Namespaces
+### Multiple Namespaces
 
 * MUST use the curly brace syntax
 
@@ -322,7 +322,7 @@ namespace SomeNamespace\View {
 &#9650; [Namespaces](#3-namespaces)
 
 
-### 4. List of Imports
+### List of Imports
 
 * MUST be followed by a blank line
 * MUST import a single namespace per declaration
@@ -392,7 +392,7 @@ class Model {
 &#9650; [Namespaces](#3-namespaces)
 
 
-## 4. Comments
+ ## Comments
 
 This section describes how comments should be formatted and used.
 
@@ -403,7 +403,7 @@ This section describes how comments should be formatted and used.
 &#9650; [Table of Contents](#table-of-contents)
 
 
-### 1. Single-line Comments
+### Single-line Comments
 
 * MUST use two forward slashes
 	* e.g. `// The comment`
@@ -427,7 +427,7 @@ This section describes how comments should be formatted and used.
 &#9650; [Comments](#4-comments)
 
 
-### 2. Multi-line Comments
+### Multi-line Comments
 
 * MUST use the block format
 	* i.e. `/*` `↵` ` The comment` `↵` `*/`
@@ -459,7 +459,7 @@ This section describes how comments should be formatted and used.
 &#9650; [Comments](#4-comments)
 
 
-### 3. PHPDoc Comments
+### PHPDoc Comments
 * MUST use the [PHPDoc](https://docs.phpdoc.org/3.0/guide/getting-started/what-is-a-docblock.html) block format.
 	* i.e. `/**` `↵` `* The comment` `↵` `*/`
 
@@ -489,7 +489,7 @@ This section describes how comments should be formatted and used.
 &#9650; [Comments](#4-comments)
 
 
-## 5. Formatting
+ ## Formatting
 
 This section outline various, general formatting rules related to whitespace and text.
 
@@ -505,7 +505,7 @@ This section outline various, general formatting rules related to whitespace and
 &#9650; [Table of Contents](#table-of-contents)
 
 
-### 1. Line Length
+### Line Length
 
 * MUST NOT be hard limited
 * The soft limit MUST be 120 characters
@@ -513,14 +513,14 @@ This section outline various, general formatting rules related to whitespace and
 
 &#9650; [Formatting](#5-formatting)
 
-### 2. Line Indentation
+### Line Indentation
 * MUST be accomplished using tabs
 	* i.e. space characters are strictly not allowed for indentation
 
 &#9650; [Formatting](#5-formatting)
 
 
-### 3. Keywords
+### Keywords
 
 * MUST be all lowercased
 	* e.g. `false`, `true`, `null`, etc.
@@ -548,7 +548,7 @@ $value = null;
 &#9650; [Formatting](#5-formatting)
 
 
-### 4. Variables
+### Variables
 
 * MUST be all camelcased 
 * MUST NOT be separated by underscores
@@ -591,7 +591,7 @@ $SomeObject = new SomeClass();
 &#9650; [Formatting](#5-formatting)
 
 
-### 5. Constants
+### Constants
 
 * MUST be all uppercased 
 * MUST be separated by underscores
@@ -624,7 +624,7 @@ define('WELCOME_MESSAGE', '');
 &#9650; [Formatting](#5-formatting)
 
 
-### 6. Statements
+### Statements
 
 * MUST be placed on their own line
 * MUST end with a semicolon
@@ -649,7 +649,7 @@ print_welcome_message();
 &#9650; [Formatting](#5-formatting)
 
 
-### 7. Operators
+### Operators
 
 * MUST be surrounded by a space
 
@@ -678,7 +678,7 @@ echo 'Hello, World! Today is ' . $date . '!';
 &#9650; [Formatting](#5-formatting)
 
 
-### 8. Unary Operators
+### Unary Operators
 
 * MUST be attached to the operand.
 
@@ -703,7 +703,7 @@ $index++;
 &#9650; [Formatting](#5-formatting)
 
 
-## 6. Functions
+ ## Functions
 
 This section describes the format for function names, calls, arguments and declarations.
 
@@ -716,7 +716,7 @@ This section describes the format for function names, calls, arguments and decla
 &#9650; [Table of Contents](#table-of-contents)
 
 
-### 1. Function Name
+### Function Name
 
 * MUST start from a lowercase letter
 * MUST be all camelcased
@@ -744,7 +744,7 @@ getWelcomeMessage();
 &#9650; [Functions](#6-functions)
 
 
-### 2. Function Call
+### Function Call
 
 * MUST NOT have a space between function name and open parenthesis
 
@@ -767,7 +767,7 @@ printWelcomeMessage();
 &#9650; [Functions](#6-functions)
 
 
-### 3. Function Arguments
+### Function Arguments
 
 * MUST NOT have a space before the comma
 * MUST have a space after the comma 
@@ -817,7 +817,7 @@ function addUsersToOffice(array $users, Office $Office): bool {
 &#9650; [Functions](#6-functions)
 
 
-### 4. Function Declaration
+### Function Declaration
 
 * SHOULD be documented via [phpDOC](http://phpdoc.org/docs/latest/index.html) and SHOULD include but not be limited by:
 	* short description if needed
@@ -858,7 +858,7 @@ function someFunction(int $id, int $width, int $height): string {
 &#9650; [Functions](#6-functions)
 
 
-### 5. Function Return
+### Function Return
 
 * MUST be type-hinted if applicable
 
@@ -885,7 +885,7 @@ function getValue(): string {
 &#9650; [Functions](#6-functions)
 
 
-## 7. Control Structures
+ ## Control Structures
 This section defines the layout and usage of control structures. Note that this section is separated into rules that are applicable to all structures, followed by specific rules for individual structures.
 
 * **Keyword** MUST be followed by a space
@@ -912,7 +912,7 @@ In addition to the rules above, some control structures have additional requirem
 &#9650; [Table of Contents](#table-of-contents)
 
 
-### 1. If, Elseif, Else
+### If, Elseif, Else
 * `elseif` MUST be used instead of `else if`
 * `elseif` or `else` MUST be between `}` and `{` on one line
 
@@ -970,7 +970,7 @@ if ($expr1) {
 &#9650; [Control Structures](#7-control-structures)
 
 
-### 2. Switch, Case
+### Switch, Case
 
 * Case statement MUST be indented once
 	* i.e. `⇥` `case 1:`
@@ -1056,7 +1056,7 @@ switch ($expr) {
 &#9650; [Control Structures](#7-control-structures)
 
 
-### 3. While, Do While
+### While, Do While
 
 #### &#10004; Correct
 
@@ -1074,7 +1074,7 @@ do {
 &#9650; [Control Structures](#7-control-structures)
 
 
-### 4. For, Foreach
+### For, Foreach
 
 #### &#10004; Correct
 
@@ -1092,7 +1092,7 @@ foreach ($iterable as $key => $value) {
 &#9650; [Control Structures](#7-control-structures)
 
 
-### 5. Try, Catch
+### Try, Catch
 
 * `catch` MUST be between `}` and `{` on one line
 
@@ -1129,7 +1129,7 @@ try {
 &#9650; [Control Structures](#7-control-structures)
 
 
-## 8. Classes
+ ## Classes
 
 This section describes class files, names, definitions, properties, methods and instantiation.
 
@@ -1148,7 +1148,7 @@ This section describes class files, names, definitions, properties, methods and 
 &#9650; [Table of Contents](#table-of-contents)
 
 
-### 1. Class File
+### Class File
 
 *  MUST only contain one definition
 
@@ -1182,7 +1182,7 @@ class User {
 &#9650; [Classes](#8-classes)
 
 
-### 2. Class Namespace
+### Class Namespace
 
 * MUST be defined
 
@@ -1211,7 +1211,7 @@ class User {
 &#9650; [Classes](#8-classes)
 
 
-### 3. Class Name
+### Class Name
 
 * MUST start with a capital letter 
 * MUST be camelcased
@@ -1253,7 +1253,7 @@ class OfficeProgram {
 &#9650; [Classes](#8-classes)
 
 
-### 4. Class Prefix
+### Class Prefix
 
 The following prefix notation SHOULD be used:
 
@@ -1289,7 +1289,7 @@ interface ICountable {
 &#9650; [Classes](#8-classes)
 
 
-### 5. Class Definition
+### Class Definition
 
 * The opening curly brace MUST be placed on the same line
 	* i.e. `class User` `·` `{` `↵` `...` `↵` `}`
@@ -1322,7 +1322,7 @@ class User {
 &#9650; [Classes](#8-classes)
 
 
-### 6. `Extends` Keyword
+### `Extends` Keyword
 
 * MUST be placed on the same line
 
@@ -1355,7 +1355,7 @@ class User extends APrototype {
 
 
 
-### 7. `Implements` keyword
+### `Implements` keyword
 
 * SHOULD be moved to the next line
 
@@ -1387,7 +1387,7 @@ class User extends APrototype
 &#9650; [Classes](#8-classes)
 
 
-### 8. `Use` keyword
+### `Use` keyword
 
 * MUST include a single trait per line 
 
@@ -1431,7 +1431,7 @@ class User extends APrototype
 &#9650; [Classes](#8-classes)
 
 
-### 9. Class Properties
+### Class Properties
 
 * MUST follow [variable standards](#4-variables)
 * MUST specify visibility
@@ -1502,7 +1502,7 @@ class User {
 &#9650; [Classes](#8-classes)
 
 
-### 10. Class Methods
+### Class Methods
 
 * MUST follow [function standards](#6-functions)
 * MUST specify visibility
@@ -1585,7 +1585,7 @@ class User {
 &#9650; [Classes](#8-classes)
 
 
-### 11. Class Instance
+### Class Instance
 
 * MUST start with a capital letter
 * MUST be camelcased
