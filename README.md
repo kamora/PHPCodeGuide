@@ -10,7 +10,7 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 - [**Files**](#files)
 	- [Encoding](#encoding)
 	- [Line Ends](#line-ends)
-	- [File Format](#filename)
+	- [File name](#file-name)
 - [**Tags**](#php-tags)
 	- [Open Tag](#open-tag)
 	- [Close Tag](#close-tag)
@@ -84,7 +84,7 @@ This section describes the format of PHP files.
 &#9650; [Files](#files)
 
 
-### Filename
+### File name
 * MUST follow the [PSR-4](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md) convention 
 	* e.g. `Controller.php` but not `controller.php`
 * MUST NOT be separated by a hyphen or underscore
