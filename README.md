@@ -34,24 +34,23 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 - [Function Arguments](#function-arguments)
 - [Function Declaration](#function-declaration)
 - [Function Return](#function-return)
-- [**Control Structures**](#control-structures)
-    - [If, Elseif, Else](#if-elseif-else)
-    - [Switch, Case](#switch-case)
-    - [While, Do While](#while-do-while)
-    - [For, Foreach](#for-foreach)
-    - [Try, Catch](#try-catch)
-- [**Classes**](#classes)
-    - [Class File](#class-file)
-    - [Class Namespace](#class-namespace)
-    - [Class Name](#class-name)
-    - [Class Prefix](#class-prefix)
-    - [Class Definition](#class-definition)
-    - [Extends Keyword](#extends-keyword)  
-    - [Implements Keyword](#implements-keyword)  
-    - [Use Keyword](#use-keyword)  
-    - [Class Properties](#class-properties)
-    - [Class Methods](#class-methods)
-    - [Class Instance](#class-instance)
+- [Control Structures](#control-structures)
+- [If, Elseif, Else](#if-elseif-else)
+- [Switch, Case](#switch-case)
+- [While, Do While](#while-do-while)
+- [For, Foreach](#for-foreach)
+- [Try, Catch](#try-catch)
+- [Class File](#class-file)
+- [Class Namespace](#class-namespace)
+- [Class Name](#class-name)
+- [Class Prefix](#class-prefix)
+- [Class Definition](#class-definition)
+- [Extends Keyword](#extends-keyword)  
+- [Implements Keyword](#implements-keyword)  
+- [Use Keyword](#use-keyword)  
+- [Class Properties](#class-properties)
+- [Class Methods](#class-methods)
+- [Class Instance](#class-instance)
 
 
 ## Encoding
@@ -861,7 +860,6 @@ if ($expr1) {
 
 
 ## Switch, Case
-
 * Case statement MUST be indented once
 	* i.e. `⇥` `case 1:`
 * Case body MUST be indented twice
@@ -983,7 +981,6 @@ foreach ($iterable as $key => $value) {
 
 
 ## Try, Catch
-
 * `catch` MUST be between `}` and `{` on one line
 
 ### &#10006; Incorrect
@@ -1019,27 +1016,7 @@ try {
 &#9650; [Table of Contents](#table-of-contents)
 
 
- ## Classes
-
-This section describes class files, names, definitions, properties, methods and instantiation.
-
-1. [**Class file**](#class-file)
-2. [**Class namespace**](#class-namespace) 
-3. [**Class name**](#class-name) 
-4. [**Class prefix**](#class-prefix)
-5. [**Class definition**](#class-definition) 
-6. [**Extends keyword**](#extends-keyword)
-7. [**Implements keyword**](#implements-keyword)
-8. [**Use keyword**](#use-keyword)
-9. [**Class properties**](#class-properties)
-10. [**Class methods**](#class-methods)
-11. [**Class instance**](#class-instance)
-
-&#9650; [Table of Contents](#table-of-contents)
-
-
 ## Class File
-
 *  MUST only contain one definition
 
 ### &#10006; Incorrect
@@ -1069,11 +1046,10 @@ class User {
 }
 ```
 
-&#9650; [Classes](#classes)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## Class Namespace
-
 * MUST be defined
 
 ### &#10006; Incorrect
@@ -1098,11 +1074,10 @@ class User {
 }
 ```
 
-&#9650; [Classes](#classes)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## Class Name
-
 * MUST start with a capital letter 
 * MUST be camelcased
 
@@ -1140,11 +1115,10 @@ class OfficeProgram {
 }
 ```
 
-&#9650; [Classes](#classes)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## Class Prefix
-
 The following prefix notation SHOULD be used:
 
 * `A` for abstract classes
@@ -1176,11 +1150,10 @@ interface ICountable {
 }
 ```
 
-&#9650; [Classes](#classes)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## Class Definition
-
 * The opening curly brace MUST be placed on the same line
 	* i.e. `class User` `·` `{` `↵` `...` `↵` `}`
 
@@ -1209,11 +1182,10 @@ class User {
 }
 ```
 
-&#9650; [Classes](#classes)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## `Extends` Keyword
-
 * MUST be placed on the same line
 
 ### &#10006; Incorrect
@@ -1241,12 +1213,11 @@ class User extends APrototype {
 }
 ```
 
-&#9650; [Classes](#classes)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 
 ## `Implements` keyword
-
 * SHOULD be moved to the next line
 
 ### ~ Acceptable
@@ -1274,11 +1245,10 @@ class User extends APrototype
 }
 ```
 
-&#9650; [Classes](#classes)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## `Use` keyword
-
 * MUST include a single trait per line 
 
 ### &#10006; Incorrect
@@ -1318,12 +1288,11 @@ class User extends APrototype
 }
 ```
 
-&#9650; [Classes](#classes)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## Class Properties
-
-* MUST follow [variable standards](#variables)
+* MUST follow variable standards
 * MUST specify visibility
 * MUST NOT be prefixed with an underscore
 * SHOULD be type-hinted if possible
@@ -1389,12 +1358,11 @@ class User {
 }
 ```
 
-&#9650; [Classes](#classes)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## Class Methods
-
-* MUST follow [function standards](#functions)
+* MUST follow function standards
 * MUST specify visibility
 * MUST NOT be prefixed with an underscore
 
@@ -1472,11 +1440,10 @@ class User {
 }
 ```
 
-&#9650; [Classes](#classes)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## Class Instance
-
 * MUST start with a capital letter
 * MUST be camelcased
 * MUST include parenthesis
@@ -1497,5 +1464,5 @@ $office_program = new OfficeProgram;
 $office_program = new OfficeProgram();
 ```
 
-&#9650; [Classes](#classes)
+&#9650; [Table of Contents](#table-of-contents)
 
