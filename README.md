@@ -65,7 +65,7 @@ This section describes the format of PHP files.
 
 1. [**Encoding**](#encoding)
 1. [**Line Ends**](#line-ends)
-1. [**Filename**](#filename)
+1. [**Filename**](#file-name)
 
 &#9650; [Table of Contents](#table-of-contents)
 
