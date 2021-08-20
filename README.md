@@ -30,16 +30,16 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 	- [Indentation](#line-indentation)
 	- [Keywords](#keywords)
 	- [Variables](#variables)
-	- [Constants](#5-constants)
-	- [Statements](#6-statements)
-	- [Operators](#7-operators)
-	- [Unary Operators](#8-unary-operators)
-- [**Functions**](#6-functions)
-	- [Function Name](#1-function-name)
-	- [Function Call](#2-function-call)
-	- [Function Arguments](#3-function-arguments)
-	- [Function Declaration](#4-function-declaration)
-	- [Function Return](#5-function-return)
+	- [Constants](#constants)
+	- [Statements](#statements)
+	- [Operators](#operators)
+	- [Unary Operators](#unary-operators)
+- [**Functions**](#functions)
+	- [Function Name](#function-name)
+	- [Function Call](#function-call)
+	- [Function Arguments](#function-arguments)
+	- [Function Declaration](#function-declaration)
+	- [Function Return](#function-return)
 - [**Control Structures**](#7-control-structures)
 	- [If, Elseif, Else](#1-if-elseif-else)
 	- [Switch, Case](#2-switch-case)
@@ -497,10 +497,10 @@ This section outline various, general formatting rules related to whitespace and
 2. [**Line indentation**](#line-indentation) 
 3. [**Keywords**](#keywords) 
 4. [**Variables**](#variables) 
-9. [**Constants**](#5-constants) 
-10. [**Statements**](#6-statements) 
-11. [**Operators**](#7-operators) 
-12. [**Unary operators**](#8-unary-operators) 
+9. [**Constants**](#constants) 
+10. [**Statements**](#statements) 
+11. [**Operators**](#operators) 
+12. [**Unary operators**](#unary-operators) 
 
 &#9650; [Table of Contents](#table-of-contents)
 
@@ -707,11 +707,11 @@ $index++;
 
 This section describes the format for function names, calls, arguments and declarations.
 
-1. [**Function name**](#1-function-name) 
-2. [**Function call**](#2-function-call)
-3. [**Function arguments**](#3-function-arguments)
-4. [**Function declaration**](#4-function-declaration) 
-5. [**Function return**](#5-function-return)
+1. [**Function name**](#function-name) 
+2. [**Function call**](#function-call)
+3. [**Function arguments**](#function-arguments)
+4. [**Function declaration**](#function-declaration) 
+5. [**Function return**](#function-return)
 
 &#9650; [Table of Contents](#table-of-contents)
 
@@ -741,7 +741,7 @@ getwelcomemessage();
 getWelcomeMessage();
 ```
 
-&#9650; [Functions](#6-functions)
+&#9650; [Functions](#functions)
 
 
 ### Function Call
@@ -764,7 +764,7 @@ printWelcomeMessage ();
 printWelcomeMessage();
 ```
 
-&#9650; [Functions](#6-functions)
+&#9650; [Functions](#functions)
 
 
 ### Function Arguments
@@ -814,7 +814,7 @@ function addUsersToOffice(array $users, Office $Office): bool {
 }
 ```
 
-&#9650; [Functions](#6-functions)
+&#9650; [Functions](#functions)
 
 
 ### Function Declaration
@@ -855,7 +855,7 @@ function someFunction(int $id, int $width, int $height): string {
 }
 ```
 
-&#9650; [Functions](#6-functions)
+&#9650; [Functions](#functions)
 
 
 ### Function Return
@@ -882,7 +882,7 @@ function getValue(): string {
 }
 ```
 
-&#9650; [Functions](#6-functions)
+&#9650; [Functions](#functions)
 
 
  ## Control Structures
@@ -1504,7 +1504,7 @@ class User {
 
 ### Class Methods
 
-* MUST follow [function standards](#6-functions)
+* MUST follow [function standards](#functions)
 * MUST specify visibility
 * MUST NOT be prefixed with an underscore
 
