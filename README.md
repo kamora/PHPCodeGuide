@@ -17,7 +17,6 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 - [Closing Tag](#closing-tag)
 - [Echo Tag](#echo-tag)
 - [Namespace Declaration](#namespace-declaration)
-- [Namespace Definition](#namespace-definition)
 - [Multiple Namespaces](#multiple-namespaces)
 - [Imports](#imports)
 - [Single-line Comments](#single-line-comments)
@@ -190,6 +189,8 @@ print_welcome_message();
 ## Namespace Declaration
 * MUST be the first statement 
 * MUST be followed by a blank line
+* MUST start with a capital letter 
+* MUST be camelcased
 
 ### &#10006; Incorrect
 
@@ -218,13 +219,6 @@ namespace SomeNamespace;
 
 print_welcome_message();
 ```
-
-&#9650; [Table of Contents](#table-of-contents)
-
-
-## Namespace Definition
-* MUST start with a capital letter 
-* MUST be camelcased
 
 ### &#10006; Incorrect
 
