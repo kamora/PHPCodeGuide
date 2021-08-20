@@ -27,7 +27,7 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 	- [PHPDoc Comments](#phpdoc-comments)
 - [**Formatting**](#formatting)
 	- [Line Length](#line-length)
-	- [Indentation](#line-indentation)
+	- [Indentation](#indentation)
 	- [Keywords](#keywords)
 	- [Variables](#variables)
 	- [Constants](#constants)
@@ -43,7 +43,7 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 - [**Control Structures**](#control-structures)
 	- [If, Elseif, Else](#if-elseif-else)
 	- [Switch, Case](#switch-case)
-	- [While, Do While](#3-while-do-while)
+	- [While, Do While](#while-do-while)
 	- [For, Foreach](#for-foreach)
 	- [Try, Catch](#try-catch)
 - [**Classes**](#classes)
@@ -494,7 +494,7 @@ This section describes how comments should be formatted and used.
 This section outline various, general formatting rules related to whitespace and text.
 
 1. [**Line length**](#line-length)
-2. [**Line indentation**](#line-indentation) 
+2. [**Line indentation**](#indentation) 
 3. [**Keywords**](#keywords) 
 4. [**Variables**](#variables) 
 9. [**Constants**](#constants) 
@@ -513,7 +513,7 @@ This section outline various, general formatting rules related to whitespace and
 
 &#9650; [Formatting](#formatting)
 
-### Line Indentation
+### Indentation
 * MUST be accomplished using tabs
 	* i.e. space characters are strictly not allowed for indentation
 
@@ -905,7 +905,7 @@ In addition to the rules above, some control structures have additional requirem
 
 1. [**If, Elseif, Else**](#if-elseif-else)
 2. [**Switch, Case**](#switch-case)
-3. [**While, Do While**](#3-while-do-while)
+3. [**While, Do While**](#while-do-while)
 4. [**For, Foreach**](#for-foreach)
 5. [**Try, Catch**](#try-catch)
 
