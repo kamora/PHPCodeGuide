@@ -7,105 +7,105 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 
 ## Table of Contents
 
-1. [**Files**](#1-files)
-	1. [Encoding](#1-encoding)
-	2. [Line Ends](#2-line-ends)
-	3. [File Format](#3-filename)
-2. [**Tags**](#2-php-tags)
-	1. [Open Tag](#1-open-tag)
-	2. [Close Tag](#2-close-tag)
-	3. [Short Open Tag](#3-short-open-tag)
-	4. [Short Echo Tag](#4-short-echo-tag)
-3. [**Namespaces**](#3-namespaces)
-	1. [Namespace Declaration](#1-namespace-declaration)
-	2. [Namespace Definition](#2-namespace-definition)
-	3. [Multiple Namespaces](#3-multiple-namespaces)
-	4. [List of imports](#4-list-of-imports)
-4. [**Comments**](#4-comments)
-	1. [Single-line Comments](#1-single-line-comments)
-	2. [Multi-line Comments](#2-multi-line-comments)
-	3. [PHPDoc Comments](#3-phpdoc-comments)
-5. [**Formatting**](#5-formatting)
-	1. [Line Length](#1-line-length)
-	2. [Line Indentation](#2-line-indentation)
-	3. [Keywords](#3-keywords)
-	4. [Variables](#4-variables)
-	5. [Constants](#5-constants)
-	6. [Statements](#6-statements)
-	7. [Operators](#7-operators)
-	8. [Unary Operators](#8-unary-operators)
-6. [**Functions**](#6-functions)
-	1. [Function Name](#1-function-name)
-	3. [Function Call](#2-function-call)
-	4. [Function Arguments](#3-function-arguments)
-	5. [Function Declaration](#4-function-declaration)
-	6. [Function Return](#5-function-return)
-7. [**Control Structures**](#7-control-structures)
-	1. [If, Elseif, Else](#1-if-elseif-else)
-	2. [Switch, Case](#2-switch-case)
-	3. [While, Do While](#3-while-do-while)
-	4. [For, Foreach](#4-for-foreach)
-	5. [Try, Catch](#5-try-catch)
-8. [**Classes**](#8-classes)
-	1. [Class File](#1-class-file)
-	2. [Class Namespace](#2-class-namespace)
-	3. [Class Name](#3-class-name)
-	4. [Class Prefix](#4-class-prefix)
-	5. [Class Definition](#5-class-definition)
-	6. [Extends Keyword](#6-extends-keyword)  
-	7. [Implements Keyword](#7-implements-keyword)  
-	8. [Use Keyword](#8-use-keyword)  
-	9. [Class Properties](#9-class-properties)
-	10. [Class Methods](#10-class-methods)
-	11. [Class Instance](#11-class-instance)
+- [**Files**](#files)
+	- [Encoding](#encoding)
+	- [Line Ends](#line-ends)
+	- [File Format](#filename)
+- [**Tags**](#php-tags)
+	- [Open Tag](#open-tag)
+	- [Close Tag](#close-tag)
+	- [Short Open Tag](#short-open-tag)
+	- [Short Echo Tag](#short-echo-tag)
+- [**Namespaces**](#3-namespaces)
+	- [Declaration](#1-namespace-declaration)
+	- [Definition](#2-namespace-definition)
+	- [Multiple Namespaces](#3-multiple-namespaces)
+	- [List of imports](#4-list-of-imports)
+- [**Comments**](#4-comments)
+	- [Single-line Comments](#1-single-line-comments)
+	- [Multi-line Comments](#2-multi-line-comments)
+	- [PHPDoc Comments](#3-phpdoc-comments)
+- [**Formatting**](#5-formatting)
+	- [Line Length](#1-line-length)
+	- [Indentation](#2-line-indentation)
+	- [Keywords](#3-keywords)
+	- [Variables](#4-variables)
+	- [Constants](#5-constants)
+	- [Statements](#6-statements)
+	- [Operators](#7-operators)
+	- [Unary Operators](#8-unary-operators)
+- [**Functions**](#6-functions)
+	- [Function Name](#1-function-name)
+	- [Function Call](#2-function-call)
+	- [Function Arguments](#3-function-arguments)
+	- [Function Declaration](#4-function-declaration)
+	- [Function Return](#5-function-return)
+- [**Control Structures**](#7-control-structures)
+	- [If, Elseif, Else](#1-if-elseif-else)
+	- [Switch, Case](#2-switch-case)
+	- [While, Do While](#3-while-do-while)
+	- [For, Foreach](#4-for-foreach)
+	- [Try, Catch](#5-try-catch)
+- [**Classes**](#8-classes)
+	- [Class File](#1-class-file)
+	- [Class Namespace](#2-class-namespace)
+	- [Class Name](#3-class-name)
+	- [Class Prefix](#4-class-prefix)
+	- [Class Definition](#5-class-definition)
+	- [Extends Keyword](#6-extends-keyword)  
+	- [Implements Keyword](#7-implements-keyword)  
+	- [Use Keyword](#8-use-keyword)  
+	- [Class Properties](#9-class-properties)
+	- [Class Methods](#10-class-methods)
+	- [Class Instance](#11-class-instance)
 
 
-## 1. Files
+## Files
 This section describes the format of PHP files.
 
-1. [**Encoding**](#1-encoding)
-2. [**Line Ends**](#2-line-ends)
-3. [**Filename**](#3-filename)
+1. [**Encoding**](#encoding)
+2. [**Line Ends**](#line-ends)
+3. [**Filename**](#filename)
 
 &#9650; [Table of Contents](#table-of-contents)
 
 
-### 1. Encoding
+### Encoding
 
 * MUST be set to UTF-8 without BOM
 
-&#9650; [Files](#1-files)
+&#9650; [Files](#files)
 
 
-### 2. Line Ends
+### Line Ends
 
 * MUST be set to Unix (LF)
 
-&#9650; [Files](#1-files)
+&#9650; [Files](#files)
 
 
-### 3. Filename
+### Filename
 * MUST follow the [PSR-4](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md) convention 
 	* e.g. `Controller.php` but not `controller.php`
 * MUST NOT be separated by a hyphen or underscore
 	* e.g. `AppConfig.php` but not `app-config.php` or `app_config.php` 
 
-&#9650; [Files](#1-files)
+&#9650; [Files](#files)
 
 
-## 2. PHP Tags
+## PHP Tags
 
 This section describes the use of PHP tags in PHP and PHP/HTML files.
 
-1. [**Open tag**](#1-open-tag) 
-2. [**Close tag**](#2-close-tag) 
-3. [**Short open tag**](#3-short-open-tag) 
-4. [**Short echo tag**](#4-short-echo-tag) 
+1. [**Open tag**](#open-tag) 
+2. [**Close tag**](#close-tag) 
+3. [**Short open tag**](#short-open-tag) 
+4. [**Short echo tag**](#short-echo-tag) 
 
 &#9650; [Table of Contents](#table-of-contents)
 
 
-### 1. Open Tag
+### Open Tag
 
 * MUST be on its own line 
 * MUST NOT be followed by a blank line. 
@@ -133,10 +133,10 @@ print_welcome_message();
 print_welcome_message();
 ```
 
-&#9650; [PHP Tags](#2-php-tags)
+&#9650; [PHP Tags](#php-tags)
 
 
-### 2. Close Tag
+### Close Tag
 
 * MUST NOT be used in PHP files
 
@@ -157,7 +157,7 @@ print_welcome_message();
 print_welcome_message();
 ```
 
-&#9650; [PHP Tags](#2-php-tags)
+&#9650; [PHP Tags](#php-tags)
 
 
 ### 3. Short Open Tag
