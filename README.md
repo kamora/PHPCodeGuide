@@ -1,116 +1,92 @@
 # PHP Style Guide
 
-All rules and guidelines in this document apply to PHP files unless otherwise noted. References to PHP/HTML files can be interpreted as files that primarily contain HTML, but use PHP for templating purposes.
+All rules and guidelines in this document apply to PHP files unless otherwise noted.
 
 > The keywords "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](http://www.ietf.org/rfc/rfc2119.txt).
 
 
 ## Table of Contents
 
-- [**Files**](#files)
-	- [Encoding](#encoding)
-	- [Line Ends](#line-ends)
-	- [File name](#file-name)
-- [**Tags**](#php-tags)
-	- [Open Tag](#open-tag)
-	- [Close Tag](#close-tag)
-	- [Short Open Tag](#short-open-tag)
-	- [Short Echo Tag](#short-echo-tag)
+- [Encoding](#encoding)
+- [Line Ends](#line-ends)
+- [Filename](#filenames)
+- [Opening Tag](#opening-tag)
+- [Closing Tag](#closing-tag)
+- [Short Tag](#short-tag)
+- [Short Echo Tag](#short-echo-tag)
 - [**Namespaces**](#namespaces)
-	- [Declaration](#declaration)
-	- [Definition](#definition)
-	- [Multiple Namespaces](#namespaces)
-	- [List of imports](#list-of-imports)
+    - [Declaration](#declaration)
+    - [Definition](#definition)
+    - [Multiple Namespaces](#namespaces)
+    - [List of imports](#list-of-imports)
 - [**Comments**](#comments)
-	- [Single-line Comments](#single-line-comments)
-	- [Multi-line Comments](#multi-line-comments)
-	- [PHPDoc Comments](#phpdoc-comments)
+    - [Single-line Comments](#single-line-comments)
+    - [Multi-line Comments](#multi-line-comments)
+    - [PHPDoc Comments](#phpdoc-comments)
 - [**Formatting**](#formatting)
-	- [Line Length](#line-length)
-	- [Indentation](#indentation)
-	- [Keywords](#keywords)
-	- [Variables](#variables)
-	- [Constants](#constants)
-	- [Statements](#statements)
-	- [Operators](#operators)
-	- [Unary Operators](#unary-operators)
+    - [Line Length](#line-length)
+    - [Indentation](#indentation)
+    - [Keywords](#keywords)
+    - [Variables](#variables)
+    - [Constants](#constants)
+    - [Statements](#statements)
+    - [Operators](#operators)
+    - [Unary Operators](#unary-operators)
 - [**Functions**](#functions)
-	- [Function Name](#function-name)
-	- [Function Call](#function-call)
-	- [Function Arguments](#function-arguments)
-	- [Function Declaration](#function-declaration)
-	- [Function Return](#function-return)
+    - [Function Name](#function-name)
+    - [Function Call](#function-call)
+    - [Function Arguments](#function-arguments)
+    - [Function Declaration](#function-declaration)
+    - [Function Return](#function-return)
 - [**Control Structures**](#control-structures)
-	- [If, Elseif, Else](#if-elseif-else)
-	- [Switch, Case](#switch-case)
-	- [While, Do While](#while-do-while)
-	- [For, Foreach](#for-foreach)
-	- [Try, Catch](#try-catch)
+    - [If, Elseif, Else](#if-elseif-else)
+    - [Switch, Case](#switch-case)
+    - [While, Do While](#while-do-while)
+    - [For, Foreach](#for-foreach)
+    - [Try, Catch](#try-catch)
 - [**Classes**](#classes)
-	- [Class File](#class-file)
-	- [Class Namespace](#class-namespace)
-	- [Class Name](#class-name)
-	- [Class Prefix](#class-prefix)
-	- [Class Definition](#class-definition)
-	- [Extends Keyword](#extends-keyword)  
-	- [Implements Keyword](#implements-keyword)  
-	- [Use Keyword](#use-keyword)  
-	- [Class Properties](#class-properties)
-	- [Class Methods](#class-methods)
-	- [Class Instance](#class-instance)
+    - [Class File](#class-file)
+    - [Class Namespace](#class-namespace)
+    - [Class Name](#class-name)
+    - [Class Prefix](#class-prefix)
+    - [Class Definition](#class-definition)
+    - [Extends Keyword](#extends-keyword)  
+    - [Implements Keyword](#implements-keyword)  
+    - [Use Keyword](#use-keyword)  
+    - [Class Properties](#class-properties)
+    - [Class Methods](#class-methods)
+    - [Class Instance](#class-instance)
 
 
-## Files
-This section describes the format of PHP files.
+## Encoding
 
-1. [**Encoding**](#encoding)
-2. [**Line Ends**](#line-ends)
-3. [**Filename**](#file-name)
+* MUST be set to UTF-8 without BOM
 
 &#9650; [Table of Contents](#table-of-contents)
 
 
-### Encoding
-
-* MUST be set to UTF-8 without BOM
-
-&#9650; [Files](#files)
-
-
-### Line Ends
+## Line Ends
 
 * MUST be set to Unix (LF)
 
-&#9650; [Files](#files)
+&#9650; [Table of Contents](#table-of-contents)
 
 
-### File name
+## Filenames
 * MUST follow the [PSR-4](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md) convention 
 	* e.g. `Controller.php` but not `controller.php`
 * MUST NOT be separated by a hyphen or underscore
 	* e.g. `AppConfig.php` but not `app-config.php` or `app_config.php` 
 
-&#9650; [Files](#files)
-
-
-## PHP Tags
-
-This section describes the use of PHP tags in PHP and PHP/HTML files.
-
-1. [**Open tag**](#open-tag) 
-2. [**Close tag**](#close-tag) 
-3. [**Short open tag**](#short-open-tag) 
-4. [**Short echo tag**](#short-echo-tag) 
-
 &#9650; [Table of Contents](#table-of-contents)
 
 
-### Open Tag
+## Opening Tag
 
 * MUST be on its own line 
 * MUST NOT be followed by a blank line. 
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php print_welcome_message();
@@ -126,7 +102,7 @@ print_welcome_message();
 
 &#8627; Incorrect because `<?php` is followed by a blank line.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -136,11 +112,11 @@ print_welcome_message();
 &#9650; [PHP Tags](#php-tags)
 
 
-### Close Tag
+## Closing Tag
 
 * MUST NOT be used in PHP files
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -150,21 +126,21 @@ print_welcome_message();
 
 &#8627; Incorrect because `?>` was used.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
 print_welcome_message();
 ```
 
-&#9650; [PHP Tags](#php-tags)
+&#9650; [Table of Contents](#table-of-contents)
 
 
-### Short Open Tag
+## Short Tag
 
 * MUST NOT be used
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?
@@ -173,7 +149,7 @@ print_welcome_message();
 
 &#8627; Incorrect because `<?` was used instead of `<?php`.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -183,11 +159,11 @@ print_welcome_message();
 &#9650; [PHP Tags](#2-php-tags)
 
 
-### Short Echo Tag
+## Short Echo Tag
 
 * SHOULD be used inside PHP/HTML files when possible
 
-#### ~ Acceptable
+### ~ Acceptable
 
 ```php
 <div>
@@ -197,7 +173,7 @@ print_welcome_message();
 
 &#8627; Acceptable, but `<?=` should be used over `<?php echo` when possible.
 
-#### &#10004; Preferred
+### &#10004; Preferred
 
 ```php
 <div>
@@ -220,12 +196,12 @@ This section describes how to use one or more namespaces and their naming conven
 &#9650; [Table of Contents](#table-of-contents)
 
 
-### Declaration
+## Declaration
 
 * MUST be the first statement 
 * MUST be followed by a blank line
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -244,7 +220,7 @@ print_welcome_message();
 
 &#8627; Incorrect because `namespace SomeNamespace` is not followed by a blank line.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -256,12 +232,12 @@ print_welcome_message();
 &#9650; [Namespaces](#namespaces)
 
 
-### Definition
+## Definition
 
 * MUST start with a capital letter 
 * MUST be camelcased
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -279,7 +255,7 @@ namespace SomeNAMESPACE;
 
 &#8627; Incorrect because `SomeNAMESPACE` is not camelcased.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -290,11 +266,11 @@ namespace SomeNamespace;
 &#9650; [Namespaces](#namespaces)
 
 
-### Multiple Namespaces
+## Multiple Namespaces
 
 * MUST use the curly brace syntax
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -306,7 +282,7 @@ namespace SomeNamespace\View;
 
 &#8627; Incorrect because the curly brace syntax was not used.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -322,13 +298,13 @@ namespace SomeNamespace\View {
 &#9650; [Namespaces](#namespaces)
 
 
-### List of Imports
+## List of Imports
 
 * MUST be followed by a blank line
 * MUST import a single namespace per declaration
 * SHOULD use leading backslashes
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -357,7 +333,7 @@ class Model {
 
 &#8627; Incorrect because the multiple namespaces are imported per declaration.
 
-#### ~ Acceptable
+### ~ Acceptable
 
 ```php
 <?php
@@ -374,7 +350,7 @@ class Model {
 
 &#8627; Acceptable, but no leading backslashes are using.
 
-#### &#10004; Preferred
+### &#10004; Preferred
 
 ```php
 <?php
@@ -403,12 +379,12 @@ This section describes how comments should be formatted and used.
 &#9650; [Table of Contents](#table-of-contents)
 
 
-### Single-line Comments
+## Single-line Comments
 
 * MUST use two forward slashes
 	* e.g. `// The comment`
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -417,7 +393,7 @@ This section describes how comments should be formatted and used.
 
 &#8627; Incorrect because it uses `/*` and `*/` for a single-line comment.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -427,12 +403,12 @@ This section describes how comments should be formatted and used.
 &#9650; [Comments](#comments)
 
 
-### Multi-line Comments
+## Multi-line Comments
 
 * MUST use the block format
 	* i.e. `/*` `↵` ` The comment` `↵` `*/`
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -444,7 +420,7 @@ This section describes how comments should be formatted and used.
 
 &#8627; Incorrect because it uses `//` for a multi-line comment.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -459,11 +435,11 @@ This section describes how comments should be formatted and used.
 &#9650; [Comments](#comments)
 
 
-### PHPDoc Comments
+## PHPDoc Comments
 * MUST use the [PHPDoc](https://docs.phpdoc.org/3.0/guide/getting-started/what-is-a-docblock.html) block format.
 	* i.e. `/**` `↵` `* The comment` `↵` `*/`
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -476,7 +452,7 @@ This section describes how comments should be formatted and used.
 
 &#8627; Incorrect because doesn't use the PHPDoc block format.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -505,7 +481,7 @@ This section outline various, general formatting rules related to whitespace and
 &#9650; [Table of Contents](#table-of-contents)
 
 
-### Line Length
+## Line Length
 
 * MUST NOT be hard limited
 * The soft limit MUST be 120 characters
@@ -513,19 +489,19 @@ This section outline various, general formatting rules related to whitespace and
 
 &#9650; [Formatting](#formatting)
 
-### Indentation
+## Indentation
 * MUST be accomplished using tabs
 	* i.e. space characters are strictly not allowed for indentation
 
 &#9650; [Formatting](#formatting)
 
 
-### Keywords
+## Keywords
 
 * MUST be all lowercased
 	* e.g. `false`, `true`, `null`, etc.
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -536,7 +512,7 @@ $value = NULL;
 
 &#8627; Incorrect because `FALSE`, `TRUE` and `NULL` are not all lowercased.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -548,7 +524,7 @@ $value = null;
 &#9650; [Formatting](#formatting)
 
 
-### Variables
+## Variables
 
 * MUST be all camelcased 
 * MUST NOT be separated by underscores
@@ -556,7 +532,7 @@ $value = null;
 * Variables of primitive types MUST starts from a lowercase letter
 * Arrays MAY be tract both: as primitives or as objects
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -580,7 +556,7 @@ $someObject = new SomeClass();
 
 &#8627; Incorrect because the variable contains an object but doesn't start from an uppercase letter.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -591,12 +567,12 @@ $SomeObject = new SomeClass();
 &#9650; [Formatting](#formatting)
 
 
-### Constants
+## Constants
 
 * MUST be all uppercased 
 * MUST be separated by underscores
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -614,7 +590,7 @@ define('WELCOMEMESSAGE', '');
 
 &#8627; Incorrect because `WELCOME` and `MESSAGE` are not separated by an underscore.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -624,12 +600,12 @@ define('WELCOME_MESSAGE', '');
 &#9650; [Formatting](#formatting)
 
 
-### Statements
+## Statements
 
 * MUST be placed on their own line
 * MUST end with a semicolon
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -638,7 +614,7 @@ $isFalse = false; print_welcome_message();
 
 &#8627; Incorrect because the statements are on the same line.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -649,11 +625,11 @@ print_welcome_message();
 &#9650; [Formatting](#formatting)
 
 
-### Operators
+## Operators
 
 * MUST be surrounded by a space
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -665,7 +641,7 @@ echo 'Hello, World! Today is '.$date.'!';
 
 &#8627; Incorrect because there is no space surrounding the `=`, `+`, `.` or `.=` sign.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -678,11 +654,11 @@ echo 'Hello, World! Today is ' . $date . '!';
 &#9650; [Formatting](#formatting)
 
 
-### Unary Operators
+## Unary Operators
 
 * MUST be attached to the operand.
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -692,7 +668,7 @@ $index ++;
 
 &#8627; Incorrect because there is a space before `++` and after `--`.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -716,13 +692,13 @@ This section describes the format for function names, calls, arguments and decla
 &#9650; [Table of Contents](#table-of-contents)
 
 
-### Function Name
+## Function Name
 
 * MUST start from a lowercase letter
 * MUST be all camelcased
 * MUST NOT be separated by underscores
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -734,7 +710,7 @@ getwelcomemessage();
 
 &#8627; Incorrect because the function names are not all properly camelcased or separated by underscores.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -744,11 +720,11 @@ getWelcomeMessage();
 &#9650; [Functions](#functions)
 
 
-### Function Call
+## Function Call
 
 * MUST NOT have a space between function name and open parenthesis
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -757,7 +733,7 @@ printWelcomeMessage ();
 
 &#8627; Incorrect because there is a space between `getWelcomeMessage` and `()`.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -767,14 +743,14 @@ printWelcomeMessage();
 &#9650; [Functions](#functions)
 
 
-### Function Arguments
+## Function Arguments
 
 * MUST NOT have a space before the comma
 * MUST have a space after the comma 
 * SHOULD be type-hinted if possible
 * MAY use line breaks for long arguments
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -794,7 +770,7 @@ someFunction($arg1,$arg2,$arg3) {
 
 &#8627; Incorrect because there is no space after `,`.
 
-#### ~ Acceptable
+### ~ Acceptable
 
 ```php
 <?php
@@ -805,7 +781,7 @@ function addUsersToOffice($users, $Office) {
 
 &#8627; Acceptable, but `$users` and `$office` are missing their data types.
 
-#### &#10004; Preferred
+### &#10004; Preferred
 
 ```php
 <?php
@@ -817,7 +793,7 @@ function addUsersToOffice(array $users, Office $Office): bool {
 &#9650; [Functions](#functions)
 
 
-### Function Declaration
+## Function Declaration
 
 * SHOULD be documented via [phpDOC](http://phpdoc.org/docs/latest/index.html) and SHOULD include but not be limited by:
 	* short description if needed
@@ -825,7 +801,7 @@ function addUsersToOffice(array $users, Office $Office): bool {
 	* return data type, if applicable
 	* throwable exceptions if any
 
-#### ~ Acceptable
+### ~ Acceptable
 
 ```php
 <?php
@@ -836,7 +812,7 @@ function someFunction(int $id, int $width, int $height): Photo {
 
 &#8627; Acceptable but the function is not documented.
 
-#### &#10004; Preferred
+### &#10004; Preferred
 
 ```php
 <?php
@@ -858,11 +834,11 @@ function someFunction(int $id, int $width, int $height): string {
 &#9650; [Functions](#functions)
 
 
-### Function Return
+## Function Return
 
 * MUST be type-hinted if applicable
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -873,7 +849,7 @@ function getValue() {
 
 &#8627; Incorrect because the return type is not hinted.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -912,11 +888,11 @@ In addition to the rules above, some control structures have additional requirem
 &#9650; [Table of Contents](#table-of-contents)
 
 
-### If, Elseif, Else
+## If, Elseif, Else
 * `elseif` MUST be used instead of `else if`
 * `elseif` or `else` MUST be between `}` and `{` on one line
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -954,7 +930,7 @@ if($expr)
 
 &#8627; Incorrect because structure body is not wrapped in curly braces.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -970,7 +946,7 @@ if ($expr1) {
 &#9650; [Control Structures](#control-structures)
 
 
-### Switch, Case
+## Switch, Case
 
 * Case statement MUST be indented once
 	* i.e. `⇥` `case 1:`
@@ -979,7 +955,7 @@ if ($expr1) {
 * Break keyword MUST be indented twice
 	* i.e. `⇥` `⇥` `break;`
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -1029,7 +1005,7 @@ switch ($expr) {
 
 &#8627; Incorrect because body is not indented twice.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -1056,9 +1032,9 @@ switch ($expr) {
 &#9650; [Control Structures](#control-structures)
 
 
-### While, Do While
+## While, Do While
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -1074,9 +1050,9 @@ do {
 &#9650; [Control Structures](#control-structures)
 
 
-### For, Foreach
+## For, Foreach
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -1092,11 +1068,11 @@ foreach ($iterable as $key => $value) {
 &#9650; [Control Structures](#control-structures)
 
 
-### Try, Catch
+## Try, Catch
 
 * `catch` MUST be between `}` and `{` on one line
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -1113,7 +1089,7 @@ catch (OtherExceptionType $Exception) {
 
 &#8627; Incorrect because `catch` is not between `}` and `{` on one line.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -1148,11 +1124,11 @@ This section describes class files, names, definitions, properties, methods and 
 &#9650; [Table of Contents](#table-of-contents)
 
 
-### Class File
+## Class File
 
 *  MUST only contain one definition
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -1169,7 +1145,7 @@ class Office {
 
 &#8627; Incorrect because two classes are defined in one file.
 
-#### &#10004; Correct
+### &#10004; Correct
 ```php
 <?php
 namespace Core\Models;
@@ -1182,11 +1158,11 @@ class User {
 &#9650; [Classes](#classes)
 
 
-### Class Namespace
+## Class Namespace
 
 * MUST be defined
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -1197,7 +1173,7 @@ class User {
 
 &#8627; Incorrect because there is no namespace defined.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -1211,12 +1187,12 @@ class User {
 &#9650; [Classes](#classes)
 
 
-### Class Name
+## Class Name
 
 * MUST start with a capital letter 
 * MUST be camelcased
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -1239,7 +1215,7 @@ class Officeprogram {
 
 &#8627; Incorrect because the class name is not camelcased.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -1253,7 +1229,7 @@ class OfficeProgram {
 &#9650; [Classes](#classes)
 
 
-### Class Prefix
+## Class Prefix
 
 The following prefix notation SHOULD be used:
 
@@ -1266,7 +1242,7 @@ The following prefix notation SHOULD be used:
 * `E` for exceptions
 	* e.g. `EInbvalidArgument`, `EUndefinedVariable`, etc
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -1289,12 +1265,12 @@ interface ICountable {
 &#9650; [Classes](#classes)
 
 
-### Class Definition
+## Class Definition
 
 * The opening curly brace MUST be placed on the same line
 	* i.e. `class User` `·` `{` `↵` `...` `↵` `}`
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -1308,7 +1284,7 @@ class User
 
 &#8627; Incorrect because `{` is not on the same line.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -1322,11 +1298,11 @@ class User {
 &#9650; [Classes](#classes)
 
 
-### `Extends` Keyword
+## `Extends` Keyword
 
 * MUST be placed on the same line
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -1340,7 +1316,7 @@ class User
 
 &#8627; Incorrect because the `extends` keyword is not on the same line.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -1355,11 +1331,11 @@ class User extends APrototype {
 
 
 
-### `Implements` keyword
+## `Implements` keyword
 
 * SHOULD be moved to the next line
 
-#### ~ Acceptable
+### ~ Acceptable
 
 ```php
 <?php
@@ -1372,7 +1348,7 @@ class User extends APrototype implements Countable {
 
 &#8627; Incorrect because the `implements` keyword is not on the new line.
 
-#### &#10004; Preferred
+### &#10004; Preferred
 
 ```php
 <?php
@@ -1387,11 +1363,11 @@ class User extends APrototype
 &#9650; [Classes](#classes)
 
 
-### `Use` keyword
+## `Use` keyword
 
 * MUST include a single trait per line 
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -1410,7 +1386,7 @@ class User extends APrototype
 
 &#8627; Incorrect because two traits are included per line.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -1431,14 +1407,14 @@ class User extends APrototype
 &#9650; [Classes](#classes)
 
 
-### Class Properties
+## Class Properties
 
 * MUST follow [variable standards](#variables)
 * MUST specify visibility
 * MUST NOT be prefixed with an underscore
 * SHOULD be type-hinted if possible
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -1471,7 +1447,7 @@ class User {
 
 &#8627; Incorrect because some properties are prefixed by the underscore.
 
-#### ~ Acceptable
+### ~ Acceptable
 
 ```php
 <?php
@@ -1486,7 +1462,7 @@ class User {
 
 &#8627; Acceptable, but the properties are not type-hinted.
 
-#### &#10004; Preferred
+### &#10004; Preferred
 
 ```php
 <?php
@@ -1502,13 +1478,13 @@ class User {
 &#9650; [Classes](#classes)
 
 
-### Class Methods
+## Class Methods
 
 * MUST follow [function standards](#functions)
 * MUST specify visibility
 * MUST NOT be prefixed with an underscore
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -1559,7 +1535,7 @@ class User {
 
 &#8627; Incorrect because some methods are prefixed by the underscore.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
@@ -1585,13 +1561,13 @@ class User {
 &#9650; [Classes](#classes)
 
 
-### Class Instance
+## Class Instance
 
 * MUST start with a capital letter
 * MUST be camelcased
 * MUST include parenthesis
 
-#### &#10006; Incorrect
+### &#10006; Incorrect
 
 ```php
 <?php
@@ -1600,7 +1576,7 @@ $office_program = new OfficeProgram;
 
 &#8627; Incorrect because a lack of parenthesis.
 
-#### &#10004; Correct
+### &#10004; Correct
 
 ```php
 <?php
