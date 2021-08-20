@@ -8,8 +8,8 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 ## Table of Contents
 
 - [Encoding](#encoding)
-- [Line Ends](#line-ends)
 - [Indentation](#indentation)
+- [Line Ends](#line-ends)
 - [Line Length](#line-length)
 - [Filename](#filenames)
 - [Opening Tag](#opening-tag)
@@ -59,15 +59,15 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 &#9650; [Table of Contents](#table-of-contents)
 
 
-## Line Ends
-* MUST be set to Unix (LF)
+## Indentation
+* MUST be accomplished using tabs
+	* i.e. space characters are strictly **not allowed** for indentation
 
 &#9650; [Table of Contents](#table-of-contents)
 
 
-## Indentation
-* MUST be accomplished using tabs
-	* i.e. space characters are strictly **not allowed** for indentation
+## Line Ends
+* MUST be set to Unix (LF)
 
 &#9650; [Table of Contents](#table-of-contents)
 
