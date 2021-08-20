@@ -9,29 +9,26 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 
 - [Encoding](#encoding)
 - [Line Ends](#line-ends)
+- [Indentation](#indentation)
 - [Filename](#filenames)
 - [Opening Tag](#opening-tag)
 - [Closing Tag](#closing-tag)
 - [Short Tag](#short-tag)
 - [Short Echo Tag](#short-echo-tag)
-- [**Namespaces**](#namespaces)
-    - [Declaration](#declaration)
-    - [Definition](#definition)
-    - [Multiple Namespaces](#namespaces)
-    - [List of imports](#list-of-imports)
-- [**Comments**](#comments)
-    - [Single-line Comments](#single-line-comments)
-    - [Multi-line Comments](#multi-line-comments)
-    - [PHPDoc Comments](#phpdoc-comments)
-- [**Formatting**](#formatting)
-    - [Line Length](#line-length)
-    - [Indentation](#indentation)
-    - [Keywords](#keywords)
-    - [Variables](#variables)
-    - [Constants](#constants)
-    - [Statements](#statements)
-    - [Operators](#operators)
-    - [Unary Operators](#unary-operators)
+- [Namespace Declaration](#namespace-declaration)
+- [Namespace Definition](#namespace-definition)
+- [Multiple Namespaces](#multiple-namespaces)
+- [Imports](#imports)
+- [Single-line Comments](#single-line-comments)
+- [Multi-line Comments](#multi-line-comments)
+- [PHPDoc Comments](#phpdoc-comments)
+- [Line Length](#line-length)
+- [Keywords](#keywords)
+- [Variables](#variables)
+- [Constants](#constants)
+- [Statements](#statements)
+- [Operators](#operators)
+- [Unary Operators](#unary-operators)
 - [**Functions**](#functions)
     - [Function Name](#function-name)
     - [Function Call](#function-call)
@@ -59,15 +56,20 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 
 
 ## Encoding
-
 * MUST be set to UTF-8 without BOM
 
 &#9650; [Table of Contents](#table-of-contents)
 
 
 ## Line Ends
-
 * MUST be set to Unix (LF)
+
+&#9650; [Table of Contents](#table-of-contents)
+
+
+## Indentation
+* MUST be accomplished using tabs
+	* i.e. space characters are strictly not allowed for indentation
 
 &#9650; [Table of Contents](#table-of-contents)
 
@@ -82,7 +84,6 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 
 
 ## Opening Tag
-
 * MUST be on its own line 
 * MUST NOT be followed by a blank line. 
 
@@ -137,7 +138,6 @@ print_welcome_message();
 
 
 ## Short Tag
-
 * MUST NOT be used
 
 ### &#10006; Incorrect
@@ -156,11 +156,10 @@ print_welcome_message();
 print_welcome_message();
 ```
 
-&#9650; [PHP Tags](#2-php-tags)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## Short Echo Tag
-
 * SHOULD be used inside PHP/HTML files when possible
 
 ### ~ Acceptable
@@ -181,23 +180,10 @@ print_welcome_message();
 </div>
 ```
 
-&#9650; [PHP Tags](#2-php-tags)
-
-
- ## Namespaces
-
-This section describes how to use one or more namespaces and their naming convention.
-
-1. [**Declaration**](#declaration) 
-2. [**Definition**](#definition) 
-3. [**Multiple namespaces**](#namespaces) 
-4. [**List of imports**](#list-of-imports)
-
 &#9650; [Table of Contents](#table-of-contents)
 
 
-## Declaration
-
+## Namespace Declaration
 * MUST be the first statement 
 * MUST be followed by a blank line
 
@@ -229,11 +215,10 @@ namespace SomeNamespace;
 print_welcome_message();
 ```
 
-&#9650; [Namespaces](#namespaces)
+&#9650; [Table of Contents](#table-of-contents)
 
 
-## Definition
-
+## Namespace Definition
 * MUST start with a capital letter 
 * MUST be camelcased
 
@@ -263,11 +248,11 @@ namespace SomeNamespace;
 
 ```
 
-&#9650; [Namespaces](#namespaces)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## Multiple Namespaces
-
+* SHOULD be avoided if possible
 * MUST use the curly brace syntax
 
 ### &#10006; Incorrect
@@ -295,10 +280,10 @@ namespace SomeNamespace\View {
 }
 ```
 
-&#9650; [Namespaces](#namespaces)
+&#9650; [Table of Contents](#table-of-contents)
 
 
-## List of Imports
+## Imports
 
 * MUST be followed by a blank line
 * MUST import a single namespace per declaration
@@ -365,19 +350,7 @@ class Model {
 }
 ```
 
-&#9650; [Namespaces](#namespaces)
-
-
- ## Comments
-
-This section describes how comments should be formatted and used.
-
-1. **[Single-line comments](#single-line-comments)**
-2. **[Multi-line comments](#multi-line-comments)**
-3. **[PHPDoc comments](#phpdoc-comments)** 
-
 &#9650; [Table of Contents](#table-of-contents)
-
 
 ## Single-line Comments
 
@@ -400,7 +373,7 @@ This section describes how comments should be formatted and used.
 // This is a comment
 ```
 
-&#9650; [Comments](#comments)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## Multi-line Comments
@@ -432,7 +405,7 @@ This section describes how comments should be formatted and used.
 
 ```
 
-&#9650; [Comments](#comments)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## PHPDoc Comments
@@ -462,22 +435,6 @@ This section describes how comments should be formatted and used.
  */
 ```
 
-&#9650; [Comments](#comments)
-
-
- ## Formatting
-
-This section outline various, general formatting rules related to whitespace and text.
-
-1. [**Line length**](#line-length)
-2. [**Line indentation**](#indentation) 
-3. [**Keywords**](#keywords) 
-4. [**Variables**](#variables) 
-9. [**Constants**](#constants) 
-10. [**Statements**](#statements) 
-11. [**Operators**](#operators) 
-12. [**Unary operators**](#unary-operators) 
-
 &#9650; [Table of Contents](#table-of-contents)
 
 
@@ -487,13 +444,7 @@ This section outline various, general formatting rules related to whitespace and
 * The soft limit MUST be 120 characters
 	* i.e. automated style checkers SHOULD warn but MUST NOT error
 
-&#9650; [Formatting](#formatting)
-
-## Indentation
-* MUST be accomplished using tabs
-	* i.e. space characters are strictly not allowed for indentation
-
-&#9650; [Formatting](#formatting)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## Keywords
@@ -521,7 +472,7 @@ $isFalse = true:
 $value = null;
 ```
 
-&#9650; [Formatting](#formatting)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## Variables
@@ -564,7 +515,7 @@ $welcomeMessage = '';
 $SomeObject = new SomeClass();
 ```
 
-&#9650; [Formatting](#formatting)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## Constants
@@ -597,7 +548,7 @@ define('WELCOMEMESSAGE', '');
 define('WELCOME_MESSAGE', '');
 ```
 
-&#9650; [Formatting](#formatting)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## Statements
@@ -622,7 +573,7 @@ $isFalse = false;
 print_welcome_message();
 ```
 
-&#9650; [Formatting](#formatting)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## Operators
@@ -651,7 +602,7 @@ $string .= 'Today is a good day!';
 echo 'Hello, World! Today is ' . $date . '!';
 ```
 
-&#9650; [Formatting](#formatting)
+&#9650; [Table of Contents](#table-of-contents)
 
 
 ## Unary Operators
@@ -676,7 +627,7 @@ $index++;
 --$index;
 ```
 
-&#9650; [Formatting](#formatting)
+&#9650; [Table of Contents](#table-of-contents)
 
 
  ## Functions
