@@ -13,8 +13,8 @@ All rules and guidelines in this document apply to PHP files unless otherwise no
 - [Line Endings](#line-endings)
 - [Line Length](#line-length)
 - [Opening Tag](#opening-tag)
+- [Short Opening Tag](#short-opening-tag)
 - [Closing Tag](#closing-tag)
-- [Short Tag](#short-tag)
 - [Echo Tag](#echo-tag)
 - [Namespace Declaration](#namespace-declaration)
 - [Namespace Definition](#namespace-definition)
@@ -119,6 +119,28 @@ print_welcome_message();
 &#9650; [Table of Contents](#table-of-contents)
 
 
+## Short Opening Tag
+* MUST NOT be used
+
+### &#10006; Incorrect
+
+```php
+<?
+print_welcome_message();
+```
+
+&#8627; Incorrect because `<?` was used instead of `<?php`.
+
+### &#10004; Correct
+
+```php
+<?php
+print_welcome_message();
+```
+
+&#9650; [Table of Contents](#table-of-contents)
+
+
 ## Closing Tag
 * MUST NOT be used in PHP files
 
@@ -140,29 +162,6 @@ print_welcome_message();
 ```
 
 &#9650; [Table of Contents](#table-of-contents)
-
-
-## Short Tag
-* MUST NOT be used
-
-### &#10006; Incorrect
-
-```php
-<?
-print_welcome_message();
-```
-
-&#8627; Incorrect because `<?` was used instead of `<?php`.
-
-### &#10004; Correct
-
-```php
-<?php
-print_welcome_message();
-```
-
-&#9650; [Table of Contents](#table-of-contents)
-
 
 ## Echo Tag
 * SHOULD be used inside PHP/HTML files when possible
