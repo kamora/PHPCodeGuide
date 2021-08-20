@@ -1292,7 +1292,7 @@ class User extends APrototype
 
 
 ## Class Properties
-* MUST follow variable standards
+* MUST follow [variable standards](#variables)
 * MUST specify visibility
 * MUST NOT be prefixed with an underscore
 * SHOULD be type-hinted if possible
@@ -1362,7 +1362,7 @@ class User {
 
 
 ## Class Methods
-* MUST follow function standards
+* MUST follow [function standards](#function-name)
 * MUST specify visibility
 * MUST NOT be prefixed with an underscore
 
